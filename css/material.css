@@ -322,7 +322,9 @@ h1, h2 {
 .slider:active::-webkit-slider-thumb {
     transform: scale(2.66)
 }
+.card-container {background-color: #E5E5E5}
 .card {
+    background-color: #FFF;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26),
                 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
 }

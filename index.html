@@ -4,51 +4,82 @@
 	<link rel="stylesheet" href="css/material.css"/>
 	<link rel="stylesheet" href="css/demo.css"/>
 </head>
-<body>
+<body class="card-container">
+<div class="header card" z="1">
+	<h1>Material framework</h1>
+</div>
 <h1>Checkbox</h1>
-<div class="checkbox">    
-    <input type="checkbox" id="checkbox"/>
-    <label for="checkbox"></label>
+<div class="card" z="1">
+	<div class="checkbox">    
+		<input type="checkbox" id="checkbox"/>
+		<label for="checkbox"></label>
+	</div>
+	<div class="checkbox">    
+		<input type="checkbox" id="checkbox2" checked/>
+		<label for="checkbox2"></label>
+	</div>
 </div>
 <h1>Radio</h1>
-<div class="radio">
-    <input type="radio" id="radio" name="radios"/>
-    <label for="radio"></label>
-</div>
-<div class="radio">
-    <input type="radio" id="radio2" name="radios"/>
-    <label for="radio2"></label>
+<div class="card" z="1">
+	<div class="radio">
+		<input type="radio" id="radio" name="radios"/>
+		<label for="radio"></label>
+	</div>
+	<div class="radio">
+		<input type="radio" id="radio2" name="radios" checked/>
+		<label for="radio2"></label>
+	</div>
 </div>
 <h1>Switch</h1>
-<div class="switch">
-    <input type="checkbox" id="switch"/>
-    <label for="switch"></label>
+<div class="card" z="1">
+	<div class="switch">
+		<input type="checkbox" id="switch"/>
+		<label for="switch"></label>
+	</div>
+	<div class="switch">
+		<input type="checkbox" id="switch2" checked/>
+		<label for="switch2"></label>
+	</div>
 </div>
 <h1>Inputs</h1>
-<input type="text" class="text-input" placeholder="Type something here"/>
+<div class="card" z="1">
+	<input type="text" class="text-input" placeholder="Type something here"/>
+</div>
 <h1>Buttons</h1>
 <h2>Flat</h2>
-<button class="button">Button</button>
-<button class="button colored">Colored</button>
-<button class="button" disabled>Disabled</button>
+<div class="card" z="1">
+	<button class="button">Button</button>
+	<button class="button colored">Colored</button>
+	<button class="button" disabled>Disabled</button>
+</div>
 <h2>Raised</h2>
-<button class="button raised">Button</button>
-<button class="button raised colored">Colored</button>
-<button class="button raised" disabled>Disabled</button>
+<div class="card" z="1">
+	<button class="button raised">Button</button>
+	<button class="button raised colored">Colored</button>
+	<button class="button raised" disabled>Disabled</button>
+</div>
 <h1>Fab</h1>
-<button class="fab colored">+</button>
-<button class="fab red">X</button>
-<button class="fab green small">X</button>
-<button class="fab yellow small">X</button>
+<div class="card" z="1">
+	<button class="fab colored">+</button>
+	<button class="fab red">X</button>
+	<button class="fab green small">X</button>
+	<button class="fab yellow small">X</button>
+</div>
 <h1>Icon buttons</h1>
-<button class="icon-button">X</button>
+<div class="card" z="1">
+	<button class="icon-button">X</button>
+</div>
 <h1>Sliders</h1>
-<input type="range" class="slider"/>
+<div class="card" z="1">
+	<input type="range" class="slider"/>
+</div>
 <h1>Card</h1>
-<div class="card" z="1">z-depth: 1</div>
-<div class="card" z="2">z-depth: 2</div>
-<div class="card" z="3">z-depth: 3</div>
-<div class="card" z="4">z-depth: 4</div>
-<div class="card" z="5">z-depth: 5</div>
+<div id="card-demo">
+	<div class="card" z="1">z-depth: 1</div>
+	<div class="card" z="2">z-depth: 2</div>
+	<div class="card" z="3">z-depth: 3</div>
+	<div class="card" z="4">z-depth: 4</div>
+	<div class="card" z="5">z-depth: 5</div>
+</div>
 </body>
 </html>

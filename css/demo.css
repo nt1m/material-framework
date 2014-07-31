@@ -1,5 +1,20 @@
-.card {margin-bottom: 100px; height: 100px;}
+body {margin:0;padding: 0;}
+h1, h2 {margin-left: 20px;}
+.card {margin: 20px;padding: 10px}
+#card-demo .card {
+    margin-bottom: 100px;
+    height: 100px;
+}
 .checkbox, .radio, .text-input, .button, .switch, .fab {
     margin: 10px;
 }
-.button {padding: 8px 15px;}
+.button {
+    padding: 8px 15px;
+}
+.header {
+    background:#D23F31;
+    color: white;
+    overflow: auto;
+    margin: 0;
+    height: auto;
+}
