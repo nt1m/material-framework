@@ -23,6 +23,8 @@ h1, h2 {
 }
 .checkbox, .radio, .button, .switch, .fab, .icon-button {
     cursor:pointer;
+    -moz-user-select: none;
+    user-select: none;
 }
 .checkbox input[type="checkbox"],
 .radio input[type="radio"], 
