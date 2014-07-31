@@ -294,7 +294,8 @@ h1, h2 {
 .toolbar {
     display:block;
     padding: 5px 10px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16)
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+    background-color: white;
 }
 .toolbar > *:not(sub):not(sup) {
     vertical-align: middle;

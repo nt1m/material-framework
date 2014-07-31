@@ -12,15 +12,11 @@ h1, h2 {margin-left: 20px;}
     padding: 8px 15px;
 }
 .header {
-    background:#D23F31;
-    color: white;
-    overflow: auto;
     margin: 0;
     height: auto;
     position: sticky;
     top:0;
     z-index: 999;
-    padding: 0;
 }
 .row {
     display: inline-block;
