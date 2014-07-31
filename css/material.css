@@ -199,8 +199,8 @@ h1, h2 {
     transition: all 0.2s;
     text-align: center;
 }
-.button.colored {
-    color: #4285F4;
+.button.colored , .button.blue {
+    color: #4285F4  !important;
 }
 .button:active::after, .fab:active::after {
     width: 100%;
@@ -210,7 +210,7 @@ h1, h2 {
     border-radius: 0;
 }
 .button:not(.raised) {
-    background: none;
+    background: none !important;
 }
 .button.raised, .fab {
     background-color:#DFDFDF;
@@ -225,8 +225,8 @@ h1, h2 {
                 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
 }
 .colored, .blue {
-    background-color: #4285F4;
-    color: white;
+    background-color: #4285F4 !important;
+    color: white !important;
 }
 .button:disabled {
     background: #EAEAEA !important;
@@ -253,26 +253,26 @@ h1, h2 {
     line-height: 23px;
 }
 .red, .green{
-    color: #FFF;
+    color: #FFF !important;
 }
 .red {
-    background-color: #d23f31;
+    background-color: #d23f31 !important;
 }
 .button.red:not(.raised) {
-    color: #d23f31;
+    color: #d23f31 !important;
 }
 .green, .green {
-    background-color: #259b24;
+    background-color: #259b24 !important;
 }
 .button.green:not(.raised) {
-    color: #259b24;
+    color: #259b24 !important;
 }
 .yellow {
-    background-color: #ffeb3b;
-    color: #000;
+    background-color: #ffeb3b !important;
+    color: #000 !important;
 }
 .button.yellow:not(.raised) {
-    color: #ffeb3b;
+    color: #ffeb3b !important;
 }
 .icon-button {
     width: 40px;
