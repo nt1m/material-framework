@@ -1,7 +1,16 @@
-body {font-family: Roboto, Arial, sans-serif;}
-:focus {outline: none;}
-::-moz-focus-inner {border:none; padding: 0;}
-h1, h2 {font-weight: 300;}
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border:none;
+    padding: 0;
+}
+h1, h2 {
+    font-weight: 300;
+}
 .checkbox, .radio, .text-input, .button, .switch, .fab {
     display:inline-block;
     vertical-align:top;
@@ -117,7 +126,7 @@ h1, h2 {font-weight: 300;}
     background-color: #5A5A5A;
     display:inline-block;
     position:relative;
-    top: -16px;
+    vertical-align: top;
 }
 .switch input:checked + label::before {
     background-color: #0F9D58;
@@ -135,6 +144,7 @@ h1, h2 {font-weight: 300;}
     top:-8px;
     background-color: white;
     transition: box-shadow 0.3s ease, transform 0.3s;
+    vertical-align: top;
 }
 .switch input:checked + label::after {
     background-color: #0F9D58 !important;
