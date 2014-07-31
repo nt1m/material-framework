@@ -275,6 +275,7 @@ h1, h2 {
     transition: background 0.3s ease;
     padding: 8px;
     font:inherit;
+    font-size: 24px;
 }
 .icon-button:active {
     background-color: rgba(210,210,210, 0.27)
@@ -345,3 +346,167 @@ h1, h2 {
     box-shadow: 0px 27px 24px 0px rgba(0, 0, 0, 0.2),
                 0px 40px 77px 0px rgba(0, 0, 0, 0.22);
 }
+@font-face {
+  font-family: 'google-icons';
+  src: url('../font/google-icons.eot?56983515');
+  src: url('../font/google-icons.eot?56983515#iefix') format('embedded-opentype'),
+       url('../font/google-icons.woff?56983515') format('woff'),
+       url('../font/google-icons.ttf?56983515') format('truetype'),
+       url('../font/google-icons.svg?56983515#google-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'google-icons';
+    src: url('../font/google-icons.svg?56983515#google-icons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:not(.icon-button):before, [class*=" icon-"]:not(.icon-button):before {
+  font-family: "google-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-person:before { content: '\e800'; } /* 'î €' */
+.icon-person-add:before { content: '\e801'; } /* 'î ' */
+.icon-photo-library:before { content: '\e802'; } /* 'î ‚' */
+.icon-play:before { content: '\e803'; } /* 'î ƒ' */
+.icon-poll:before { content: '\e804'; } /* 'î „' */
+.icon-popular:before { content: '\e805'; } /* 'î …' */
+.icon-print:before { content: '\e806'; } /* 'î †' */
+.icon-refresh:before { content: '\e807'; } /* 'î ‡' */
+.icon-replay:before { content: '\e808'; } /* 'î ˆ' */
+.icon-reply:before { content: '\e809'; } /* 'î ‰' */
+.icon-reply-all:before { content: '\e80a'; } /* 'î Š' */
+.icon-report:before { content: '\e80b'; } /* 'î ‹' */
+.icon-rotate-left:before { content: '\e80c'; } /* 'î Œ' */
+.icon-rotate-right:before { content: '\e80d'; } /* 'î ' */
+.icon-save:before { content: '\e80e'; } /* 'î Ž' */
+.icon-search:before { content: '\e80f'; } /* 'î ' */
+.icon-select-all:before { content: '\e810'; } /* 'î ' */
+.icon-shopping-basket:before { content: '\e812'; } /* 'î ’' */
+.icon-shopping-cart:before { content: '\e813'; } /* 'î “' */
+.icon-shuffle:before { content: '\e814'; } /* 'î ”' */
+.icon-sidebar:before { content: '\e815'; } /* 'î •' */
+.icon-skip-next:before { content: '\e816'; } /* 'î –' */
+.icon-skip-previous:before { content: '\e817'; } /* 'î —' */
+.icon-star:before { content: '\e818'; } /* 'î ˜' */
+.icon-star-half:before { content: '\e819'; } /* 'î ™' */
+.icon-star-outline:before { content: '\e81a'; } /* 'î š' */
+.icon-stop:before { content: '\e81b'; } /* 'î ›' */
+.icon-swap-horizontal:before { content: '\e81c'; } /* 'î œ' */
+.icon-swap-vertical:before { content: '\e81d'; } /* 'î ' */
+.icon-thumb-down:before { content: '\e81e'; } /* 'î ž' */
+.icon-thumb-up:before { content: '\e81f'; } /* 'î Ÿ' */
+.icon-trash:before { content: '\e820'; } /* 'î  ' */
+.icon-undo:before { content: '\e821'; } /* 'î ¡' */
+.icon-upload:before { content: '\e822'; } /* 'î ¢' */
+.icon-usb:before { content: '\e823'; } /* 'î £' */
+.icon-video:before { content: '\e824'; } /* 'î ¤' */
+.icon-video-off:before { content: '\e825'; } /* 'î ¥' */
+.icon-view-array:before { content: '\e826'; } /* 'î ¦' */
+.icon-view-column:before { content: '\e827'; } /* 'î §' */
+.icon-view-grid:before { content: '\e828'; } /* 'î ¨' */
+.icon-view-headline:before { content: '\e829'; } /* 'î ©' */
+.icon-view-list:before { content: '\e82a'; } /* 'î ª' */
+.icon-view-quilt:before { content: '\e82b'; } /* 'î «' */
+.icon-view-stream:before { content: '\e82c'; } /* 'î ¬' */
+.icon-visibility:before { content: '\e82d'; } /* 'î ­' */
+.icon-visibility-off:before { content: '\e82e'; } /* 'î ®' */
+.icon-volume-down:before { content: '\e82f'; } /* 'î ¯' */
+.icon-volume-mute:before { content: '\e830'; } /* 'î °' */
+.icon-volume-off:before { content: '\e831'; } /* 'î ±' */
+.icon-volume-up:before { content: '\e832'; } /* 'î ²' */
+.icon-world:before { content: '\e833'; } /* 'î ³' */
+.icon-write:before { content: '\e834'; } /* 'î ´' */
+.icon-youtube:before { content: '\e835'; } /* 'î µ' */
+.icon-add:before { content: '\e836'; } /* 'î ¶' */
+.icon-add-alarm:before { content: '\e837'; } /* 'î ·' */
+.icon-alarms:before { content: '\e838'; } /* 'î ¸' */
+.icon-apps:before { content: '\e839'; } /* 'î ¹' */
+.icon-archive:before { content: '\e83a'; } /* 'î º' */
+.icon-attachment:before { content: '\e83b'; } /* 'î »' */
+.icon-back:before { content: '\e83c'; } /* 'î ¼' */
+.icon-bluetooth:before { content: '\e83d'; } /* 'î ½' */
+.icon-bluetooth-off:before { content: '\e83e'; } /* 'î ¾' */
+.icon-book:before { content: '\e83f'; } /* 'î ¿' */
+.icon-cake:before { content: '\e840'; } /* 'î¡€' */
+.icon-call:before { content: '\e841'; } /* 'î¡' */
+.icon-captions:before { content: '\e842'; } /* 'î¡‚' */
+.icon-check:before { content: '\e843'; } /* 'î¡ƒ' */
+.icon-close:before { content: '\e844'; } /* 'î¡„' */
+.icon-cloud:before { content: '\e845'; } /* 'î¡…' */
+.icon-copy:before { content: '\e846'; } /* 'î¡†' */
+.icon-crop:before { content: '\e847'; } /* 'î¡‡' */
+.icon-cut:before { content: '\e848'; } /* 'î¡ˆ' */
+.icon-directions:before { content: '\e849'; } /* 'î¡‰' */
+.icon-download:before { content: '\e84a'; } /* 'î¡Š' */
+.icon-fast-forward:before { content: '\e84b'; } /* 'î¡‹' */
+.icon-fast-rewind:before { content: '\e84c'; } /* 'î¡Œ' */
+.icon-flag:before { content: '\e84d'; } /* 'î¡' */
+.icon-forward:before { content: '\e84e'; } /* 'î¡Ž' */
+.icon-google:before { content: '\e84f'; } /* 'î¡' */
+.icon-hd:before { content: '\e850'; } /* 'î¡' */
+.icon-history:before { content: '\e851'; } /* 'î¡‘' */
+.icon-home:before { content: '\e852'; } /* 'î¡’' */
+.icon-image:before { content: '\e853'; } /* 'î¡“' */
+.icon-inbox:before { content: '\e854'; } /* 'î¡”' */
+.icon-info:before { content: '\e855'; } /* 'î¡•' */
+.icon-language:before { content: '\e856'; } /* 'î¡–' */
+.icon-launch:before { content: '\e857'; } /* 'î¡—' */
+.icon-link:before { content: '\e858'; } /* 'î¡˜' */
+.icon-location:before { content: '\e859'; } /* 'î¡™' */
+.icon-location-off:before { content: '\e85a'; } /* 'î¡š' */
+.icon-lock:before { content: '\e85b'; } /* 'î¡›' */
+.icon-loop:before { content: '\e85c'; } /* 'î¡œ' */
+.icon-mail:before { content: '\e85d'; } /* 'î¡' */
+.icon-mail-open:before { content: '\e85e'; } /* 'î¡ž' */
+.icon-map:before { content: '\e85f'; } /* 'î¡Ÿ' */
+.icon-menu:before { content: '\e860'; } /* 'î¡ ' */
+.icon-message:before { content: '\e861'; } /* 'î¡¡' */
+.icon-message-empty:before { content: '\e862'; } /* 'î¡¢' */
+.icon-mic:before { content: '\e863'; } /* 'î¡£' */
+.icon-mic-off:before { content: '\e864'; } /* 'î¡¤' */
+.icon-minus:before { content: '\e865'; } /* 'î¡¥' */
+.icon-more:before { content: '\e866'; } /* 'î¡¦' */
+.icon-movie:before { content: '\e867'; } /* 'î¡§' */
+.icon-news:before { content: '\e868'; } /* 'î¡¨' */
+.icon-notifications:before { content: '\e869'; } /* 'î¡©' */
+.icon-notifications-none:before { content: '\e86a'; } /* 'î¡ª' */
+.icon-notifications-off:before { content: '\e86b'; } /* 'î¡«' */
+.icon-paste:before { content: '\e86c'; } /* 'î¡¬' */
+.icon-pause:before { content: '\e86d'; } /* 'î¡­' */
+.icon-calendar:before { content: '\e86e'; } /* 'î¡®' */
+.icon-camera:before { content: '\e86f'; } /* 'î¡¯' */
+.icon-share-1:before { content: '\e870'; } /* 'î¡°' */

@@ -22,3 +22,12 @@ h1, h2 {margin-left: 20px;}
     z-index: 999;
     padding: 0;
 }
+.row {
+    display: inline-block;
+    width: calc(25% - 100px);
+    margin-right: 20px; 
+}
+.row .i-code {
+    float: right;
+    color: gray;
+}
