@@ -1,0 +1,5 @@
+.card {margin-bottom: 100px; height: 100px;}
+.checkbox, .radio, .text-input, .button, .switch, .fab {
+    margin: 10px;
+}
+.button {padding: 8px 15px;}
