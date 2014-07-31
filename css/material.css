@@ -286,6 +286,7 @@ h1, h2 {
     border: none;
 }
 .slider, x::-webkit-slider-thumb {
+    -webkit-appearance: none;
     -moz-appearance: none;
     height: 2px;
     background-color:#C8C8C8;
