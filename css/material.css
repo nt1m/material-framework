@@ -176,6 +176,10 @@ h1, h2 {
     border-bottom-color: #4285F4;
     border-bottom-width: 2px;
 }
+.ripple {
+    position: relative;
+    display: inline-block;
+}
 .button, .fab {
     position: relative;
     border: none;
@@ -189,7 +193,7 @@ h1, h2 {
     transition: all 0.1s;
     text-align: center;
 }
-.button::after, .fab::after {
+.ripple::after, .button::after, .fab::after {
     content:"";
     position: absolute;
     top: 0;
@@ -197,17 +201,22 @@ h1, h2 {
     background-color: rgba(204,204,204, 0.29);
     height: 100%;
     width: 0%;
-    border-radius: 10px / 30px;
+    border-radius: 0.75em / 2em;
     transition: all 0.2s;
     text-align: center;
 }
-
-.button:active::after, .fab:active::after {
-    width: 100%;
+.ripple.circle::after, .fab::after {
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    border-radius: 100% !important;
+}
+.ripple:active::after, .button:active::after, .fab:active::after {
+    width: 100% !important;
     left:0;
-    top: 0;
-    height: 100%;
-    border-radius: 0;
+    top: 0 !important;
+    height: 100% !important;
+    border-radius: 0 !important;
 }
 .button:not(.raised) {
     background: none !important;
@@ -236,12 +245,6 @@ h1, h2 {
     border-radius: 100%;
     font-size: 24px;
     box-sizing:border-box;
-}
-.fab::after {
-    width: 0px;
-    height: 0px;
-    top: 50%;
-    border-radius: 100% !important;
 }
 .fab.small {
     width: 40px;
@@ -278,6 +281,7 @@ h1, h2 {
 .button.yellow:not(.raised) {
     color: #ffeb3b !important;
 }
+
 .icon-button {
     width: 40px;
     height: 40px;
