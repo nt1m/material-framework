@@ -245,11 +245,14 @@ h1, h2 {
     border-radius: 100%;
     font-size: 24px;
     box-sizing:border-box;
+    color: #000;
+    padding: 15px 10px;
 }
 .fab.small {
     width: 40px;
     height: 40px;
     line-height: 23px;
+    padding: 8px;
 }
 
 .red, .green, .blue {
