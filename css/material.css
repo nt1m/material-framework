@@ -418,13 +418,14 @@ h1, h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: white;
+	color: #F1F1F1;
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
 	line-height: 22px;
-	padding: 18px 24px;
 }
 .toast-label {
 	-ms-flex: 1;
 	flex: 1;
+	padding: 16px 24px 12px;
 }
 .card-container {background-color: #E5E5E5}
 .card {
