@@ -426,7 +426,7 @@ h1, h2 {
 .toast-label {
 	-ms-flex: 1;
 	flex: 1;
-	padding: 16px 24px 12px;
+	padding: 12px 24px 12px;
 }
 .toast .button {
 	margin: 0px;
