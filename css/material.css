@@ -181,7 +181,7 @@ h1, h2 {
     border-bottom-color: #4285F4;
     border-bottom-width: 2px;
 }
-.ripple {
+.ripple, [ripple] {
     position: relative;
     display: inline-block;
 }
@@ -198,7 +198,7 @@ h1, h2 {
     transition: all 0.1s;
     text-align: center;
 }
-.ripple::after, .button::after, .fab::after {
+.ripple::after, .button::after, .fab::after, [ripple]::after {
     content:"";
     position: absolute;
     top: 0;
@@ -210,13 +210,13 @@ h1, h2 {
     transition: all 0.2s;
     text-align: center;
 }
-.ripple.circle::after, .fab::after {
+.ripple.circle::after, .fab::after, [ripple="circle"] {
     width: 0px;
     height: 0px;
     top: 50%;
     border-radius: 100% !important;
 }
-.ripple:active::after, .button:active::after, .fab:active::after {
+.ripple:active::after, .button:active::after, .fab:active::after, [ripple]:active::after {
     width: 100% !important;
     left:0;
     top: 0 !important;
@@ -316,6 +316,33 @@ h1, h2 {
 }
 .toolbar-label {
     margin: 0 5px;
+}
+.tabs {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    height: 40px;
+    margin: 0;
+}
+.tabs > li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.tabs > li.selected {
+    border-bottom: 2px solid currentColor;
+}
+.tabs > li > a {
+    display: block;
+    width: 100%;
+    color: inherit;
 }
 .slider::-moz-range-track {
     -moz-appearance: none;
