@@ -341,6 +341,9 @@ h1, h2 {
     text-transform: uppercase;
     text-align: center;
 }
+.tabs > li:not(.selected) {
+    opacity: 0.6;
+}
 .tabs > li.selected {
     border-bottom: 2px solid currentColor;
 }
