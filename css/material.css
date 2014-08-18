@@ -427,6 +427,11 @@ h1, h2 {
 	flex: 1;
 	padding: 16px 24px 12px;
 }
+.toast .button {
+	margin: 0px;
+	align-self: stretch;
+	font-size: inherit;
+}
 .card-container {background-color: #E5E5E5}
 .card {
     background-color: #FFF;
