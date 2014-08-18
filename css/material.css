@@ -335,6 +335,11 @@ h1, h2 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
 }
 .tabs > li.selected {
     border-bottom: 2px solid currentColor;
@@ -343,6 +348,7 @@ h1, h2 {
     display: block;
     width: 100%;
     color: inherit;
+    text-decoration: none;
 }
 .slider::-moz-range-track {
     -moz-appearance: none;
