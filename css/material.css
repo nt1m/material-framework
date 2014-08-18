@@ -323,6 +323,7 @@ h1, h2 {
     display: flex;
     padding: 0;
     height: 40px;
+    margin: 0;
 }
 .tabs > li {
     -webkit-flex: 1;
@@ -332,6 +333,8 @@ h1, h2 {
     height: 40px;
     display: inline-block;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .tabs > li.selected {
     border-bottom: 2px solid currentColor;
@@ -339,6 +342,7 @@ h1, h2 {
 .tabs > li > a {
     display: block;
     width: 100%;
+    color: inherit;
 }
 .slider::-moz-range-track {
     -moz-appearance: none;
