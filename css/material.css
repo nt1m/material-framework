@@ -223,6 +223,10 @@ h1, h2 {
     height: 100% !important;
     border-radius: 0 !important;
 }
+[ripple="false"]::after, [ripple="none"]::after {
+	all: unset;
+	display: none;
+}
 .button:not(.raised) {
     background: none !important;
 }
@@ -402,6 +406,25 @@ h1, h2 {
 }
 .slider:active::-webkit-slider-thumb {
     transform: scale(2.66)
+}
+.toast {
+	transition-property: opacity, bottom, left, right, width, margin, border-radius;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+	font-size: 14px;
+	min-height: 14px;
+	background-color: #323232;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	line-height: 22px;
+	padding: 18px 24px;
+}
+.toast-label {
+	-ms-flex: 1;
+	flex: 1;
 }
 .card-container {background-color: #E5E5E5}
 .card {
