@@ -5,7 +5,7 @@ h1, h2 {margin-left: 20px;}
     margin-bottom: 100px;
     height: 100px;
 }
-.checkbox, .radio, .text-input, .button, .switch, .fab {
+.checkbox, .radio, .text-input, .button, .switch, .fab, .toast {
     margin: 10px;
 }
 .button {
