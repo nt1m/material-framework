@@ -317,6 +317,29 @@ h1, h2 {
 .toolbar-label {
     margin: 0 5px;
 }
+.tabs {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    height: 40px;
+}
+.tabs > li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.tabs > li.selected {
+    border-bottom: 2px solid currentColor;
+}
+.tabs > li > a {
+    display: block;
+    width: 100%;
+}
 .slider::-moz-range-track {
     -moz-appearance: none;
     height: 2px;
