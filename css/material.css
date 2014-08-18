@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic);
 body {
     font-family: Roboto, Arial, sans-serif;
 }
@@ -67,7 +68,6 @@ h1, h2 {
     height: 18px;
     display: inline-block;
     /*transition: border-color 0.3s, transform 0.3s;*/
-    
     position: relative;
     margin-top: 4px;
     margin-left: 4px;
@@ -90,6 +90,7 @@ h1, h2 {
     margin-bottom: 0;
     animation: checkbox2 0.3s alternate;
 }
+/* We're duplicating the animation since the first animation already ran */
 @keyframes checkbox {
     0% {transform: none;}
     50% {transform: scale(0.1);}
