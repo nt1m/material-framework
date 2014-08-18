@@ -18,6 +18,9 @@ h1, h2 {margin-left: 20px;}
     top:0;
     z-index: 999;
 }
+.toolbar-group {
+    margin: 10px 0;
+}
 .row {
     display: inline-block;
     width: calc(25% - 100px);
