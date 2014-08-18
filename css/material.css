@@ -421,11 +421,17 @@ h1, h2 {
 	color: #F1F1F1;
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
 	line-height: 22px;
+	border-radius: 2px;
 }
 .toast-label {
 	-ms-flex: 1;
 	flex: 1;
 	padding: 16px 24px 12px;
+}
+.toast .button {
+	margin: 0px;
+	align-self: stretch;
+	font-size: inherit;
 }
 .card-container {background-color: #E5E5E5}
 .card {
