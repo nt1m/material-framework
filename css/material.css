@@ -542,4 +542,4 @@ h1, h2 {
 .icon-pause:before { content: '\e86d'; } /* 'î¡­' */
 .icon-calendar:before { content: '\e86e'; } /* 'î¡®' */
 .icon-camera:before { content: '\e86f'; } /* 'î¡¯' */
-.icon-share-1:before { content: '\e870'; } /* 'î¡°' */
+.icon-share:before { content: '\e870'; } /* 'î¡°' */
