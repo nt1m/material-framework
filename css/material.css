@@ -156,7 +156,7 @@ h1, h2 {
     left: -8px;
     top:-8px;
     background-color: white;
-    transition: box-shadow 0.3s ease, transform 0.3s;
+    transition: box-shadow 0.3s ease, transform 0.2s;
     vertical-align: top;
 }
 .switch input:checked + label::after {
