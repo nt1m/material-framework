@@ -460,12 +460,14 @@ h1, h2 {
 .list > li .item-text {
 	font-size: 16px;
 	display: inline-block;
+	vertical-align: top;
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 }
 .list > li .secondary-text {
 	font-size: 14px;
+	display: block;
 }
 .list > li .item-action {
 	height: 40px;
