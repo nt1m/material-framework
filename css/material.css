@@ -210,7 +210,7 @@ h1, h2 {
     transition: all 0.2s;
     text-align: center;
 }
-.ripple.circle::after, .fab::after, [ripple="circle"] {
+.ripple.circle::after, .fab::after, [ripple="circle"]::after {
     width: 0px;
     height: 0px;
     top: 50%;
