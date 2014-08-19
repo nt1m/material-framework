@@ -445,6 +445,9 @@ h1, h2 {
 .list > li {
 	margin: 0;
 	padding: 8px 16px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 .list > li.divider {
 	background-color: rgba(0,0,0,0.12);
@@ -481,7 +484,7 @@ h1, h2 {
 	margin-left: 16px;
 }
 .list > li i::before {
-	line-height: inherit;
+	line-height: inherit !important;
 }
 .card-container {background-color: #E5E5E5}
 .card {
