@@ -175,7 +175,7 @@ h1, h2 {
     padding: 5px;
     border: none;
     border-bottom: 1px solid #757575;
-    transition: all 0.3s;
+    transition: border-color 0.3s;
     color: #000;
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
@@ -184,6 +184,7 @@ h1, h2 {
 .text-input:focus {
     border-bottom-color: #4285F4;
     border-bottom-width: 2px;
+    padding-bottom: 4px;
 }
 .ripple, [ripple] {
     position: relative;
