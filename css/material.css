@@ -456,6 +456,8 @@ h1, h2 {
 	border-radius: 100%;
 	height: 40px;
 	width: 40px;
+	vertical-align: top;
+	margin-right: 16px;
 }
 .list > li .item-text {
 	font-size: 16px;
@@ -474,6 +476,12 @@ h1, h2 {
 	width: 40px;
 	font-size: 24px;
 	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	margin-left: 16px;
+}
+.list > li i::before {
+	line-height: inherit;
 }
 .card-container {background-color: #E5E5E5}
 .card {
