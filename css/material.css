@@ -469,6 +469,7 @@ h1, h2 {
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+	align-self: center;
 }
 .list > li .secondary-text {
 	font-size: 14px;
