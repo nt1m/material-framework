@@ -306,7 +306,7 @@ h1, h2 {
     border: none;
     background-color: transparent;
     transition: background 0.3s ease;
-    padding: 8px;
+    padding: 1px;
     color: inherit;
     font:inherit;
     font-size: 24px;
