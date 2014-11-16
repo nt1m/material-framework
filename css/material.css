@@ -25,6 +25,9 @@ body {
     display:inline-block;
     vertical-align:top;
 }
+.color-white {
+    color: white;
+}
 
 /* CSS Ripple */
 .ripple, [ripple] {
