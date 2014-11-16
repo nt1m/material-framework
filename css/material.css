@@ -301,7 +301,7 @@ h1, h2 {
     line-height: 23px;
     padding: 8px;
 }
-.fab .icon::before {
+.fab [class^="icon-"]:not(.icon-button)::before, .fab [class*=" icon-"]:not(.icon-button)::before {
     vertical-align: top;
 }
 
