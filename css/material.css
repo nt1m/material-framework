@@ -143,8 +143,8 @@ h1, h2 {
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     border-radius: 2px;
-    transition: transform .1s;
-    transform: scale(0.5)
+    transition: transform .2s, background .1s;
+    transform: scale(0.1)
 }
 
 .checkbox input[type="checkbox"]:checked + label::before {
