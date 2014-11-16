@@ -94,9 +94,8 @@ h1, h2 {
 .checkbox input[type="checkbox"] + label:active,
 .radio input[type="radio"] + label:active,
 .switch input + label:active::after {
-    box-shadow: 0 0 0 9px rgba(15, 157,88, 0.29);
-    background: rgba(15, 157,88, 0.29);
-       
+    box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
+    background: rgba(204,204,204, 0.8)
 }
 .switch input + label:active::after {
     background: #BDE4D0;
@@ -104,8 +103,8 @@ h1, h2 {
 .checkbox input[type="checkbox"]:checked + label:active,
 .radio input[type="radio"]:checked + label:active,
 .switch input:checked + label:active::after {
-    box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
-    background: rgba(204,204,204, 0.8)
+    box-shadow: 0 0 0 9px rgba(15, 157,88, 0.29);
+    background: rgba(15, 157,88, 0.29);
 }
 .checkbox input[type="checkbox"] + label::after,
 .radio input[type="radio"] + label::before,
