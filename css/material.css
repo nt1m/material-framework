@@ -200,28 +200,29 @@ h1, h2 {
 }
 .switch input+label::before {
     content:"";
-    height: 1px;
+    height: 12px;
     width: 32px;
-    background-color: #5A5A5A;
+    border-radius: 20px;
+    background-color: #B0AFAF;
     display:inline-block;
     position:relative;
     vertical-align: top;
 }
 .switch input:checked + label::before {
-    background-color: #0F9D58;
+    background-color: #B9E3CF;
 }
 .switch input + label::after {
     content:"";
     position: absolute;
     display:inline-block;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    border: 2px solid #5A5A5A;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
     box-sizing: border-box;
     left: -8px;
     top:-8px;
-    background-color: white;
+    background-color: #F1F1F1;
     transition: box-shadow 0.2s ease, transform 0.08s linear;
     vertical-align: top;
 }
