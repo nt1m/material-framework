@@ -287,8 +287,6 @@ h1, h2 {
 /* Fabs */
 .fab {
     background-color: #FFF;
-}
-.fab {
     width: 56px;
     height: 56px;
     border-radius: 100%;
@@ -302,6 +300,9 @@ h1, h2 {
     height: 40px;
     line-height: 23px;
     padding: 8px;
+}
+.fab .icon::before {
+    vertical-align: top;
 }
 
 /* Sliders */
