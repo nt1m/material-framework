@@ -3,6 +3,7 @@
 /** http://twitter.com/therealntim **/
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic);
+/* Global */
 body {
     font-family: Roboto, Arial, sans-serif;
     color: rgba(0,0,0,0.87);
@@ -14,12 +15,6 @@ body {
     border:none;
     padding: 0;
 }
-h1, h2 {
-    font-weight: 300;
-}
-.secondary-text {
-	color: rgba(0,0,0,0.54);
-}
 .float-left {
     float: left;
 }
@@ -30,6 +25,82 @@ h1, h2 {
     display:inline-block;
     vertical-align:top;
 }
+
+/* CSS Ripple */
+.ripple, [ripple] {
+    position: relative;
+    display: inline-block;
+}
+.ripple::after, .button::after, .fab::after, [ripple]::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: rgba(204,204,204, 0.29);
+    height: 100%;
+    width: 0%;
+    border-radius: 0.75em / 2em;
+    transition: all 0.2s;
+    text-align: center;
+}
+.ripple.circle::after, .fab::after, [ripple="circle"]::after {
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    border-radius: 100% !important;
+}
+.ripple:active::after, .button:active::after, .fab:active::after, [ripple]:active::after {
+    width: 100% !important;
+    left:0;
+    top: 0 !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+[ripple="false"]::after, [ripple="none"]::after {
+	all: unset;
+	display: none;
+}
+
+/* Color classes (will be replaced) */
+.red, .green, .blue {
+    color: #FFF !important;
+}
+.blue {
+    background-color: #4285F4 !important;
+    color: white !important;
+}
+.button.blue:not(.raised) {
+    color: #4285F4  !important;
+}
+.red {
+    background-color: #d23f31 !important;
+}
+.button.red:not(.raised) {
+    color: #d23f31 !important;
+}
+.green, .green {
+    background-color: #259b24 !important;
+}
+.button.green:not(.raised) {
+    color: #259b24 !important;
+}
+.yellow {
+    background-color: #ffeb3b !important;
+    color: #000 !important;
+}
+.button.yellow:not(.raised) {
+    color: #ffeb3b !important;
+}
+
+/* Typography */
+h1, h2 {
+    font-weight: 300;
+}
+.secondary-text {
+    color: rgba(0,0,0,0.54);
+}
+
+/* Switches */
 .checkbox, .radio, .button, .switch, .fab, .icon-button {
     cursor:pointer;
     -moz-user-select: none;
@@ -75,7 +146,6 @@ h1, h2 {
     width: 18px;
     height: 18px;
     display: inline-block;
-    /*transition: border-color 0.3s, transform 0.3s;*/
     position: relative;
     margin-top: 4px;
     margin-left: 4px;
@@ -117,13 +187,13 @@ h1, h2 {
 }
 .radio input[type="radio"] + label::before {
     position:absolute;
-    top: 2px;
-    left: 2px;
+    top: 6px;
+    left: 6px;
     border-radius: 100%;
-    width: 18px;
-    height: 18px;
+    width: 10px;
+    height: 10px;
     border: none;
-    background:#0F9D58;
+    background: #0F9D58;
     transform: scale(0);
     transition: all 0.2s;
 }
@@ -171,6 +241,7 @@ h1, h2 {
     height: 18px;
     margin-top: -1px;
 }
+/* Text inputs */
 .text-input {
     padding: 5px;
     border: none;
@@ -186,10 +257,8 @@ h1, h2 {
     border-bottom-width: 2px;
     padding-bottom: 4px;
 }
-.ripple, [ripple] {
-    position: relative;
-    display: inline-block;
-}
+
+/* Buttons */
 .button, .fab {
     position: relative;
     border: none;
@@ -203,35 +272,6 @@ h1, h2 {
     transition: all 0.1s;
     text-align: center;
 }
-.ripple::after, .button::after, .fab::after, [ripple]::after {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background-color: rgba(204,204,204, 0.29);
-    height: 100%;
-    width: 0%;
-    border-radius: 0.75em / 2em;
-    transition: all 0.2s;
-    text-align: center;
-}
-.ripple.circle::after, .fab::after, [ripple="circle"]::after {
-    width: 0px;
-    height: 0px;
-    top: 50%;
-    border-radius: 100% !important;
-}
-.ripple:active::after, .button:active::after, .fab:active::after, [ripple]:active::after {
-    width: 100% !important;
-    left:0;
-    top: 0 !important;
-    height: 100% !important;
-    border-radius: 0 !important;
-}
-[ripple="false"]::after, [ripple="none"]::after {
-	all: unset;
-	display: none;
-}
 .button:not(.raised) {
     background: none !important;
 }
@@ -239,9 +279,6 @@ h1, h2 {
     background-color:#DFDFDF;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26),
                 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
-}
-.fab {
-    background-color: #FFF;
 }
 .button.raised:active, .fab:active {
     box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.2),
@@ -252,6 +289,11 @@ h1, h2 {
     color: #A8A8A8 !important;
     box-shadow: none !important;
     pointer-events: none;
+}
+
+/* Fabs */
+.fab {
+    background-color: #FFF;
 }
 .fab {
     width: 56px;
@@ -269,105 +311,7 @@ h1, h2 {
     padding: 8px;
 }
 
-.red, .green, .blue {
-    color: #FFF !important;
-}
-.blue {
-    background-color: #4285F4 !important;
-    color: white !important;
-}
-.button.blue:not(.raised) {
-    color: #4285F4  !important;
-}
-.red {
-    background-color: #d23f31 !important;
-}
-.button.red:not(.raised) {
-    color: #d23f31 !important;
-}
-.green, .green {
-    background-color: #259b24 !important;
-}
-.button.green:not(.raised) {
-    color: #259b24 !important;
-}
-.yellow {
-    background-color: #ffeb3b !important;
-    color: #000 !important;
-}
-.button.yellow:not(.raised) {
-    color: #ffeb3b !important;
-}
-
-.icon-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    border: none;
-    background-color: transparent;
-    transition: background 0.3s ease;
-    padding: 1px;
-    color: inherit;
-    font:inherit;
-    font-size: 24px;
-}
-.icon-button:active {
-    background-color: rgba(210,210,210, 0.27)
-}
-.toolbar-group {
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16); 
-}
-.toolbar-group .toolbar {
-	box-shadow: none;
-}
-.toolbar {
-    display:block;
-    padding: 5px 10px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
-    background-color: white;
-}
-.toolbar > *:not(sub):not(sup) {
-    vertical-align: middle;
-}
-.toolbar-label {
-    margin: 0 5px;
-}
-.tabs {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    height: 40px;
-    margin: 0;
-}
-.tabs > li {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    line-height: 40px;
-    height: 40px;
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-}
-.tabs > li:not(.selected) {
-    opacity: 0.6;
-}
-.tabs > li.selected {
-    border-bottom: 2px solid currentColor;
-}
-.tabs > li > a {
-    display: block;
-    width: 100%;
-    color: inherit;
-    text-decoration: none;
-}
+/* Sliders */
 .slider::-moz-range-track {
     -moz-appearance: none;
     height: 2px;
@@ -412,6 +356,83 @@ h1, h2 {
 .slider:active::-webkit-slider-thumb {
     transform: scale(2.66)
 }
+
+/* Icon buttons */
+.icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    background-color: transparent;
+    transition: background 0.3s ease;
+    padding: 1px;
+    color: inherit;
+    font:inherit;
+    font-size: 24px;
+}
+.icon-button:active {
+    background-color: rgba(210,210,210, 0.27)
+}
+
+/* Toolbars */
+.toolbar-group {
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16); 
+}
+.toolbar-group .toolbar {
+	box-shadow: none;
+}
+.toolbar {
+    display:block;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+    background-color: white;
+}
+.toolbar > *:not(sub):not(sup) {
+    vertical-align: middle;
+}
+.toolbar-label {
+    margin: 0 5px;
+}
+
+/* Tabs */
+.tabs {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    height: 40px;
+    margin: 0;
+}
+.tabs > li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+.tabs > li:not(.selected) {
+    opacity: 0.6;
+}
+.tabs > li.selected {
+    border-bottom: 2px solid currentColor;
+}
+.tabs > li > a {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Toasts */
 .toast {
 	transition-property: opacity, bottom, left, right, width, margin, border-radius;
 	transition-duration: 0.5s;
@@ -438,6 +459,8 @@ h1, h2 {
 	align-self: stretch;
 	font-size: inherit;
 }
+
+/* Lists */
 .list {
 	margin: 0;
 	padding: 0;
@@ -488,6 +511,8 @@ h1, h2 {
 .list > li i::before {
 	line-height: inherit !important;
 }
+
+/* Cards */
 .card-container {background-color: #E5E5E5}
 .card {
     background-color: #FFF;
@@ -510,6 +535,8 @@ h1, h2 {
     box-shadow: 0px 27px 24px 0px rgba(0, 0, 0, 0.2),
                 0px 40px 77px 0px rgba(0, 0, 0, 0.22);
 }
+
+/* Icons (will need to update this) */
 @font-face {
   font-family: 'google-icons';
   src: url('../font/google-icons.eot?56983515');
