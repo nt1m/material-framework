@@ -42,6 +42,7 @@ body {
     border-radius: 0.75em / 2em;
     transition: all 0.2s;
     text-align: center;
+    pointer-events: none;
 }
 .ripple.circle::after, .fab::after, [ripple="circle"]::after {
     width: 0px;
