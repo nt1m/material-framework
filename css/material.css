@@ -84,8 +84,8 @@ h1, h2 {
 .checkbox input[type="checkbox"] + label,
 .radio input[type="radio"] + label {
     border-radius: 100%;
-    width: 1.875em;
-    height: 1.875em;
+    width: 1em;
+    height: 1em;
     display: inline-block;
     background: transparent;
     transition: all 0.2s;
