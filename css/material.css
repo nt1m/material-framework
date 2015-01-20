@@ -287,19 +287,19 @@ h1, h2 {
 /* Fabs */
 .fab {
     background-color: #FFF;
-    width: 2.33333333333333em;
-    height: 2.33333333333333em;
+    width: 2.33em;
+    height: 2.33em;
     border-radius: 100%;
     font-size: 1.5em;
     box-sizing:border-box;
     color: #000;
-    padding: 0.625em 0.416666666666667em;
+    padding: 0.625em 0.417em;
 }
 .fab.small {
-    width: 1.66666666666667em;
-    height: 1.66666666666667em;
+    width: 1.67em;
+    height: 1.67em;
     line-height: 23px;
-    padding: 0.3333333333em;
+    padding: 0.33em;
 }
 .fab [class^="icon-"]:not(.icon-button)::before, .fab [class*=" icon-"]:not(.icon-button)::before {
     vertical-align: top;
@@ -380,8 +380,8 @@ h1, h2 {
 
 /* Icon buttons */
 .icon-button {
-    width: 1.66666666666667em;
-    height: 1.66666666666667em;
+    width: 1.67em;
+    height: 1.67em;
     border-radius: 100%;
     border: none;
     background-color: transparent;
@@ -428,8 +428,8 @@ h1, h2 {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    line-height: 2.85714285714286em;
-    height: 2.85714285714286em;
+    line-height: 2.857em;
+    height: 2.857em;
     display: inline-block;
     box-sizing: border-box;
     margin: 0;
@@ -467,7 +467,7 @@ h1, h2 {
 	align-items: center;
 	color: #F1F1F1;
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
-	line-height: 1.57142857142857em;
+	line-height: 1.57em;
 	border-radius: 2px;
 }
 .toast-label {
