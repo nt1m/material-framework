@@ -24,6 +24,7 @@ body {
 .checkbox, .radio, .text-input, .button, .switch, .fab {
     display:inline-block;
     vertical-align:top;
+    border:0;
 }
 
 /* CSS Ripple */
@@ -63,9 +64,31 @@ body {
 }
 
 /* Typography */
-h1, h2 {
+h1, .heading {    
     font-weight: 300;
 }
+h2, .subheading {
+    padding:0;
+    margin:0;
+    padding-left: 16px;
+    font-size: 1em;
+    line-height: 3em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-weight: 400;
+    background-color:inherit;
+    z-index: 99;
+    color: rgba(0,0,0,0.54);
+}
+.card > h2, .card > .subheading {
+    top: -10px; /* cards have some padding, we need to move the subheader up to cover that */
+}
+
+p {
+    line-height: 1.5em;
+}
+
 .secondary-text {
     color: rgba(0,0,0,0.54);
 }
@@ -144,12 +167,14 @@ h1, h2 {
     border-radius: 0.1em;
     transition: transform .2s, background .1s;
     transform: scale(0.1)
+    -webkit-transform: scale(0.1);
 }
 
 .checkbox input[type="checkbox"]:checked + label::before {
     background-color: currentColor;
     opacity: 1;
     transform: none;
+    -webkit-transform:none;
 }
 .checkbox input[type="checkbox"] + label::after {
     border-style: solid;
@@ -165,6 +190,7 @@ h1, h2 {
     top: 50%;
     width: 0.7em;
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 .checkbox input[type="checkbox"]:checked + label::after {
     border-color: white;
@@ -185,10 +211,12 @@ h1, h2 {
     border: none;
     background: #0F9D58;
     transform: scale(0);
+    -webkit-transform: scale(0);
     transition: all 0.2s;
 }
 .radio input[type="radio"]:checked + label::before {
     transform: none;
+    -webkit-transform: none;
 }
 .radio input[type="radio"]:checked + label::after {
     border-color: #0F9D58;
@@ -228,6 +256,7 @@ h1, h2 {
     background-color: #0F9D58 !important;
     border: none;
     transform: translateX(21px);
+    -webkit-transform: translateX(21px);
     width: 18px;
     height: 18px;
     margin-top: -1px;
@@ -349,9 +378,12 @@ h1, h2 {
     background-image: none;
     background-color: currentColor;
     transition: all 0.2s ease;
+    margin-top:-0.375em; /* fix webkit-specific bug */
 }
 .slider:active::-webkit-slider-thumb {
-    transform: scale(2.66)
+    transform: scale(2.66);
+    -webkit-transform: scale(2.66);
+    margin-top: -0.65em; /* fix webkit-specific bug */
 }
 .slider::-ms-fill-lower, 
 .slider::-ms-fill-upper {
@@ -462,6 +494,7 @@ h1, h2 {
 	min-height: 14px;
 	background-color: #323232;
 	display: -ms-flexbox;
+    display:-webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -471,6 +504,7 @@ h1, h2 {
 	border-radius: 2px;
 }
 .toast-label {
+    -webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 	padding: 12px 24px 12px;
@@ -478,6 +512,7 @@ h1, h2 {
 .toast .button {
 	margin: 0px;
 	align-self: stretch;
+    -webkit-align-self: stretch;
 	font-size: inherit;
 }
 
