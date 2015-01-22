@@ -1,6 +1,15 @@
-body {margin:0;padding: 0;}
-h1, h2 {margin-left: 20px;}
-.card {margin: 20px;padding: 10px}
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+h1, h2 {
+    margin-left: 20px;
+}
+.section {
+    border-bottom: 1px solid #CDCDCD;
+    padding: 20px;
+}
 #card-demo .card {
     margin-bottom: 100px;
     height: 100px;
