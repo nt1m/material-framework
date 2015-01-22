@@ -70,7 +70,7 @@ h1, .heading {
 h2, .subheading {
 	padding: 0;
 	margin: 0;
-	padding-left: 16px;
+	padding-left: 1em;
 	font-size: 1em;
 	line-height: 3em;
 	position: -webkit-sticky;
@@ -597,7 +597,9 @@ p {
 }
 
 /* Cards */
-.card-container {background-color: #E5E5E5}
+.card-container {
+	background-color: #E5E5E5;
+}
 .card {
 	background-color: #FFF;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
