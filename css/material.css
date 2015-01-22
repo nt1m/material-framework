@@ -24,6 +24,7 @@ body {
 .checkbox, .radio, .text-input, .button, .switch, .fab {
     display:inline-block;
     vertical-align:top;
+    border:0;
 }
 
 /* CSS Ripple */
@@ -63,9 +64,33 @@ body {
 }
 
 /* Typography */
-h1, h2 {
+h1, .heading {    
     font-weight: 300;
 }
+h2, .subheading {
+    padding:0;
+    margin:0;
+    padding-left: 16px;
+    font-size: 1em;
+    line-height: 3em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-weight: 400;
+    background-color:inherit;
+    z-index: 99;
+    color: rgba(0,0,0,0.54);
+}
+.card > h2, .card > .subheading {
+    top: -10px; /* cards have some padding, we need to move the subheader up to cover that */
+}
+.section > h2, .section > .subheading {
+    top: -20px; /* sections have some padding, we need to move the subheader up to cover that */
+}
+p {
+    line-height: 1.5em;
+}
+
 .secondary-text {
     color: rgba(0,0,0,0.54);
 }
@@ -142,12 +167,14 @@ h1, h2 {
     height: calc(100% + 0.3em);
     border-radius: 0.1em;
     transition: transform .2s, background .1s;
+    -webkit-transform: scale(0.1);
     transform: scale(0.1)
 }
 
 .checkbox input[type="checkbox"]:checked + label::before {
     background-color: currentColor;
     opacity: 1;
+    -webkit-transform:none;
     transform: none;
 }
 .checkbox input[type="checkbox"] + label::after {
@@ -163,6 +190,7 @@ h1, h2 {
     position: absolute;
     top: 50%;
     width: 0.7em;
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -183,10 +211,12 @@ h1, h2 {
     height: 0.65em;
     border: none;
     background: #0F9D58;
+    -webkit-transform: scale(0);
     transform: scale(0);
     transition: all 0.2s;
 }
 .radio input[type="radio"]:checked + label::before {
+    -webkit-transform: none;
     transform: none;
 }
 .radio input[type="radio"]:checked + label::after {
@@ -226,6 +256,10 @@ h1, h2 {
 .switch input:checked + label::after {
     background-color: #0F9D58 !important;
     border: none;
+    -webkit-transform: translateX(21px);
+    transform: translateX(21px);
+    width: 18px;
+    height: 18px;
     transform: translateX(1.3125em);
     width: 1.125em;
     height: 1.125em;
@@ -351,9 +385,12 @@ h1, h2 {
     background-image: none;
     background-color: currentColor;
     transition: all 0.2s ease;
+    margin-top:-0.375em; /* fix webkit-specific bug */
 }
 .slider:active::-webkit-slider-thumb {
-    transform: scale(2.66)
+    -webkit-transform: scale(2.66);
+    transform: scale(2.66);
+    margin-top: -0.65em; /* fix webkit-specific bug */
 }
 .slider::-ms-fill-lower, 
 .slider::-ms-fill-upper {
@@ -464,6 +501,7 @@ h1, h2 {
 	min-height: 0.875em;
 	background-color: #323232;
 	display: -ms-flexbox;
+    display:-webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -473,12 +511,14 @@ h1, h2 {
 	border-radius: 2px;
 }
 .toast-label {
+    -webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 	padding: 0.75em 1.5em 0.75em;
 }
 .toast .button {
 	margin: 0;
+    -webkit-align-self: stretch;
 	align-self: stretch;
 	font-size: inherit;
 }

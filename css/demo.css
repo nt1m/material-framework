@@ -1,9 +1,12 @@
+body {margin:0;padding: 0;}
+.card {margin: 20px;padding: 10px}
 body {
     margin: 0;
     padding: 0;
     background: white;
 }
 .section {
+    background-color: #FFF;
     border-bottom: 1px solid #CDCDCD;
     padding: 20px;
 }
@@ -21,6 +24,7 @@ body {
     margin: 0;
     height: auto;
     position: sticky;
+    position: -webkit-sticky;
     top:0;
     z-index: 999;
 }
@@ -41,4 +45,8 @@ body {
 .row .i-code {
     float: right;
     color: gray;
+}
+#typo-demo {
+    max-height:225px;
+    overflow:auto;
 }
