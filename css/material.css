@@ -12,7 +12,7 @@ body {
 	outline: none;
 }
 ::-moz-focus-inner {
-	border:none;
+	border: none;
 	padding: 0;
 }
 .float-left {
@@ -22,9 +22,9 @@ body {
 	float: right;
 }
 .checkbox, .radio, .text-input, .button, .switch, .fab {
-	display:inline-block;
-	vertical-align:top;
-	border:0;
+	display: inline-block;
+	vertical-align: top;
+	border: 0;
 }
 
 /* CSS Ripple */
@@ -46,14 +46,14 @@ body {
 	pointer-events: none;
 }
 .ripple.circle::after, .fab::after, [ripple="circle"]::after {
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	top: 50%;
 	border-radius: 100% !important;
 }
 .ripple:active::after, .button:active::after, .fab:active::after, [ripple]:active::after {
 	width: 100% !important;
-	left:0;
+	left: 0;
 	top: 0 !important;
 	height: 100% !important;
 	border-radius: 0 !important;
@@ -68,8 +68,8 @@ h1, .heading {
 	font-weight: 300;
 }
 h2, .subheading {
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 	padding-left: 16px;
 	font-size: 1em;
 	line-height: 3em;
@@ -77,7 +77,7 @@ h2, .subheading {
 	position: sticky;
 	top: 0;
 	font-weight: 400;
-	background-color:inherit;
+	background-color: inherit;
 	z-index: 99;
 	color: rgba(0,0,0,0.54);
 }
@@ -92,12 +92,12 @@ p {
 }
 
 .secondary-text {
-	color: rgba(0,0,0,0.54);
+	color: rgba(0, 0, 0, 0.54);
 }
 
 /* Switches */
 .checkbox, .radio, .button, .switch, .fab, .icon-button {
-	cursor:pointer;
+	cursor: pointer;
 	-moz-user-select: none;
 	user-select: none;
 }
@@ -231,8 +231,8 @@ p {
 	width: 1.8em;
 	border-radius: 1.2em;
 	background-color: #B0AFAF;
-	display:inline-block;
-	position:relative;
+	display: inline-block;
+	position: relative;
 	vertical-align: top;
 }
 .switch input:checked + label::before {
@@ -241,7 +241,7 @@ p {
 .switch input + label::after {
 	content:"";
 	position: absolute;
-	display:inline-block;
+	display: inline-block;
 	width: 1em;
 	height: 1em;
 	border-radius: 50%;
@@ -600,84 +600,71 @@ p {
 .card-container {background-color: #E5E5E5}
 .card {
 	background-color: #FFF;
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26),
-				0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
+	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
 .card[z="2"] {
-	box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.2),
-				0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+	            0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card[z="3"] {
-	box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.24),
-				0px 17px 50px 0px rgba(0, 0, 0, 0.19);
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+	            0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .card[z="4"] {
-	box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.22),
-				0px 25px 55px 0px rgba(0, 0, 0, 0.21);
+	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
+	            0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 .card[z="5"] {
-	box-shadow: 0px 27px 24px 0px rgba(0, 0, 0, 0.2),
-				0px 40px 77px 0px rgba(0, 0, 0, 0.22);
+	box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2),
+	            0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
 /* White color class */
 .color-white {
-	color: white;
+	color: #fff;
 }
 
 /* Icons (will need to update this) */
 @font-face {
-  font-family: 'google-icons';
-  src: url('../font/google-icons.eot?56983515');
-  src: url('../font/google-icons.eot?56983515#iefix') format('embedded-opentype'),
-	   url('../font/google-icons.woff?56983515') format('woff'),
-	   url('../font/google-icons.ttf?56983515') format('truetype'),
-	   url('../font/google-icons.svg?56983515#google-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  	font-family: 'google-icons';
+  	src: url('../font/google-icons.eot?56983515');
+  	src: url('../font/google-icons.eot?56983515#iefix') format('embedded-opentype'),
+	     url('../font/google-icons.woff?56983515') format('woff'),
+	     url('../font/google-icons.ttf?56983515') format('truetype'),
+	     url('../font/google-icons.svg?56983515#google-icons') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-	font-family: 'google-icons';
-	src: url('../font/google-icons.svg?56983515#google-icons') format('svg');
-  }
-}
-*/
  
- [class^="icon-"]:not(.icon-button):before, [class*=" icon-"]:not(.icon-button):before {
-  font-family: "google-icons";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
+[class^="icon-"]:not(.icon-button):before, [class*=" icon-"]:not(.icon-button):before {
+	font-family: "google-icons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
  
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	/* opacity: .8; */
  
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
 	 
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
  
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
  
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120%; */
 }
- 
+
 .icon-person:before { content: '\e800'; } /* 'î €' */
 .icon-person-add:before { content: '\e801'; } /* 'î ' */
 .icon-photo-library:before { content: '\e802'; } /* 'î ‚' */
