@@ -256,16 +256,13 @@ p {
 .switch input:checked + label::after {
     background-color: #0F9D58 !important;
     border: none;
-<<<<<<< HEAD
     transform: translateX(21px);
     -webkit-transform: translateX(21px);
     width: 18px;
     height: 18px;
-=======
     transform: translateX(1.3125em);
     width: 1.125em;
     height: 1.125em;
->>>>>>> FETCH_HEAD
     margin-top: -1px;
 }
 .switch input + label:active::after {
