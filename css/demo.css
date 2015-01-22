@@ -1,52 +1,50 @@
-body {margin:0;padding: 0;}
-.card {margin: 20px;padding: 10px}
 body {
-    margin: 0;
-    padding: 0;
-    background: white;
+	margin: 0;
+	padding: 0;
+	background: #fff;
 }
 .section {
-    background-color: #FFF;
-    border-bottom: 1px solid #CDCDCD;
-    padding: 20px;
+	background-color: #fff;
+	border-bottom: 1px solid #cdcdcd;
+	padding: 20px;
 }
 #card-demo .card {
-    margin-bottom: 100px;
-    height: 100px;
+	margin-bottom: 100px;
+	height: 100px;
 }
 .checkbox, .radio, .text-input, .button, .switch, .fab, .toast {
-    margin: 10px;
+	margin: 10px;
 }
 .button {
-    padding: 8px 15px;
+	padding: 8px 15px;
 }
 .header {
-    margin: 0;
-    height: auto;
-    position: sticky;
-    position: -webkit-sticky;
-    top:0;
-    z-index: 999;
+	margin: 0;
+	height: auto;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 999;
 }
 .toolbar-group {
-    margin: 10px 0;
+	margin: 10px 0;
 }
 #icons {
-  text-align: center;
+	text-align: center;
 }
 .row {
-    display: inline-block;
-    width:20%;
-    margin-right: 2%;
-    margin-left: 2%;
-    min-width: 250px;
-    text-align: left;
+	display: inline-block;
+	width: 20%;
+	margin-right: 2%;
+	margin-left: 2%;
+	min-width: 250px;
+	text-align: left;
 }
 .row .i-code {
-    float: right;
-    color: gray;
+	float: right;
+	color: gray;
 }
 #typo-demo {
-    max-height:225px;
-    overflow:auto;
+	max-height: 225px;
+	overflow: auto;
 }
