@@ -94,11 +94,10 @@ h1, h2 {
     color: #4caf50;
 }
 .radio input[type="radio"] + label:active {
-    background: rgba(204,204,204, 0.8)
-}
-.switch input + label:active::after {
     box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
+    background: rgba(204,204,204, 0.8);
 }
+
 .radio input[type="radio"]:checked + label:active,
 .switch input:checked + label:active::after {
     box-shadow: 0 0 0 9px rgba(15, 157,88, 0.29);
@@ -110,10 +109,10 @@ h1, h2 {
     border: 2px solid #5A5A5A;
     width: 1em;
     height: 1em;
+    margin-left: -0.12em;
+    margin-top: -0.12em;
     display: inline-block;
     position: relative;
-    margin-top: 0.2em;
-    margin-left: 0.2em;
 }
 .checkbox input[type="checkbox"] + label {
     border-radius: 0.1em;
@@ -231,6 +230,9 @@ h1, h2 {
     width: 1.125em;
     height: 1.125em;
     margin-top: -1px;
+}
+.switch input + label:active::after {
+    box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
 }
 /* Text inputs */
 .text-input {
