@@ -3,9 +3,6 @@ body {
     padding: 0;
     background: white;
 }
-h1, h2 {
-    margin-left: 20px;
-}
 .section {
     border-bottom: 1px solid #CDCDCD;
     padding: 20px;
