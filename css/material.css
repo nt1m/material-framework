@@ -167,15 +167,15 @@ p {
     height: calc(100% + 0.3em);
     border-radius: 0.1em;
     transition: transform .2s, background .1s;
-    transform: scale(0.1)
     -webkit-transform: scale(0.1);
+    transform: scale(0.1)
 }
 
 .checkbox input[type="checkbox"]:checked + label::before {
     background-color: currentColor;
     opacity: 1;
-    transform: none;
     -webkit-transform:none;
+    transform: none;
 }
 .checkbox input[type="checkbox"] + label::after {
     border-style: solid;
@@ -190,8 +190,8 @@ p {
     position: absolute;
     top: 50%;
     width: 0.7em;
-    transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 .checkbox input[type="checkbox"]:checked + label::after {
     border-color: white;
@@ -211,13 +211,13 @@ p {
     height: 0.65em;
     border: none;
     background: #0F9D58;
-    transform: scale(0);
     -webkit-transform: scale(0);
+    transform: scale(0);
     transition: all 0.2s;
 }
 .radio input[type="radio"]:checked + label::before {
-    transform: none;
     -webkit-transform: none;
+    transform: none;
 }
 .radio input[type="radio"]:checked + label::after {
     border-color: #0F9D58;
@@ -256,8 +256,8 @@ p {
 .switch input:checked + label::after {
     background-color: #0F9D58 !important;
     border: none;
-    transform: translateX(21px);
     -webkit-transform: translateX(21px);
+    transform: translateX(21px);
     width: 18px;
     height: 18px;
     transform: translateX(1.3125em);
@@ -388,8 +388,8 @@ p {
     margin-top:-0.375em; /* fix webkit-specific bug */
 }
 .slider:active::-webkit-slider-thumb {
-    transform: scale(2.66);
     -webkit-transform: scale(2.66);
+    transform: scale(2.66);
     margin-top: -0.65em; /* fix webkit-specific bug */
 }
 .slider::-ms-fill-lower, 
@@ -518,8 +518,8 @@ p {
 }
 .toast .button {
 	margin: 0;
-	align-self: stretch;
     -webkit-align-self: stretch;
+	align-self: stretch;
 	font-size: inherit;
 }
 
