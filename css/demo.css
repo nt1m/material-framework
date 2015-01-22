@@ -1,6 +1,16 @@
 body {margin:0;padding: 0;}
 h1 {margin-left: 20px;}
 .card {margin: 20px;padding: 10px}
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+.section {
+    background-color: #FFF;
+    border-bottom: 1px solid #CDCDCD;
+    padding: 20px;
+}
 #card-demo .card {
     margin-bottom: 100px;
     height: 100px;
@@ -22,10 +32,16 @@ h1 {margin-left: 20px;}
 .toolbar-group {
     margin: 10px 0;
 }
+#icons {
+  text-align: center;
+}
 .row {
     display: inline-block;
-    width: calc(25% - 100px);
-    margin-right: 20px; 
+    width:20%;
+    margin-right: 2%;
+    margin-left: 2%;
+    min-width: 250px;
+    text-align: left;
 }
 .row .i-code {
     float: right;

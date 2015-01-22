@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="utf-8"/>
 </head>
-<body class="card-container">
+<body>
 <div class="toolbar header bg-blue-500 color-white">
 	<button class="icon-button"><i class="icon-menu"></i></button>
 	<label class="toolbar-label">Material framework</label>
@@ -15,8 +15,8 @@
 		<a href="http://github.com/nt1m/material-framework" class="fab" target="_blank"><i class="icon-launch"></i></a>
 	</span>
 </div>
-<h1>Checkbox</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Checkbox</h1>
 	<div class="checkbox"> 
 		<input type="checkbox" id="checkbox"/>
 		<label for="checkbox"></label>
@@ -26,8 +26,8 @@
 		<label for="checkbox2"></label>
 	</div>
 </div>
-<h1>Radio</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Radio</h1>
 	<div class="radio">
 		<input type="radio" id="radio" name="radios"/>
 		<label for="radio"></label>
@@ -37,8 +37,8 @@
 		<label for="radio2"></label>
 	</div>
 </div>
-<h1>Switch</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Switch</h1>
 	<div class="switch">
 		<input type="checkbox" id="switch"/>
 		<label for="switch"></label>
@@ -48,32 +48,33 @@
 		<label for="switch2"></label>
 	</div>
 </div>
-<h1>Inputs</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Inputs</h1>
 	<input type="text" class="text-input" placeholder="Type something here"/>
 </div>
-<h1>Buttons</h1>
-<h2>Flat</h2>
-<div class="card" z="1">
+<div class="section">
+	<h1>Buttons</h1>
+	<h2>Flat</h2>
 	<button class="button">Button</button>
 	<button class="button color-blue-500">Colored</button>
 	<button class="button" disabled>Disabled</button>
 </div>
-<h2>Raised</h2>
-<div class="card" z="1">
+<div class="section">
+	<h2>Raised</h2>
 	<button class="button raised">Button</button>
 	<button class="button raised bg-blue-500 color-white">Colored</button>
 	<button class="button raised" disabled>Disabled</button>
 </div>
-<h1>Fab</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Fab</h1>
 	<button class="fab bg-blue-500 color-white"><i class="icon-add"></i></button>
 	<button class="fab bg-red-500 color-white"><i class="icon-write"></i></button>
 	<button class="fab bg-green-500 color-white small"><i class="icon-check"></i></button>
 	<button class="fab bg-yellow-500 small"><i class="icon-share"></i></button>
 </div>
+
+<div class="section">
 <h1>Icon font</h1>
-<div class="card">
 <div id="icons" class="container">
 <p>The icon font was created with <a href="http://fontello.com">Fontello</a> with icons from the Polymer project.</p>
       <div class="row">
@@ -246,14 +247,14 @@
       </div>
     </div>
 </div>
-<h1>Icon buttons</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Icon buttons</h1>
 	<button class="icon-button"><i class="icon-menu"></i></button>
 	<button class="icon-button"><i class="icon-search"></i></button>
 	<button class="icon-button"><i class="icon-star"></i></button>
 </div>
-<h1>Toolbars</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Toolbars</h1>
 	<div class="toolbar bg-red-500 color-white">
 		<button class="icon-button"><i class="icon-menu"></i></button>
 		<span class="toolbar-label">My app</span>
@@ -263,8 +264,8 @@
 		</span>
 	</div>
 </div>
-<h1>Tabs</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Tabs</h1>
 	<ul class="toolbar tabs bg-green-500 color-white">
 		<li ripple class="selected"><a href="#">Item 1</a></li>
 		<li ripple><a href="#">Item 2</a></li>
@@ -287,19 +288,19 @@
 		</ul>
 	</div>
 </div>
-<h1>Sliders</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Sliders</h1>
 	<input type="range" class="slider"/>
 </div>
-<h1>Toasts</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Toasts</h1>
 	<div class="toast">
 		<label class="toast-label">We could not load your mail</label>
 		<button class="button flat color-yellow-500">Retry</button>
 	</div>
 </div>
-<h1>Lists</h1>
-<div class="card" z="1">
+<div class="section">
+	<h1>Lists</h1>
 	<ul class="list">
 		<li ripple>
 			<img class="item-icon" src="img/avatar.jpg"/>
@@ -333,10 +334,8 @@
 		</li>
 	</ul>
 </div>
-  
-<h1>Typography</h1>
-  <div class="card" z="1" id="typo-demo">
-    <h1>A heading</h1>
+  <div class="section" id="typo-demo">
+    <h1>Typography</h1>
     <h2>A subheading - scroll down</h2>
     <p>
 
@@ -346,15 +345,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lectus metus, 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lectus metus, ullamcorper vehicula dui ac, posuere feugiat turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Curabitur in tortor ac ex convallis gravida sit amet eget sem. Vivamus bibendum tincidunt risus ut ultrices. Mauris quis erat consequat, eleifend sapien ac, mollis quam. Aliquam odio lectus, consequat at magna id, efficitur euismod ante. Sed ac elit vitae odio tempus accumsan. Suspendisse leo ante, venenatis vel leo nec, euismod faucibus orci. In hac habitasse platea dictumst. orem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lectus metus, ullamcorper vehicula dui ac, posuere feugiat turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Curabitur in tortor ac ex convallis gravida sit amet eget sem. Vivamus bibendum tincidunt risus ut ultrices. Mauris quis erat consequat, eleifend sapien ac, mollis quam. Aliquam odio lectus, consequat at magna id, efficitur euismod ante. Sed ac elit vitae odio tempus accumsan. Suspendisse leo ante, venenatis vel leo nec, euismod faucibus orci. In hac habitasse platea dictumst.orem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lectus metus, ullamcorper vehicula dui ac, posuere feugiat turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Curabitur in tortor ac ex convallis gravida sit amet eget sem. Vivamus bibendum tincidunt risus ut ultrices. Mauris quis erat consequat, eleifend sapien ac, mollis quam. Aliquam odio lectus, consequat at magna id, efficitur euismod ante. Sed ac elit vitae odio tempus accumsan. Suspendisse leo ante, venenatis vel leo nec, euismod faucibus orci. In hac habitasse platea dictumst.orem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lectus metus, ullamcorper vehicula dui ac, posuere feugiat turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Curabitur in tortor ac ex convallis gravida sit amet eget sem. Vivamus bibendum tincidunt risus ut ultrices. Mauris quis erat consequat, eleifend sapien ac, mollis quam. Aliquam odio lectus, consequat at magna id, efficitur euismod ante. Sed ac elit vitae odio tempus accumsan. Suspendisse leo ante, venenatis vel leo nec, euismod faucibus orci. In hac habitasse platea dictumst.</p>
   </div>
-
-<h1>Card</h1>
-<div id="card-demo">
+<div class="section">
+	<h1>Menus</h1>
+	<ul class="menu">
+		<li ripple>Open file</li>
+		<li ripple>Close file</li>
+		<li ripple>Save file</li>
+		<li ripple>Reload file</li>
+	</ul>
+</div>
+<div class="section" id="card-demo">
+	<h1>Cards</h1>
 	<div class="card" z="1">z-depth: 1</div>
 	<div class="card" z="2">z-depth: 2</div>
 	<div class="card" z="3">z-depth: 3</div>
 	<div class="card" z="4">z-depth: 4</div>
 	<div class="card" z="5">z-depth: 5</div>
 </div>
-
 </body>
 </html>

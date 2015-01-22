@@ -84,7 +84,9 @@ h2, .subheading {
 .card > h2, .card > .subheading {
     top: -10px; /* cards have some padding, we need to move the subheader up to cover that */
 }
-
+.section > h2, .section > .subheading {
+    top: -20px; /* sections have some padding, we need to move the subheader up to cover that */
+}
 p {
     line-height: 1.5em;
 }
@@ -107,8 +109,8 @@ p {
 .checkbox input[type="checkbox"] + label,
 .radio input[type="radio"] + label {
     border-radius: 100%;
-    width: 30px;
-    height: 30px;
+    width: 1em;
+    height: 1em;
     display: inline-block;
     background: transparent;
     transition: all 0.2s;
@@ -117,11 +119,10 @@ p {
     color: #4caf50;
 }
 .radio input[type="radio"] + label:active {
-    background: rgba(204,204,204, 0.8)
-}
-.switch input + label:active::after {
     box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
+    background: rgba(204,204,204, 0.8);
 }
+
 .radio input[type="radio"]:checked + label:active,
 .switch input:checked + label:active::after {
     box-shadow: 0 0 0 9px rgba(15, 157,88, 0.29);
@@ -133,10 +134,10 @@ p {
     border: 2px solid #5A5A5A;
     width: 1em;
     height: 1em;
+    margin-left: -0.12em;
+    margin-top: -0.12em;
     display: inline-block;
     position: relative;
-    margin-top: 0.2em;
-    margin-left: 0.2em;
 }
 .checkbox input[type="checkbox"] + label {
     border-radius: 0.1em;
@@ -206,8 +207,8 @@ p {
     top: 0.3em;
     left: 0.3em;
     border-radius: 100%;
-    width: 0.6em;
-    height: 0.6em;
+    width: 0.65em;
+    height: 0.65em;
     border: none;
     background: #0F9D58;
     transform: scale(0);
@@ -255,27 +256,36 @@ p {
 .switch input:checked + label::after {
     background-color: #0F9D58 !important;
     border: none;
+<<<<<<< HEAD
     transform: translateX(21px);
     -webkit-transform: translateX(21px);
     width: 18px;
     height: 18px;
+=======
+    transform: translateX(1.3125em);
+    width: 1.125em;
+    height: 1.125em;
+>>>>>>> FETCH_HEAD
     margin-top: -1px;
+}
+.switch input + label:active::after {
+    box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
 }
 /* Text inputs */
 .text-input {
-    padding: 5px;
+    padding: 0.3125em;
     border: none;
     border-bottom: 1px solid #757575;
     transition: border-color 0.3s;
     color: #000;
     font-family: Roboto, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
 }
 .text-input:focus {
     border-bottom-color: #4285F4;
     border-bottom-width: 2px;
-    padding-bottom: 4px;
+    padding-bottom: 0.25em;
 }
 
 /* Buttons */
@@ -283,8 +293,8 @@ p {
     position: relative;
     border: none;
     text-transform: uppercase;
-    padding: 8px;
-    font-size: 16px;
+    padding: 0.5em;
+    font-size: 1em;
     font-weight: 400;
     font-family: Roboto, Arial, sans-serif;
     border-radius: 2px;
@@ -316,19 +326,19 @@ p {
 /* Fabs */
 .fab {
     background-color: #FFF;
-    width: 56px;
-    height: 56px;
+    width: 2.33em;
+    height: 2.33em;
     border-radius: 100%;
-    font-size: 24px;
+    font-size: 1.5em;
     box-sizing:border-box;
     color: #000;
-    padding: 15px 10px;
+    padding: 0.625em 0.417em;
 }
 .fab.small {
-    width: 40px;
-    height: 40px;
+    width: 1.67em;
+    height: 1.67em;
     line-height: 23px;
-    padding: 8px;
+    padding: 0.33em;
 }
 .fab [class^="icon-"]:not(.icon-button)::before, .fab [class*=" icon-"]:not(.icon-button)::before {
     vertical-align: top;
@@ -370,8 +380,8 @@ p {
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 12px;
-    height: 12px;
+    width: 0.75em;
+    height: 0.75em;
     box-sizing: border-box;
     border-radius: 50%;
     border: none;
@@ -390,8 +400,8 @@ p {
     background: transparent;
 }
 .slider::-ms-track {
-    width: 12px;
-    height: 12px;
+    width: 0.75em;
+    height: 0.75em;
     box-sizing: border-box;
     border-radius: 50%;
     border: none;
@@ -400,8 +410,8 @@ p {
     transition: all 0.2s ease;
 }
 .slider::-ms-thumb {
-    width: 12px;
-    height: 12px;
+    width: 0.75em;
+    height: 0.75em;
     box-sizing: border-box;
     border-radius: 50%;
     border: none;
@@ -412,16 +422,16 @@ p {
 
 /* Icon buttons */
 .icon-button {
-    width: 40px;
-    height: 40px;
+    width: 1.67em;
+    height: 1.67em;
     border-radius: 100%;
     border: none;
     background-color: transparent;
     transition: background 0.3s ease;
-    padding: 1px;
+    padding: 0.025em;
     color: inherit;
     font: inherit;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 .icon-button:active {
     background-color: rgba(210,210,210, 0.27)
@@ -436,7 +446,7 @@ p {
 }
 .toolbar {
     display:block;
-    padding: 5px 10px;
+    padding: 0.3125em 0.625em;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
     background-color: white;
 }
@@ -453,21 +463,21 @@ p {
     display: -ms-flexbox;
     display: flex;
     padding: 0;
-    height: 40px;
+    height: 2.5em;
     margin: 0;
 }
 .tabs > li {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    line-height: 40px;
-    height: 40px;
+    line-height: 2.857em;
+    height: 2.857em;
     display: inline-block;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
@@ -490,8 +500,8 @@ p {
 	transition-property: opacity, bottom, left, right, width, margin, border-radius;
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
-	font-size: 14px;
-	min-height: 14px;
+	font-size: 0.875em;
+	min-height: 0.875em;
 	background-color: #323232;
 	display: -ms-flexbox;
     display:-webkit-flex;
@@ -500,17 +510,17 @@ p {
 	align-items: center;
 	color: #F1F1F1;
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
-	line-height: 22px;
+	line-height: 1.57em;
 	border-radius: 2px;
 }
 .toast-label {
     -webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	padding: 12px 24px 12px;
+	padding: 0.75em 1.5em 0.75em;
 }
 .toast .button {
-	margin: 0px;
+	margin: 0;
 	align-self: stretch;
     -webkit-align-self: stretch;
 	font-size: inherit;
@@ -524,7 +534,7 @@ p {
 }
 .list > li {
 	margin: 0;
-	padding: 8px 16px;
+	padding: 0.2em 0.4em;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -537,13 +547,13 @@ p {
 }
 .list > li .item-icon {
 	border-radius: 100%;
-	height: 40px;
-	width: 40px;
+	height: 2.5em;
+	width: 2.5em;
 	vertical-align: top;
-	margin-right: 16px;
+	margin-right: 1em;
 }
 .list > li .item-text {
-	font-size: 16px;
+	font-size: 1em;
 	display: inline-block;
 	vertical-align: top;
 	-webkit-flex: 1;
@@ -552,20 +562,42 @@ p {
 	align-self: center;
 }
 .list > li .secondary-text {
-	font-size: 14px;
+	font-size: 0.875em;
 	display: block;
 }
 .list > li .item-action {
-	height: 40px;
-	width: 40px;
-	font-size: 24px;
-	line-height: 40px;
+	height: 2.5em;
+	width: 2.5em;
+	font-size: 1.5em;
+	line-height: 2.5em;
 	display: inline-block;
 	text-align: center;
-	margin-left: 16px;
+	margin-left: 1em;
 }
 .list > li i::before {
 	line-height: inherit !important;
+}
+
+/* Menu */
+.menu {
+	display: inline-block;
+	list-style: none;
+	background-color: #FFF;
+	color: #000;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
+	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
+	margin: 0;
+	padding: 0;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	min-width: 100px;
+}
+.menu li {
+	padding: 0.33em 0.66em;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 /* Cards */
