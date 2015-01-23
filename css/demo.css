@@ -33,7 +33,7 @@ body {
 	margin-right: 100px;
 }
 #external-fab-container {
-	position: fixed;
+	position: absolute;
 	right: 20px;
 	top: 10px;
 }
