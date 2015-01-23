@@ -599,6 +599,8 @@ p {
 .menu li > a {
 	display: block;
 	padding: 0 1.5em;
+	text-decoration: none;
+	color: inherit;
 }
 
 /* Cards */
