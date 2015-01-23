@@ -102,11 +102,13 @@ h2,
 .dark-theme .secondary-text {
 	color: rgba(255, 255, 255, 0.54);
 }
-.card > h2, .card > .subheading {
-	top: -10px; /* cards have some padding, we need to move the subheader up to cover that */
+a {
+	color: #2196f3; /* Blue - 300 */
+	text-decoration: none;
 }
-.section > h2, .section > .subheading {
-	top: -20px; /* sections have some padding, we need to move the subheader up to cover that */
+a:hover,
+a:focus {
+	text-decoration: underline;
 }
 p {
 	line-height: 1.5em;
@@ -338,6 +340,7 @@ p {
 	position: relative;
 	border: none;
 	text-transform: uppercase;
+	text-decoration: none;
 	padding: 0.5em;
 	font-size: 1em;
 	font-weight: 400;
