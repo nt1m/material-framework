@@ -642,7 +642,7 @@ p {
 	user-select: none;
 	min-width: 100px;
 }
-.dark .menu {
+.dark-theme .menu {
 	background-color: #444;
 	color: rgba(255, 255, 255, 0.87);
 }
