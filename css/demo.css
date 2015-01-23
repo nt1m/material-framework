@@ -12,6 +12,11 @@ body {
 	margin-bottom: 100px;
 	height: 100px;
 }
+#external-fab-container {
+	position: fixed;
+	right: 20px;
+	top: 10px;
+}
 .checkbox, .radio, .text-input, .button, .switch, .fab, .toast {
 	margin: 10px;
 }
