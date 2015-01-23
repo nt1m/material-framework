@@ -338,7 +338,7 @@ p {
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 0.5em;
+	padding: 0.5em 0.75em;
 	font-size: 1em;
 	font-weight: 400;
 	font-family: Roboto, Arial, sans-serif;
