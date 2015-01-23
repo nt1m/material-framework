@@ -8,6 +8,10 @@ body {
 	font-family: Roboto, Arial, sans-serif;
 	color: rgba(0, 0, 0, 0.87);
 }
+.dark-theme {
+	background-color: #333;
+	color: rgba(255, 255, 255, 0.87);
+}
 :focus {
 	outline: none;
 }
@@ -155,7 +159,10 @@ p {
 	visibility: visible;
 	width: 1em;
 }
-/* Checkbox background*/
+.dark-theme input[type="checkbox"] + label {
+	border-color: #fff;
+}
+/* Checkbox background */
 .checkbox input[type="checkbox"] + label::before {
 	content: "";
 	margin-left: -0.15em;
@@ -211,6 +218,9 @@ p {
 	margin-top: -0.12em;
 	display: inline-block;
 	position: relative;
+}
+.dark-theme input[type="radio"]::after {
+	border-color: #fff;
 }
 /* Radio border */
 .radio input[type="radio"] + label::after {
@@ -289,6 +299,10 @@ p {
 .switch input + label:active::after {
 	box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
 }
+.dark-theme .switch input:checked + label::after {
+	filter: brightness(110%);
+}
+
 /* Text inputs */
 .text-input {
 	padding: 0.3125em;
@@ -629,10 +643,16 @@ p {
 .card-container {
 	background-color: #e5e5e5;
 }
+.dark-theme .card-container {
+	background-color: #222;
+}
 .card {
 	background-color: #fff;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
 	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.dark-theme .card {
+	background-color: #444;
 }
 .card[z="2"] {
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
