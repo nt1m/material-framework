@@ -1,35 +1,24 @@
+/* General styles */
 body {
 	margin: 0;
 	padding: 0;
 	background: #fff;
 }
+/* Sections */
 .section {
 	background-color: #fff;
-	border-bottom: 1px solid #cdcdcd;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 	padding: 20px;
 }
 .dark-theme .section {
 	background-color: inherit;
-	border-bottom-color: #555;
+	border-bottom-color: rgba(255, 255, 255, 0.12);
 }
-#card-demo .card {
-	margin-bottom: 100px;
-	height: 100px;
+.section > h2, .section > .subheading {
+	top: -20px; /* sections have some padding, we need to move the subheader up to cover that */
 }
-#switch-container {
-	margin-right: 100px;
-}
-#external-fab-container {
-	position: fixed;
-	right: 20px;
-	top: 10px;
-}
-.checkbox, .radio, .text-input, .button, .switch, .fab, .toast {
-	margin: 10px;
-}
-.button {
-	padding: 8px 15px;
-}
+
+/* Header positioning */
 .header {
 	margin: 0;
 	height: auto;
@@ -38,9 +27,36 @@ body {
 	top: 0;
 	z-index: 999;
 }
+
+/* Header toolbar tweaks */
+#switch-container {
+	margin-right: 100px;
+}
+#external-fab-container {
+	position: fixed;
+	right: 20px;
+	top: 10px;
+}
+
+/* Specific demo rules */
+#card-demo .card {
+	margin-bottom: 100px;
+	height: 100px;
+}
+#typo-demo {
+	max-height: 225px;
+	overflow: auto;
+}
+
+/* Add spacing around items */
+.checkbox, .radio, .text-input, .button, .switch, .fab, .toast {
+	margin: 10px;
+}
 .toolbar-group {
 	margin: 10px 0;
 }
+
+/* Icon font display */
 #icons {
 	text-align: center;
 }
@@ -56,7 +72,4 @@ body {
 	float: right;
 	color: gray;
 }
-#typo-demo {
-	max-height: 225px;
-	overflow: auto;
-}
+
