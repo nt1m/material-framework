@@ -6,7 +6,7 @@
 /* Global */
 body {
 	font-family: Roboto, Arial, sans-serif;
-	color: rgba(0, 0, 0,0.87);
+	color: rgba(0, 0, 0, 0.87);
 }
 :focus {
 	outline: none;
