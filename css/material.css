@@ -59,20 +59,26 @@ h3 {
 }
 h2,
 .subheading,
-.secondary-text,
+.secondary-text {
+	color: rgba(0, 0, 0, 0.54);
+}
+blockquote,
 blockquote::before,
 blockquote::after,
 blockquote + cite {
-	color: rgba(0, 0, 0, 0.54);
+	color: rgba(0, 0, 0, 0.87);
 }
 .dark-theme h2,
 .dark-theme .subheading,
 .dark-theme .secondary-text,
-.dark-theme h3,
+.dark-theme h3 {
+	color: rgba(255, 255, 255, 0.54);
+}
+.dark-theme blockquote,
 .dark-theme blockquote::before,
 .dark-theme blockquote::after,
 .dark-theme blockquote + cite {
-	color: rgba(255, 255, 255, 0.54);
+	color: rgba(255, 2550, 255, 0.87);
 }
 a {
 	color: #2196f3; /* Blue - 300 */
@@ -92,8 +98,8 @@ blockquote {
 	width: 50%;
 	min-width: 320px;
 	font-weight: 500;
-	font-size: 1.2em;
-	line-height: 1.7em;
+	font-size: 1.5em;
+	line-height: 2em;
 }
 blockquote::before, blockquote::after {
 	font-size: 1.5em;
