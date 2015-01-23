@@ -65,9 +65,9 @@ body {
 	display: none;
 }
 
-.fab[class^="bg-"]::after, .fab[class*=" bg-]::after,
-[ripple][class^="bg-"]::after, [ripple][class*=" bg-]::after,
-.ripple[class^="bg-"]::after, .ripple[class*=" bg-]::after {
+.fab[class^="bg-"]::after, .fab[class*=" bg-"]::after,
+[ripple][class^="bg-"]::after, [ripple][class*=" bg-"]::after,
+.ripple[class^="bg-"]::after, .ripple[class*=" bg-"]::after {
 	background-color: rgba(220, 220, 220, 0.29);
 }
 /* Typography */
