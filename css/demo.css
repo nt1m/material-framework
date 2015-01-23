@@ -16,6 +16,9 @@ body {
 	margin-bottom: 100px;
 	height: 100px;
 }
+#switch-container {
+	margin-right: 100px;
+}
 #external-fab-container {
 	position: fixed;
 	right: 20px;
