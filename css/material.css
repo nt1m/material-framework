@@ -2,11 +2,15 @@
 /******** by Tim Nguyen *************/
 /** http://twitter.com/therealntim **/
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic);
+@import url("//fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic");
 /* Global */
 body {
 	font-family: Roboto, Arial, sans-serif;
-	color: rgba(0,0,0,0.87);
+	color: rgba(0, 0, 0, 0.87);
+}
+.dark-theme {
+	background-color: #333;
+	color: rgba(255, 255, 255, 0.87);
 }
 :focus {
 	outline: none;
@@ -37,7 +41,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 44%;
-	background-color: rgba(204,204,204, 0.29);
+	background-color: rgba(190, 190, 190, 0.29);
 	height: 100%;
 	width: 12%;
 	border-radius: 0.75em / 2em;
@@ -64,9 +68,11 @@ body {
 	all: unset;
 	display: none;
 }
+.button[class^="bg-"]::after, .button[class*=" bg-"]::after,
+.fab[class^="bg-"]::after, .fab[class*=" bg-"]::after,
 [ripple][class^="bg-"]::after, [ripple][class*=" bg-"]::after,
 .ripple[class^="bg-"]::after, .ripple[class*=" bg-"]::after {
-	background-color: rgba(220, 220, 220, 0.29);
+	background-color: rgba(230, 230, 230, 0.29);
 }
 
 /* Typography */
@@ -85,7 +91,7 @@ h2, .subheading {
 	font-weight: 400;
 	background-color: inherit;
 	z-index: 99;
-	color: rgba(0,0,0,0.54);
+	color: rgba(0, 0, 0, 0.54);
 }
 .card > h2, .card > .subheading {
 	top: -10px; /* cards have some padding, we need to move the subheader up to cover that */
@@ -96,22 +102,26 @@ h2, .subheading {
 p {
 	line-height: 1.5em;
 }
-
 .secondary-text {
 	color: rgba(0, 0, 0, 0.54);
 }
+.color-white {
+	color: #fff;
+}
 
-/* Switches */
+/* Switches, checkboxes and radios */
 .checkbox, .radio, .button, .switch, .fab, .icon-button {
 	cursor: pointer;
 	-moz-user-select: none;
 	user-select: none;
 }
+/* Hide the native controls */
 .checkbox input[type="checkbox"],
 .radio input[type="radio"], 
 .switch input {
 	display: none;
 }
+/* Checkbox/Radio container */
 .checkbox input[type="checkbox"] + label,
 .radio input[type="radio"] + label {
 	border-radius: 100%;
@@ -124,33 +134,23 @@ p {
 	box-shadow: 0 0 0 transparent;
 	color: #4caf50;
 }
+/* Radio & switch active state */
 .radio input[type="radio"] + label:active {
-	box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
-	background: rgba(204,204,204, 0.8);
+	box-shadow: 0 0 0 9px rgba(204, 204, 204, 0.8);
+	background: rgba(204, 204, 204, 0.8);
 }
 
 .radio input[type="radio"]:checked + label:active,
 .switch input:checked + label:active::after {
-	box-shadow: 0 0 0 9px rgba(15, 157,88, 0.29);
-	background: rgba(15, 157,88, 0.29);
+	box-shadow: 0 0 0 9px rgba(15, 157, 88, 0.29);
+	background: rgba(15, 157, 88, 0.29);
 }
-.radio input[type="radio"] + label::before,
-.radio input[type="radio"] + label::after {
-	content:"";
-	border: 2px solid #5A5A5A;
-	width: 1em;
-	height: 1em;
-	margin-left: -0.12em;
-	margin-top: -0.12em;
-	display: inline-block;
-	position: relative;
-}
+/* Checkbox container */
 .checkbox input[type="checkbox"] + label {
 	border-radius: 0.1em;
 	border-style: solid;
 	border-width: 0.15em;
-	border-color: #5A5A5A;
-	content: " ";
+	border-color: #5a5a5a;
 	cursor: pointer;
 	display: inline-block;
 	height: 1em;
@@ -159,11 +159,12 @@ p {
 	visibility: visible;
 	width: 1em;
 }
-.checkbox input[type="checkbox"]:disabled + label {
-	color: #999;
+.dark-theme input[type="checkbox"] + label {
+	border-color: #fff;
 }
+/* Checkbox background */
 .checkbox input[type="checkbox"] + label::before {
-	content: " ";
+	content: "";
 	margin-left: -0.15em;
 	margin-top: -0.15em;
 	position: absolute;
@@ -176,18 +177,18 @@ p {
 	-webkit-transform: scale(0.1);
 	transform: scale(0.1)
 }
-
 .checkbox input[type="checkbox"]:checked + label::before {
 	background-color: currentColor;
 	opacity: 1;
 	-webkit-transform:none;
 	transform: none;
 }
+/* Checkmark */
 .checkbox input[type="checkbox"] + label::after {
+	content: " ";
 	border-style: solid;
 	border-width: 0 0 0.15em 0.15em;
 	border-color: transparent;
-	content: " ";
 	cursor: pointer;
 	height: 0.4em;
 	left: 50%;
@@ -200,16 +201,36 @@ p {
 	transform: rotate(-45deg);
 }
 .checkbox input[type="checkbox"]:checked + label::after {
-	border-color: white;
+	border-color: #fff;
 }
-
+/* Disabled checkbox state */
+.checkbox input[type="checkbox"]:disabled + label {
+	color: #999;
+}
+/* Radio border and dot */
+.radio input[type="radio"] + label::before,
+.radio input[type="radio"] + label::after {
+	content:"";
+	border: 2px solid #5a5a5a;
+	width: 1em;
+	height: 1em;
+	margin-left: -0.12em;
+	margin-top: -0.12em;
+	display: inline-block;
+	position: relative;
+}
+.dark-theme input[type="radio"]::after {
+	border-color: #fff;
+}
+/* Radio border */
 .radio input[type="radio"] + label::after {
 	border-radius: 100%;
 	width: 1em;
 	height: 1em;
 }
+/* Radio dot */
 .radio input[type="radio"] + label::before {
-	position:absolute;
+	position: absolute;
 	top: 0.3em;
 	left: 0.3em;
 	border-radius: 100%;
@@ -221,16 +242,20 @@ p {
 	transform: scale(0);
 	transition: all 0.2s;
 }
+/* Make the dot visible when checked */
 .radio input[type="radio"]:checked + label::before {
 	-webkit-transform: none;
 	transform: none;
 }
+/* Change border color when radio is checked */
 .radio input[type="radio"]:checked + label::after {
 	border-color: #0F9D58;
 }
+/* Switches */
 .switch input+label {
 	position: relative;
 }
+/* Switch track */
 .switch input+label::before {
 	content:"";
 	height: 0.7em;
@@ -244,6 +269,7 @@ p {
 .switch input:checked + label::before {
 	background-color: #B9E3CF;
 }
+/* Switch thumb */
 .switch input + label::after {
 	content:"";
 	position: absolute;
@@ -273,6 +299,10 @@ p {
 .switch input + label:active::after {
 	box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
 }
+.dark-theme .switch input:checked + label::after {
+	filter: brightness(110%);
+}
+
 /* Text inputs */
 .text-input {
 	padding: 0.3125em;
@@ -285,7 +315,7 @@ p {
 	font-weight: 400;
 }
 .text-input:focus {
-	border-bottom-color: #4285F4;
+	border-bottom-color: #4285f4;
 	border-bottom-width: 2px;
 	padding-bottom: 0.25em;
 }
@@ -308,31 +338,31 @@ p {
 	background: none !important;
 }
 .button.raised, .fab {
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26),
-				0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
+	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
 .button.raised:not([class*="bg-"]), .fab {
-	background-color: #DFDFDF;
+	background-color: #dfdfdf;
 }
 .button.raised:active, .fab:active {
-	box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.2),
-				0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+	            0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .button:disabled {
-	background: #EAEAEA !important;
-	color: #A8A8A8 !important;
+	background: #eaeaea !important;
+	color: #a8a8a8 !important;
 	box-shadow: none !important;
 	pointer-events: none;
 }
 
 /* Fabs */
 .fab {
-	background-color: #FFF;
+	background-color: #fff;
 	width: 2.33em;
 	height: 2.33em;
 	border-radius: 100%;
 	font-size: 1.5em;
-	box-sizing:border-box;
+	box-sizing: border-box;
 	color: #000;
 	padding: 0.625em 0.417em;
 }
@@ -350,12 +380,12 @@ p {
 .slider {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	color: #5677FC;
+	color: #5677fc;
 }
 .slider::-moz-range-track {
 	-moz-appearance: none;
 	height: 2px;
-	background-color:#C8C8C8;
+	background-color: #c8c8c8;
 	border: none;
 }
 .slider::-webkit-slider-runnable-track {
@@ -436,21 +466,21 @@ p {
 	font-size: 1.5em;
 }
 .icon-button:active {
-	background-color: rgba(210,210,210, 0.27)
+	background-color: rgba(210, 210, 210, 0.27)
 }
 
 /* Toolbars */
 .toolbar-group {
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16); 
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16); 
 }
 .toolbar-group .toolbar {
 	box-shadow: none;
 }
 .toolbar {
-	display:block;
+	display: block;
 	padding: 0.3125em 0.625em;
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
-	background-color: white;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+	background-color: #fff;
 }
 .toolbar > *:not(sub):not(sup) {
 	vertical-align: middle;
@@ -542,7 +572,7 @@ p {
 	display: flex;
 }
 .list > li.divider {
-	background-color: rgba(0,0,0,0.12);
+	background-color: rgba(0, 0, 0, 0.12);
 	height: 1px;
 	padding: 0;
 	box-sizing: border-box;
@@ -611,12 +641,18 @@ p {
 
 /* Cards */
 .card-container {
-	background-color: #E5E5E5;
+	background-color: #e5e5e5;
+}
+.dark-theme .card-container {
+	background-color: #222;
 }
 .card {
-	background-color: #FFF;
+	background-color: #fff;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
 	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.dark-theme .card {
+	background-color: #444;
 }
 .card[z="2"] {
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
@@ -633,11 +669,6 @@ p {
 .card[z="5"] {
 	box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2),
 	            0 40px 77px 0 rgba(0, 0, 0, 0.22);
-}
-
-/* White color class */
-.color-white {
-	color: #fff;
 }
 
 /* Icons (will need to update this) */
