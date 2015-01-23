@@ -48,19 +48,36 @@ h2, .subheading {
 	background-color: inherit;
 	z-index: 99;
 }
+h3 {
+	font-size: 0.93em;
+	line-height: 1.5em;
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: 400;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding-left: 2em;
+}
 h2,
 .subheading,
-.secondary-text {
+.secondary-text,
+blockquote::before,
+blockquote::after,
+blockquote + cite {
 	color: rgba(0, 0, 0, 0.54);
 }
 .dark-theme h2,
 .dark-theme .subheading,
-.dark-theme .secondary-text {
+.dark-theme .secondary-text,
+.dark-theme h3,
+.dark-theme blockquote::before,
+.dark-theme blockquote::after,
+.dark-theme blockquote + cite {
 	color: rgba(255, 255, 255, 0.54);
 }
 a {
 	color: #2196f3; /* Blue - 300 */
 	text-decoration: none;
+	cursor: pointer;
 }
 a:hover,
 a:focus {
@@ -69,7 +86,35 @@ a:focus {
 p {
 	line-height: 1.5em;
 }
+/* quotes */
+blockquote {
+	float: right;
+	width: 50%;
+	min-width:320px;
+	font-weight: 500;
+	font-size: 1.2em;
+	line-height: 1.7em;
+}
+blockquote::before, blockquote::after {
+	font-size: 1.5em;
+	line-height: 1em;
+	font-weight: 300;
+	font-family: Roboto;
+}
 
+blockquote::before {
+	content: open-quote;
+}
+blockquote::after {
+	content: close-quote;
+}
+blockquote + cite {
+	float: right;
+	width:50%;
+	min-width: 320px;
+	padding: 0.5em;
+	margin-left: 4em;
+}
 /* CSS Ripple */
 .ripple, [ripple] {
 	position: relative;
