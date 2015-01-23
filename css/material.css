@@ -106,7 +106,7 @@ p {
 	color: rgba(0, 0, 0, 0.54);
 }
 .color-white {
-	color: #fff;
+	color: #fff !important;
 }
 
 /* Switches, checkboxes and radios */
@@ -114,6 +114,11 @@ p {
 	cursor: pointer;
 	-moz-user-select: none;
 	user-select: none;
+}
+.checkbox label,
+.radio label,
+.switch label {
+	vertical-align: top;
 }
 /* Hide the native controls */
 .checkbox input[type="checkbox"],
