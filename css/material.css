@@ -30,6 +30,9 @@ body {
 	vertical-align: top;
 	border: 0;
 }
+* {
+	-webkit-overflow-scrolling: touch;
+}
 
 /* Typography */
 h1, .heading {    
