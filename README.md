@@ -1,4 +1,4 @@
-material-framework
+Material framework
 ==================
 
 This is a CSS only Material design based framework.
