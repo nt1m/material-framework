@@ -8,6 +8,10 @@ body {
 	border-bottom: 1px solid #cdcdcd;
 	padding: 20px;
 }
+.dark-theme .section {
+	background-color: inherit;
+	border-bottom-color: #555;
+}
 #card-demo .card {
 	margin-bottom: 100px;
 	height: 100px;
