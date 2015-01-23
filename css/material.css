@@ -100,7 +100,7 @@ h2,
 .dark-theme h2,
 .dark-theme .subheading,
 .dark-theme .secondary-text {
-	color: rgba(0, 0, 0, 0.54);
+	color: rgba(255, 255, 255, 0.54);
 }
 .card > h2, .card > .subheading {
 	top: -10px; /* cards have some padding, we need to move the subheader up to cover that */
@@ -349,6 +349,9 @@ p {
 }
 .button:not(.raised) {
 	background: none !important;
+}
+.button:not(.raised):not([class^="color-"]):not([class*=" color-"]) {
+	color: inherit;
 }
 .button.raised, .fab {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
