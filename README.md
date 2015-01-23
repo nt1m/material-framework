@@ -9,9 +9,9 @@ Demo : http://nt1m.github.io/material-framework
 Just include material.css on any web page/ web app.
 
 # Resources used
-- (Material Colors)[https://github.com/shuhei/material-colors/]
-- (Material design icons)[https://github.com/google/material-design-icons/]
-- (Fontello)[http://fontello.com] (to generate icon font)
+- [Material Colors](https://github.com/shuhei/material-colors/)
+- [Material design icons](https://github.com/google/material-design-icons/)
+- [Fontello](http://fontello.com) (to generate icon font)
 
 # Contributing
 Pull requests :) or Issues if you can't :)
