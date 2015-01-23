@@ -2,11 +2,11 @@
 /******** by Tim Nguyen *************/
 /** http://twitter.com/therealntim **/
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic);
+@import url("//fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic");
 /* Global */
 body {
 	font-family: Roboto, Arial, sans-serif;
-	color: rgba(0,0,0,0.87);
+	color: rgba(0, 0, 0,0.87);
 }
 :focus {
 	outline: none;
