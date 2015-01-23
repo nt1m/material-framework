@@ -90,7 +90,7 @@ p {
 blockquote {
 	float: right;
 	width: 50%;
-	min-width:320px;
+	min-width: 320px;
 	font-weight: 500;
 	font-size: 1.2em;
 	line-height: 1.7em;
@@ -110,7 +110,7 @@ blockquote::after {
 }
 blockquote + cite {
 	float: right;
-	width:50%;
+	width: 50%;
 	min-width: 320px;
 	padding: 0.5em;
 	margin-left: 4em;
