@@ -6,6 +6,16 @@
 	<link rel="stylesheet" href="css/demo.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="utf-8"/>
+	<script>
+		function setDarkTheme(state) {
+			if (state) {
+				document.body.classList.add("dark-theme");
+			}
+			else {
+				document.body.classList.remove("dark-theme");	
+			}
+		}
+	</script>
 </head>
 <body>
 <div class="toolbar header bg-blue-500 color-white">
@@ -13,7 +23,7 @@
 	<label class="toolbar-label">Material framework</label>
 	<span class="float-right" id="switch-container">
 		<div class="switch">
-			<input type="checkbox" id="dark-theme-switch" onchange="document.body.classList.(this.checked ? add : remove)('dark-theme')"/>
+			<input type="checkbox" id="dark-theme-switch" onchange="setDarkTheme(this.checked)"/>
 			<label for="dark-theme-switch"></label>
 			<label>Dark theme</label>
 		</div>
