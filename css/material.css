@@ -19,6 +19,10 @@ body {
 	border: none;
 	padding: 0;
 }
+* {
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+}
 .float-left {
 	float: left;
 }
@@ -29,10 +33,6 @@ body {
 	display: inline-block;
 	vertical-align: top;
 	border: 0;
-}
-* {
-	-webkit-overflow-scrolling: touch;
-	-webkit-font-smoothing: antialiased;
 }
 
 /* Typography */
@@ -95,6 +95,7 @@ a:focus {
 }
 p {
 	line-height: 1.5em;
+	text-align: justify;
 }
 blockquote {
 	float: right;
@@ -377,7 +378,7 @@ blockquote + cite {
 	background-color: inherit;
 	transition: border-color 0.3s;
 	color: inherit;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: inherit;
 	font-size: 1em;
 	font-weight: 400;
 }
