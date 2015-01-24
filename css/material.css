@@ -2,10 +2,10 @@
 /******** by Tim Nguyen *************/
 /** http://twitter.com/therealntim **/
 
-@import url("//fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,400italic,500italic");
+@import url("//fonts.googleapis.com/css?family=RobotoDraft:500,400,300,300italic,400italic,500italic");
 /* General styles */
 body {
-	font-family: Roboto, Arial, sans-serif;
+	font-family: RobotoDraft, Roboto, Arial, sans-serif;
 	color: rgba(0, 0, 0, 0.87);
 }
 .dark-theme {
@@ -96,7 +96,6 @@ a:focus {
 p {
 	line-height: 1.5em;
 }
-/* quotes */
 blockquote {
 	float: right;
 	width: 50%;
@@ -109,7 +108,7 @@ blockquote::before, blockquote::after {
 	font-size: 1.5em;
 	line-height: 1em;
 	font-weight: 300;
-	font-family: Roboto;
+	font-family: inherit;
 }
 
 blockquote::before {
@@ -125,6 +124,7 @@ blockquote + cite {
 	padding: 0.5em;
 	margin-left: 4em;
 }
+
 /* CSS Ripple */
 .ripple, [ripple] {
 	position: relative;
