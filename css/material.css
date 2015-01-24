@@ -378,7 +378,7 @@ blockquote + cite {
 	background-color: inherit;
 	transition: border-color 0.3s;
 	color: inherit;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: inherit;
 	font-size: 1em;
 	font-weight: 400;
 }
