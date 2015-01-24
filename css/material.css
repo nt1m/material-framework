@@ -96,7 +96,6 @@ a:focus {
 p {
 	line-height: 1.5em;
 }
-/* quotes */
 blockquote {
 	float: right;
 	width: 50%;
@@ -109,7 +108,7 @@ blockquote::before, blockquote::after {
 	font-size: 1.5em;
 	line-height: 1em;
 	font-weight: 300;
-	font-family: Roboto;
+	font-family: inherit;
 }
 
 blockquote::before {
@@ -125,6 +124,7 @@ blockquote + cite {
 	padding: 0.5em;
 	margin-left: 4em;
 }
+
 /* CSS Ripple */
 .ripple, [ripple] {
 	position: relative;
