@@ -5,6 +5,8 @@
 @import url("//fonts.googleapis.com/css?family=RobotoDraft:500,400,300,300italic,400italic,500italic");
 /* General styles */
 body {
+	margin: 0;
+	padding: 0;
 	font-family: RobotoDraft, Roboto, Arial, sans-serif;
 	color: rgba(0, 0, 0, 0.87);
 }
@@ -674,6 +676,18 @@ blockquote + cite {
 }
 .list > li i::before {
 	line-height: inherit !important;
+}
+
+/* Dividers */
+.divider {
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.dark-theme .divider {
+	border-top-color: rgba(255, 255, 255, 0.12);
 }
 
 /* Menu */
