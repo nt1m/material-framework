@@ -128,6 +128,9 @@ blockquote + cite {
 	padding: 0.5em;
 	margin-left: 4em;
 }
+.bold {
+	font-weight: 500;
+}
 
 /* CSS Ripple */
 .ripple, [ripple] {
@@ -565,6 +568,7 @@ blockquote + cite {
 	padding: 0;
 	list-style: none;
 	line-height: 3.125em;
+	text-transform: uppercase;
 }
 .navbar li {
 	margin: 0;
@@ -573,6 +577,8 @@ blockquote + cite {
 .navbar a {
 	display: inline-block;
 	height: 100%;
+	color: inherit;
+	text-decoration: none;
 	line-height: 3.125em;
 }
 
