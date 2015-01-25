@@ -568,6 +568,7 @@ blockquote + cite {
 	padding: 0;
 	list-style: none;
 	line-height: 3.125em;
+	height: 3.125em;
 	text-transform: uppercase;
 }
 .navbar li {
@@ -580,6 +581,7 @@ blockquote + cite {
 	color: inherit;
 	text-decoration: none;
 	line-height: 3.125em;
+	padding: 0 1em;
 }
 
 /* Tabs */
@@ -709,6 +711,7 @@ blockquote + cite {
 	padding: 0;
 	display: block;
 	width: 100%;
+	height: 1px !important;
 	border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 .dark-theme .divider {
