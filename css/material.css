@@ -558,6 +558,24 @@ blockquote + cite {
 	margin: 0 5px;
 }
 
+/* Navigation bar */
+.navbar {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 3.125em;
+}
+.navbar li {
+	margin: 0;
+	padding: 0;
+}
+.navbar a {
+	display: inline-block;
+	height: 100%;
+	line-height: 3.125em;
+}
+
 /* Tabs */
 .tabs {
 	display: -webkit-flex;
