@@ -136,7 +136,7 @@ blockquote + cite {
 	position: absolute;
 	top: 0;
 	left: 44%;
-	background-color: rgba(190, 190, 190, 0.29);
+	background-color: currentColor;
 	height: 100%;
 	width: 12%;
 	border-radius: 0.75em / 2em;
@@ -156,18 +156,12 @@ blockquote + cite {
 	left: 0;
 	top: 0 !important;
 	height: 100% !important;
-	opacity: 1;
+	opacity: 0.15;
 	border-radius: 0 !important;
 }
 [ripple="false"]::after, [ripple="none"]::after {
 	all: unset;
 	display: none;
-}
-.button[class^="bg-"]::after, .button[class*=" bg-"]::after,
-.fab[class^="bg-"]::after, .fab[class*=" bg-"]::after,
-[ripple][class^="bg-"]::after, [ripple][class*=" bg-"]::after,
-.ripple[class^="bg-"]::after, .ripple[class*=" bg-"]::after {
-	background-color: rgba(230, 230, 230, 0.29);
 }
 
 /* Switches, checkboxes and radios */
