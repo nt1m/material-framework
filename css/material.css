@@ -5,7 +5,10 @@
 @import url("//fonts.googleapis.com/css?family=RobotoDraft:500,400,300,300italic,400italic,500italic");
 /* General styles */
 body {
+	margin: 0;
+	padding: 0;
 	font-family: RobotoDraft, Roboto, Arial, sans-serif;
+	background-color: #fff;
 	color: rgba(0, 0, 0, 0.87);
 }
 .dark-theme {
@@ -124,6 +127,9 @@ blockquote + cite {
 	min-width: 320px;
 	padding: 0.5em;
 	margin-left: 4em;
+}
+.bold {
+	font-weight: 500;
 }
 
 /* CSS Ripple */
@@ -391,7 +397,7 @@ blockquote + cite {
 	padding: 0.5em 0.75em;
 	font-size: 1em;
 	font-weight: 400;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: inherit;
 	border-radius: 2px;
 	overflow: hidden;
 	transition: all 0.1s;
@@ -555,6 +561,27 @@ blockquote + cite {
 	margin: 0 5px;
 }
 
+/* Navigation bar */
+.navbar {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 3.125em;
+	text-transform: uppercase;
+}
+.navbar li {
+	margin: 0;
+	padding: 0;
+}
+.navbar a {
+	display: inline-block;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+	line-height: 3.125em;
+}
+
 /* Tabs */
 .tabs {
 	display: -webkit-flex;
@@ -674,6 +701,18 @@ blockquote + cite {
 }
 .list > li i::before {
 	line-height: inherit !important;
+}
+
+/* Dividers */
+.divider {
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.dark-theme .divider {
+	border-top-color: rgba(255, 255, 255, 0.12);
 }
 
 /* Menu */
