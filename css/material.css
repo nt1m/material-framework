@@ -367,7 +367,7 @@ blockquote + cite {
 	margin-top: -1px;
 }
 .switch input + label:active::after {
-	box-shadow: 0 0 0 9px rgba(204,204,204, 0.8);
+	box-shadow: 0 0 0 0.55em rgba(204, 204, 204, 0.8);
 }
 .dark-theme .switch input:checked + label::after {
 	filter: brightness(110%);
