@@ -382,7 +382,7 @@ blockquote + cite {
 	padding: 0.3125em;
 	border: none;
 	border-radius: 0;
-	border-bottom: 1px solid #757575;
+	border-bottom: 1px solid #4285f4;
 	background-color: inherit;
 	transition: border-color 0.3s;
 	color: inherit;
@@ -390,8 +390,10 @@ blockquote + cite {
 	font-size: 1em;
 	font-weight: 400;
 }
+.text-input:not(:focus) {
+	border-bottom-color: #888 !important;
+}
 .text-input:focus {
-	border-bottom-color: #4285f4;
 	border-bottom-width: 2px;
 	padding-bottom: 0.25em;
 }
