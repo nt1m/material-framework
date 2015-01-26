@@ -207,7 +207,7 @@ blockquote + cite {
 /* Radio & switch active state */
 .radio input[type="radio"] + label:active {
 	box-shadow: 0 0 0 0.55em rgba(204, 204, 204, 0.29);
-	background: rgba(204, 204, 204, 0.8);
+	background: rgba(204, 204, 204, 0.29);
 }
 
 .radio input[type="radio"]:checked + label:active,
