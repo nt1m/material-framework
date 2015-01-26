@@ -131,6 +131,10 @@ blockquote + cite {
 .bold {
 	font-weight: 500;
 }
+.transparent {
+	background: none;
+	box-shadow: none;
+}
 
 /* CSS Ripple */
 .ripple, [ripple] {
@@ -582,6 +586,9 @@ blockquote + cite {
 	text-decoration: none;
 	line-height: 3.125em;
 	padding: 0 1em;
+}
+.navbar .fab {
+	margin: 0.66em;
 }
 
 /* Tabs */
