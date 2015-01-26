@@ -183,7 +183,12 @@ blockquote + cite {
 .checkbox label,
 .radio label,
 .switch label {
-	vertical-align: top;
+	vertical-align: middle;
+}
+.checkbox .form-control-label,
+.radio .form-control-label,
+.switch .form-control-label {
+	margin-left: 0.5em;
 }
 /* Hide the native controls */
 .checkbox input[type="checkbox"],
@@ -334,7 +339,7 @@ blockquote + cite {
 	background-color: #b0afaf;
 	display: inline-block;
 	position: relative;
-	top: 0.15em;
+	top: 0.28em;
 	vertical-align: top;
 }
 .switch input:checked + label::before {
