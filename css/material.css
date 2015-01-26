@@ -206,13 +206,13 @@ blockquote + cite {
 }
 /* Radio & switch active state */
 .radio input[type="radio"] + label:active {
-	box-shadow: 0 0 0 9px rgba(204, 204, 204, 0.8);
+	box-shadow: 0 0 0 0.55em rgba(204, 204, 204, 0.29);
 	background: rgba(204, 204, 204, 0.8);
 }
 
 .radio input[type="radio"]:checked + label:active,
 .switch input:checked + label:active::after {
-	box-shadow: 0 0 0 9px rgba(15, 157, 88, 0.29);
+	box-shadow: 0 0 0 0.55em rgba(15, 157, 88, 0.29);
 	background: rgba(15, 157, 88, 0.29);
 }
 /* Checkbox container */
@@ -281,7 +281,7 @@ blockquote + cite {
 .radio input[type="radio"] + label::before,
 .radio input[type="radio"] + label::after {
 	content:"";
-	border: 2px solid #5a5a5a;
+	border: 0.125em solid #5a5a5a;
 	width: 1em;
 	height: 1em;
 	margin-left: -0.12em;
