@@ -378,11 +378,12 @@ blockquote + cite {
 }
 
 /* Text inputs */
-.text-input {
+.text-input,
+.dropdown-menu {
 	padding: 0.3125em;
 	border: none;
 	border-radius: 0;
-	border-bottom: 1px solid #757575;
+	border-bottom: 1px solid #4285f4;
 	background-color: inherit;
 	transition: border-color 0.3s;
 	color: inherit;
@@ -390,10 +391,23 @@ blockquote + cite {
 	font-size: 1em;
 	font-weight: 400;
 }
-.text-input:focus {
-	border-bottom-color: #4285f4;
+.text-input:not(:focus),
+.dropdown-menu:not(:focus):not(.active) {
+	border-bottom-color: #888 !important;
+}
+.text-input:focus,
+.dropdown-menu:focus,
+.dropdown-menu.active {
 	border-bottom-width: 2px;
 	padding-bottom: 0.25em;
+}
+.text-input-container {
+	display: inline-block;
+}
+.text-input-icon {
+	display: inline-block;
+	font-size: 1em;
+	margin-right: 1em;
 }
 
 /* Buttons */
