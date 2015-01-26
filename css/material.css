@@ -347,7 +347,7 @@ blockquote + cite {
 	width: 1em;
 	height: 1em;
 	border-radius: 50%;
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 	box-sizing: border-box;
 	left: -0.15em;
 	top: -0.15em;
@@ -358,8 +358,6 @@ blockquote + cite {
 .switch input:checked + label::after {
 	background-color: #0f9d58 !important;
 	border: none;
-	width: 18px;
-	height: 18px;
 	-webkit-transform: translateX(1.3125em);
 	transform: translateX(1.3125em);
 	width: 1.125em;
@@ -646,6 +644,10 @@ blockquote + cite {
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
 	line-height: 1.57em;
 	border-radius: 2px;
+	overflow: hidden;
+}
+.toast.rounded {
+	border-radius: 1.5em;
 }
 .toast-label {
 	-webkit-flex: 1;
