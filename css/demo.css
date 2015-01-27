@@ -67,3 +67,6 @@
 	color: gray;
 }
 
+.section > .divider {
+	margin-top: 1.5em;
+}
