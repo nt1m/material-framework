@@ -36,19 +36,19 @@
 code {
 	white-space: pre-wrap;
 }
-.tag {
+code .tag {
 	color: #E91E63; /* Pink - 500 */
 }
-.atn {
+code .atn {
 	color: #FF9800; /* Orange - 500 */
 }
-.pun {
+code .pun {
 	color: #9E9E9E; /* Gray - 500 */
 }
-.atv {
+code .atv {
 	color: #03A9F4; /* Light Blue - 500 */
 }
-.pln {
+code .pln {
 	color: inherit;
 }
 
