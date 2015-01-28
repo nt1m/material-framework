@@ -824,13 +824,17 @@ code {
 .dark-theme .card-container {
 	background-color: #222;
 }
+.dialog,
 .card {
 	background-color: #fff;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
-	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
+.dark-theme .dialog,
 .dark-theme .card {
 	background-color: #444;
+}
+.card {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
+	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
 .card[z="2"] {
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
