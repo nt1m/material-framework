@@ -2,7 +2,7 @@
 /******** by Tim Nguyen *************/
 /** http://twitter.com/therealntim **/
 
-@import url("//fonts.googleapis.com/css?family=RobotoDraft:500,400,300,300italic,400italic,500italic");
+@import url("//fonts.googleapis.com/css?family=RobotoDraft:500,400,300,300italic,400italic,500italic|Roboto+Slab:500,600");
 /* General styles */
 body {
 	margin: 0;
@@ -824,11 +824,23 @@ code {
 }
 
 /* Rich cards */
+.rich-card {
+	display: inline-block;
+}
 .card-hero {
 	background-position: center;
+	color: rgba(255, 255, 255, 0.87);
+	position: relative;
+}
+.card-hero h1 {
+	font-family: "Roboto Slab", Cambria, serif;
+	font-size: 1.5em;
+	position: absolute;
+	bottom: 0.5rem;
+	left: 0.5rem;
 }
 .card-hero:not(.side) {
-	height: 3em;
+	height: 5em;
 	width: 100%;
 	background-size: 100% auto;
 }
