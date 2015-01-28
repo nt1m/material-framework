@@ -136,7 +136,7 @@ blockquote + cite {
 	box-shadow: none;
 }
 code {
-	font-family: monospace;
+	font-family: Consolas, Menlo, monospace;
 	display: inline-block;
 	padding: 1em;
 	font-size: 1.2em;

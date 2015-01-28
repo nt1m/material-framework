@@ -32,6 +32,11 @@
 	top: 10px;
 }
 
+/* Code demos */
+code {
+	white-space: pre-wrap;
+}
+
 /* Specific demo rules */
 #card-demo .card {
 	margin-bottom: 100px;
