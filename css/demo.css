@@ -63,7 +63,7 @@ code .pln {
 }
 
 /* Add spacing around items */
-.checkbox, .radio, .button, .switch, .fab, .toast {
+.section > .checkbox, .section > .radio, .section > .button, .section > .switch, .section > .fab {
 	margin: 10px;
 }
 .toolbar-group {
