@@ -36,6 +36,21 @@
 code {
 	white-space: pre-wrap;
 }
+.tag {
+	color: #E91E63; /* Pink - 500 */
+}
+.atn {
+	color: #FF9800; /* Orange - 500 */
+}
+.pun {
+	color: #9E9E9E; /* Gray - 500 */
+}
+.atv {
+	color: #03A9F4; /* Light Blue - 500 */
+}
+.pln {
+	color: inherit;
+}
 
 /* Specific demo rules */
 #card-demo .card {
