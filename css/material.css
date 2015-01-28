@@ -135,6 +135,14 @@ blockquote + cite {
 	background: none;
 	box-shadow: none;
 }
+code {
+	font-family: monospace;
+	display: inline-block;
+	padding: 1em;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: 400;
+}
 
 /* CSS Ripple */
 .ripple, [ripple] {
@@ -403,6 +411,9 @@ blockquote + cite {
 }
 .text-input-container {
 	display: inline-block;
+}
+.text-input-container * {
+	vertical-align: middle;
 }
 .text-input-icon {
 	display: inline-block;
