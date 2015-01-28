@@ -48,7 +48,7 @@ code {
 }
 
 /* Add spacing around items */
-.checkbox, .radio, .text-input, .button, .switch, .fab, .toast {
+.checkbox, .radio, .button, .switch, .fab, .toast {
 	margin: 10px;
 }
 .toolbar-group {
