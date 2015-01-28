@@ -823,6 +823,24 @@ code {
 	            0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
+/* Rich cards */
+.card-hero {
+	background-position: center;
+}
+.card-hero:not(.side) {
+	height: 3em;
+	width: 100%;
+	background-size: 100% auto;
+}
+.card-hero.side {
+	height: 100%;
+	background-size: auto 100%;
+}
+.card-footer,
+.card-content {
+	padding: 0.5em;
+}
+
 /* Icons (will need to update this) */
 @font-face {
   	font-family: 'google-icons';
