@@ -794,6 +794,29 @@ code {
 	color: inherit;
 }
 
+/* Dialogs */
+.dialog-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5); /* FIXME : Magic color */
+}
+.dialog {
+	padding: 1.5em 1.5em 0.5em 1.5em;
+}
+.dialog-title {
+	font-size: 1.4em;
+	font-weight: 500;
+}
+.dialog-content {
+	padding-bottom: 1em;
+}
+.dialog-footer {
+	height: 3em;
+}
+
 /* Cards */
 .card-container {
 	background-color: #e5e5e5;
@@ -813,6 +836,7 @@ code {
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
 	            0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.dialog,
 .card[z="3"] {
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
 	            0 17px 50px 0 rgba(0, 0, 0, 0.19);
