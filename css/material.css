@@ -802,9 +802,11 @@ code {
 	left: 0;
 	right: 0;
 	background-color: rgba(0, 0, 0, 0.5); /* FIXME : Magic color */
+  z-index: 1;
 }
 .dialog {
 	padding: 1.5em 1.5em 0.5em 1.5em;
+  z-index: 1;
 }
 .dialog-title {
 	font-size: 1.4em;
