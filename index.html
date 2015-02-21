@@ -579,6 +579,58 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 &lt;/ul&gt;
 	</code>
 </div>
+	
+<div class="section">
+	<h1>Sidemenus</h1>
+	<button id="sidemenu-button" class="button color-blue-500">Click to see sidemenu</button>
+	<div class="divider"></div>
+	<h2>example</h2>
+	<code class="prettyprint">
+    &lt;div class=&quot;dialog-overlay&quot; id=&quot;sidemenu-background&quot; hidden&gt;&lt;/div&gt;
+    &lt;div class=&quot;sidemenu&quot; hidden&gt;
+     &lt;div class=&quot;hero&quot;&gt;
+         &lt;div class=&quot;fade&quot;&gt;&lt;/div&gt;
+         &lt;img class=&quot;thumbnail&quot; src=&quot;img/avatar.jpg&quot;/&gt;
+  	&lt;img class=&quot;background&quot; src=&quot;http://2.bp.blogspot.com/-9_DGM6_refc/U96PucSnWaI/AAAAAAABF4Y/eBBW_vP0Zfk/s0/Google+IO+Paper+Design_image.jpg&quot;/&gt;
+	&lt;span class=&quot;title&quot;&gt;Larry Page&lt;/span&gt;
+	&lt;span class=&quot;text&quot;&gt;example@gmail.com&lt;/span&gt;
+    &lt;/div&gt;
+ &lt;ul class=&quot;menu&quot;&gt; 
+     &lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-person-add&quot;&gt;&lt;/i&gt;Current&lt;/a&gt;&lt;/li&gt; 
+     &lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-person&quot;&gt;&lt;/i&gt;Recent&lt;/a&gt;&lt;/li&gt;
+	 		&lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+	 		&lt;h2&gt;Subheading&lt;/h2&gt;
+     &lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-archive&quot;&gt;&lt;/i&gt;Archive&lt;/a&gt;&lt;/li&gt; 
+     &lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-trash&quot;&gt;&lt;/i&gt;Trash&lt;/a&gt;&lt;/li&gt; 
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+	</code>
+	</div>
+
+    <div class="dialog-overlay" id="sidemenu-background" hidden></div>
+    <div class="sidemenu" hidden>
+     <div class="hero">
+         <div class="fade"></div>
+         <img class="thumbnail" src="img/avatar.jpg"/>
+    		<img class="background" src="http://2.bp.blogspot.com/-9_DGM6_refc/U96PucSnWaI/AAAAAAABF4Y/eBBW_vP0Zfk/s0/Google+IO+Paper+Design_image.jpg"/>
+			 		<span class="title">Larry Page</span>
+         	<span class="text">example@gmail.com</span>
+        </div>
+ <ul class="menu"> 
+     <li ripple><a href="#"><i class="icon-person-add"></i>Current</a></li> 
+     <li ripple><a href="#"><i class="icon-person"></i>Recent</a></li>
+	 		<li class="divider"></li>
+	 		<h2>Subheading</h2>
+     <li ripple><a href="#"><i class="icon-archive"></i>Archive</a></li> 
+     <li ripple><a href="#"><i class="icon-trash"></i>Trash</a></li> 
+        </ul>
+    </div>
+
+	<script>
+	document.getElementById("sidemenu-button").onclick = function() {document.querySelector(".sidemenu").hidden = false; document.getElementById("sidemenu-background").hidden = false; }
+	document.getElementById("sidemenu-background").onclick = function() { document.querySelector(".sidemenu").hidden = true; document.getElementById("sidemenu-background").hidden = true;}
+	</script>
 <div class="section">
 	<h1>Cards</h1>
 	<h2>Rich cards</h2>
@@ -616,6 +668,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 		<div class="card" z="5">z-depth: 5</div>
 	</div>
 </div>
+
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </body>
 </html>
