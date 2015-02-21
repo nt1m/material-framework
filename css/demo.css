@@ -24,6 +24,7 @@
 
 /* Header toolbar tweaks */
 #switch-container {
+	margin-top: 8px;
 	margin-right: 100px;
 }
 #external-fab-container {
