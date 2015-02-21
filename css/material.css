@@ -169,6 +169,7 @@ code {
 	top: 50%;
 	border-radius: 100% !important;
 }
+.sidemenu .menu li.selected::after,
 .ripple:active::after, .button:active::after, .fab:active::after, [ripple]:active::after {
 	width: 100% !important;
 	left: 0;
@@ -825,7 +826,7 @@ code {
 	height: 3em;
 }
 
-/* sidemenus */
+/* Sidemenus */
 
 .sidemenu {
 	position: fixed;
@@ -846,14 +847,6 @@ code {
 .sidemenu[hidden] {
 	left: -400px;
 	display: block;
-}
-.sidemenu .menu {
-	box-shadow: unset;
-	width: 100%;
-}
-.sidemenu .menu li {
-	line-height: 3em;
-	height: auto;
 }
 .sidemenu .sidemenu-hero {
 	width: 100%;
@@ -883,8 +876,8 @@ code {
 	padding: 0.375em 1em;
 }
 .sidemenu .sidemenu-hero .text {
-	width: 100%;
-	color: #FFF;
+	width: calc(100% - 2em);
+	color: #fff;
 	z-index: 1;
 	display: block;
 	padding: 0 1em;
@@ -899,11 +892,25 @@ code {
 	z-index: 0;
 }
 .sidemenu .menu i {
-	padding: 0 2em 0 1em;
+	padding: 0 2rem 0 0;
+	font-size: 1.5em;
 }
-
+.sidemenu .menu li:not(.selected) i {
+	opacity: 0.63;
+}
 .sidemenu .menu h2, .sidemenu .menu .subheading {
-	padding-left: 2em;
+	padding-left: 1em;
+}
+.sidemenu .menu {
+	box-shadow: none;
+	width: 100%;
+}
+.sidemenu .menu li {
+	line-height: 3em;
+	height: auto;
+}
+.sidemenu .menu li > a {
+	padding: 0 1em;
 }
 
 /* Cards */

@@ -11,6 +11,9 @@
 .section > h2, .section > .subheading {
 	top: -20px; /* sections have some padding, we need to move the subheader up to cover that */
 }
+.section > .divider {
+	margin-top: 1.5em;
+}
 
 /* Header positioning */
 .header {
@@ -87,7 +90,6 @@ code .pln {
 	float: right;
 	color: gray;
 }
-
-.section > .divider {
-	margin-top: 1.5em;
+.row i[class^="icon-"] {
+	font-size: 1.5em;
 }
