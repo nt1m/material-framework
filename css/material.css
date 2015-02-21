@@ -445,14 +445,14 @@ code {
 }
 .button.raised, .fab {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
-							0 2px 10px 0 rgba(0, 0, 0, 0.16);
+	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
 .button.raised:not([class*="bg-"]), .fab {
 	background-color: #dfdfdf;
 }
 .button.raised:active, .fab:active {
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-							0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	            0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .button:disabled {
 	background: #eaeaea !important;
@@ -836,24 +836,24 @@ code {
 }
 .card {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26),
-							0 2px 10px 0 rgba(0, 0, 0, 0.16);
+	            0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
 .card[z="2"] {
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-							0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	            0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .dialog,
 .card[z="3"] {
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-							0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	            0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .card[z="4"] {
 	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
-							0 25px 55px 0 rgba(0, 0, 0, 0.21);
+	            0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 .card[z="5"] {
 	box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2),
-							0 40px 77px 0 rgba(0, 0, 0, 0.22);
+	            0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
 /* Rich cards */
