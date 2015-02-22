@@ -885,7 +885,9 @@ code {
 /* Sidemenus */
 
 .sidemenu {
+	display: -webkit-flexbox;
 	display: flex;
+	-webkit-flex-direction: column;
 	flex-direction: column;
 	position: fixed;
 	top: 0;
@@ -974,8 +976,9 @@ code {
 	box-shadow: none;
 	width: 100%;
 	display: block;
-	overflow: auto;
-	flex: 1;
+	overflow: visible;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
 }
 .sidemenu .menu li {
 	line-height: 3em;
@@ -1063,7 +1066,11 @@ code {
 	font-weight: normal;
 	font-style: normal;
 }
-
+[class^="icon-"]:not(.icon-button), [class*=" icon-"]:not(.icon-button) {
+	height: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
 [class^="icon-"]:not(.icon-button)::before, [class*=" icon-"]:not(.icon-button)::before {
 	font-family: "material-design-icons";
 	font-style: normal;
@@ -1072,11 +1079,12 @@ code {
 	display: inline-block;
 	text-decoration: inherit;
 	width: 1em;
+	height: 1em;
 	text-align: center;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1em;
-	vertical-align: middle;
+	vertical-align: top;
 }
  
 .icon-access-alarms:before { content: '\e800'; } /* 'î €' */

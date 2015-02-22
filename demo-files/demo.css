@@ -91,6 +91,7 @@ code .pun {
 code .atv {
 	color: #03A9F4; /* Light Blue - 500 */
 }
+code .kwd,
 code .pln {
 	color: inherit;
 }
@@ -101,6 +102,7 @@ code .typ,
 code .lit {
 	color: #26A69A; /* Teal - 400 */
 }
+
 /* Specific demo rules */
 #card-demo .card {
 	margin-bottom: 100px;
