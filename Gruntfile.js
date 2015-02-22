@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 					browsers: [
 						"Chrome > 21",
 						"Firefox > 29",
-						"IE > 10",
+						"IE > 9",
 						"Safari > 6"
 					],
 					cascade: false
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 					browsers: [
 						"Chrome > 21",
 						"Firefox > 29",
-						"IE > 10",
+						"IE > 9",
 						"Safari > 6"
 					],
 					cascade: false
