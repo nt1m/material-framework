@@ -68,7 +68,6 @@ var SideMenu = new function() {
 		sm.hidden = !sm.hidden;
 	};
 	this.show = function(sm) {
-		console.log(Responsive, Responsive.device)
 		if (typeof Responsive == "undefined" || Responsive.device !== "desktop") {
 			this.overlay.hidden = false;
 		}
