@@ -488,6 +488,12 @@ code {
 	box-shadow: none !important;
 	pointer-events: none;
 }
+.button i {
+	font-size: 1.5em;
+	height: 1em;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
 
 /* Fabs */
 .fab {
