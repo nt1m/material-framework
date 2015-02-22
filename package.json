@@ -1,0 +1,33 @@
+{
+  "name": "material-framework",
+  "description": "An easy to use Material Design Framework for the web.",
+  "author": {
+    "name": "Tim Nguyen",
+    "email": "ntim.bugs@gmail.com",
+    "url": "http://nt1m.github.io"
+  },
+  "contributors": [
+    {
+      "name": "PalmerAL",
+      "url": "http://github.com/PalmerAL"
+    }
+  ],
+  "version": "2.1.0",
+  "homepage": "http://nt1m.github.io/material-framework",
+  "repository" : { 
+    "type": "git",
+    "url": "https://github.com/nt1m/material-framework.git"
+  },
+  "license" : "Apache 2.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~1.0.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-rename": "0.0.3",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-sass": "~0.7.3"
+  }
+}
