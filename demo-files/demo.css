@@ -1,0 +1,139 @@
+#navigation-sidemenu {
+	max-width: 22em
+}
+#navigation-sidemenu .sidemenu-hero h1 {
+	font-size: 25px;
+	margin-top: 10px;
+}
+#navigation-sidemenu .sidemenu-hero {
+	height: 70px;
+}
+#navigation-sidemenu .sidemenu-hero-image {
+	margin-top: -100px;
+}
+/* Sections */
+.navigation-section:not(:target) {
+	display: none;
+}
+p > code {
+	padding: 0 0.5em;
+	color: #E91E63;
+}
+
+/* Header positioning */
+.header {
+	margin: 0;
+	height: auto;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+/* Header toolbar tweaks */
+#switch-container {
+	margin-top: 8px;
+	margin-right: 100px;
+}
+#external-fab-container {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+/* Color palette */
+.color-palette {
+	color: rgba(255, 255, 255, 0.87);
+	font-size: 14px;
+	font-weight: 500;
+}
+.color-group {
+	display: inline-block;
+	width: 24%;
+	vertical-align: top;
+}
+.color-group ul {
+	list-style: none;
+	padding: 0;
+	margin-right: 3%;
+}
+.color-palette .dark {
+    color: rgba(0, 0, 0, 0.87);
+}
+.color-palette .color-group li.color, .color-palette .color-group:last-child li.color {
+    padding: 15px;
+}
+.color-palette .color-group li.main-color, .color-palette .color-group:last-child li.main-color {
+    border-bottom: 4px solid #F9F9F9;
+}
+.color-palette .color-group li.main-color .name, .color-palette .color-group:last-child li.main-color .name {
+    display: block;
+    margin-bottom: 60px;
+}
+.color-palette .color-group li.color .hex, .color-palette .color-group:last-child li.color .hex {
+    float: right;
+    text-transform: uppercase;
+}
+
+/* Code demos */
+code {
+	white-space: pre-wrap;
+}
+code .tag {
+	color: #E91E63; /* Pink - 500 */
+}
+code .atn {
+	color: #FF9800; /* Orange - 500 */
+}
+code .pun {
+	color: #9E9E9E; /* Gray - 500 */
+}
+code .atv {
+	color: #03A9F4; /* Light Blue - 500 */
+}
+code .pln {
+	color: inherit;
+}
+code .str {
+	color: #4CAF50; /* Green - 500 */
+}
+code .lit {
+	color: #26A69A; /* Teal - 400 */
+}
+/* Specific demo rules */
+#card-demo .card {
+	margin-bottom: 100px;
+	height: 100px;
+}
+#typography {
+	max-height: 330px;
+	overflow: auto;
+}
+
+/* Add spacing around items */
+.section > .checkbox, .section > .radio, .section > .button, .section > .switch, .section > .fab {
+	margin: 10px;
+}
+.toolbar-group {
+	margin: 10px 0;
+}
+
+/* Icon font display */
+#icons-demo {
+	text-align: center;
+}
+.row {
+	display: inline-block;
+	width: 20%;
+	margin-right: 2%;
+	margin-left: 2%;
+	min-width: 275px;
+	text-align: left;
+}
+.row .i-code {
+	float: right;
+	color: gray;
+}
+.row i[class^="icon-"] {
+	font-size: 1.5em;
+}
