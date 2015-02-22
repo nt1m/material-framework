@@ -40,7 +40,23 @@ module.exports = function(grunt) {
 					browsers: [
 						"Chrome > 21",
 						"Firefox > 29",
-						"IE > 10"
+						"IE > 10",
+						"Safari > 6"
+					],
+					cascade: false
+				}
+			},
+			uncompressed: {
+				expand: true,
+				cwd: "css/",
+				src: "**/*.css",
+				dest: "css/",
+				options: {
+					browsers: [
+						"Chrome > 21",
+						"Firefox > 29",
+						"IE > 10",
+						"Safari > 6"
 					],
 					cascade: false
 				}
@@ -100,5 +116,6 @@ module.exports = function(grunt) {
 	npmTasksToLoad.forEach(function(taskName) {
 		grunt.loadNpmTasks(taskName);
 	});
+	grunt.registerTask("autoprefix", ["autoprefixer:uncompressed"]);
 	grunt.registerTask("dist", ["clean:dist", "copy:js", "copy:css", "uglify:main", "autoprefixer:main", "cssmin:main", "rename:main"]);
 };
