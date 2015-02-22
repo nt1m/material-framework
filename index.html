@@ -9,7 +9,6 @@
 	<meta charset="utf-8"/>
 </head>
 <body>
-<div class="dialog-overlay" id="sidemenu-overlay" hidden></div>
 <div class="sidemenu sidebar responsive" id="navigation-sidemenu">
 	<div class="sidemenu-hero">
 		<img class="sidemenu-hero-image" src="demo-files/sidemenu-hero.jpg">
@@ -28,7 +27,7 @@
 		<li ripple><a href="#inputs"><i class="icon-input"></i>Inputs</a></li>
 		<li ripple><a href="#icons"><i class="icon-bookmark-outline"></i>Icons</a></li>
 		<li ripple><a href="#toolbars"><i class="icon-drive-site"></i>Toolbars</a></li>
-		<li ripple><a href="#toasts"><i class="icon-notifications-none"></i>Toasts</a></li>
+		<li ripple><a href="#popups"><i class="icon-notifications-none"></i>Popups</a></li>
 		<li ripple><a href="#lists-and-grids"><i class="icon-list"></i>Lists</a></li>
 		<li ripple><a href="#menus"><i class="icon-menu"></i>Menus</a></li>
 		<li ripple><a href="#cards"><i class="icon-content-copy"></i>Cards</a></li>
@@ -1736,25 +1735,73 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	</div>
 </div>
 
-<div class="section navigation-section" id="toasts">
-	<h1>Toasts</h1>
-	<div class="toast">
-		<label class="toast-label">We could not load your mail</label>
-		<button class="button flat color-yellow-500">Retry</button>
+<div id="dialog-demo" class="dialog" hidden>
+	<h1 class="dialog-title">Hello world</h1>
+	<div class="dialog-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
-	<div class="divider"></div>
-	<h2>Example</h2>
-	<code class="prettyprint">
+	<div class="dialog-footer">
+		<button class="button">More info</button>
+		<span class="float-right">
+			<button class="button dialog-close">Decline</button>
+			<button class="button color-blue-500 dialog-confirm">Accept</button>
+		</span>
+	</div>
+</div>
+<div class="navigation-section" id="popups">
+	<div class="section" id="toasts">
+		<h1>Toasts</h1>
+		<div class="toast">
+			<label class="toast-label">We could not load your mail</label>
+			<button class="button flat color-yellow-500">Retry</button>
+		</div>
+		<div class="divider"></div>
+		<h2>Example</h2>
+		<code class="prettyprint">
 &lt;div class=&quot;toast&quot;&gt;
 	&lt;label class=&quot;toast-label&quot;&gt;We could not load your mail&lt;/label&gt;
 	&lt;button class=&quot;button flat color-yellow-500&quot;&gt;Retry&lt;/button&gt;
 &lt;/div&gt;
-	</code>
-	<div class="divider"></div>
-	You can also add a <code class="prettyprint">rounded</code> class to toasts if needed.
-	<div class="toast rounded">
-		<label class="toast-label">We could not load your mail</label>
-		<button class="button flat color-pink-500">Retry</button>
+		</code>
+		<div class="divider"></div>
+		You can also add a <code class="prettyprint">rounded</code> class to toasts if needed.
+		<div class="toast rounded">
+			<label class="toast-label">We could not load your mail</label>
+			<button class="button flat color-pink-500">Retry</button>
+		</div>
+	</div>
+	<div class="section">
+		<h1>Dialogs</h1>
+		<p>Tip : include <code class="prettyprint">material.js</code> for quick helper functions</p>
+		<button class="button color-pink-500" onclick="Dialog.show(document.querySelector('#dialog-demo'))">Open dialog</button>
+		<div class="divider"></div>
+		<h2>Helpers</h2>
+		<code class="prettyprint bold">Dialog.show(element)</code>
+		<p>Shows a dialog. <code class="prettyprint">element</code> corresponds to a DOM element.</p>
+		<code class="prettyprint bold">Dialog.hide(element)</code>
+		<p>Hides a dialog. <code class="prettyprint">element</code> corresponds to a DOM element.</p>
+		<code class="prettyprint bold">Dialog.toggle(element)</code>
+		<p>Toggles a dialog. <code class="prettyprint">element</code> corresponds to a DOM element.</p>
+		<div class="divider"></div>
+
+		<h2>Example</h2>
+		<code class="prettyprint">
+&lt;div class="dialog" hidden>
+	&lt;h1 class="dialog-title">Hello world&lt;/h1>
+	&lt;div class="dialog-content">
+		&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+		&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+	&lt;/div>
+	&lt;div class="dialog-footer">
+		&lt;button class="button">More info&lt;/button>
+		&lt;span class="float-right">
+			&lt;button class="button dialog-close">Decline&lt;/button>
+			&lt;button class="button color-blue-500 dialog-confirm">Accept&lt;/button>
+		&lt;/span>
+	&lt;/div>
+&lt;/div>
+		</code>
 	</div>
 </div>
 
@@ -1836,12 +1883,20 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 		
 	<div class="section">
 		<h1>Sidemenus</h1>
-		<p>Tip : include <code class="prettyprint">sidemenu.js</code> to get quick helper functions.</p>
+		<p>Tip : include <code class="prettyprint">material.js</code> to get quick helper functions.</p>
+		<p>Add the additional <code class="prettyprint">sidebar</code> class if you want the sidemenu to persists on desktops (like the one on this page).</p>
 		<button id="sidemenu-button" class="button color-blue-500" onclick="SideMenu.toggle(document.querySelector('#sidemenu-demo'));">Click to see the sidemenu</button>
+		<div class="divider"></div>
+		<h2>Helpers</h2>
+		<code class="prettyprint bold">SideMenu.show(element)</code>
+		<p>Shows a sidemenu. <code class="prettyprint">element</code> corresponds to a DOM element.</p>
+		<code class="prettyprint bold">SideMenu.hide(element)</code>
+		<p>Hides a sidemenu. <code class="prettyprint">element</code> corresponds to a DOM element.</p>
+		<code class="prettyprint bold">SideMenu.toggle(element)</code>
+		<p>Toggles a sidemenu. <code class="prettyprint">element</code> corresponds to a DOM element.</p>
 		<div class="divider"></div>
 		<h2>Example</h2>
 		<code class="prettyprint">
-&lt;div class=&quot;dialog-overlay&quot; id=&quot;sidemenu-overlay&quot; hidden&gt;&lt;/div&gt;
 &lt;div class=&quot;sidemenu&quot; hidden&gt;
 	&lt;div class=&quot;sidemenu-hero fade&quot;&gt;
 		&lt;img class=&quot;avatar&quot; src=&quot;demo-files/avatar.jpg&quot;/&gt;

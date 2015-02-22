@@ -97,6 +97,7 @@ code .pln {
 code .str {
 	color: #4CAF50; /* Green - 500 */
 }
+code .typ,
 code .lit {
 	color: #26A69A; /* Teal - 400 */
 }
