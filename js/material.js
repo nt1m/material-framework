@@ -157,10 +157,39 @@ var Dialog = new function() {
 	}
 }
 
+var Ripple = new function() {
+	this.onClick = function(event) {
+		if (event.target.classList.contains("no-ripple") ||
+		    event.target.getAttribute("ripple") == "none" ||
+		    !event.target.hasAttribute("ripple") ||
+		    !event.target.classList.contains("ripple") ||
+		    !event.target.classList.contains("fab") ||
+		    !event.target.classList.contains("button")) {
+		    return;
+		}
+		var x = event.pageX - event.target.offsetLeft;
+		var y = event.pageY - event.target.offsetTop;
+		var style = document.createElement("style");
+		var id = "data-mf-ripple_" + Math.floor(Math.random() * 10000);
+		var value = Math.floor(Math.random() * 10000);
+		event.target.setAttribute(id, value);
+		style.innerHTML = "[" + id + "=" + value "::after {\n"+
+		                  "left: " + x "px;\n"+
+		                  "top: " + y + "px;}";
+		
+		
+	}
+	this.init = function() {
+		document.addEventListener("mousedown", this.onClick, false);
+		document.addEventListener("touchstart", this.onClick, false);
+	}
+}
+
 window.addEventListener("DOMContentLoaded", function MF_onLoad() {
 	Dialog.init();
 	Responsive.init();
 	SideMenu.init();
+	Ripple.init();
 	window.removeEventListener("DOMContentLoaded", MF_onLoad);
 });
 
