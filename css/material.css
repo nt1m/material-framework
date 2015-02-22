@@ -970,6 +970,7 @@ code {
 	border-radius: 50%;
 	margin: 2em 1em 0.5em;
 	z-index: 1;
+	position: relative;
 }
 .sidemenu .sidemenu-hero .title {
 	display: block;
@@ -978,6 +979,7 @@ code {
 	color: #fff;
 	z-index: 1;
 	padding: 0.375em 1em;
+	position: relative;
 }
 .sidemenu .sidemenu-hero .text {
 	width: -webkit-calc(100% - 2em);
@@ -986,6 +988,7 @@ code {
 	z-index: 1;
 	display: block;
 	padding: 0 1em;
+	position: relative;
 }
 .sidemenu-hero.fade::before {
 	content: "";
