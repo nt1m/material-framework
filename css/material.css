@@ -170,6 +170,7 @@ code {
 .ripple, [ripple] {
 	position: relative;
 	display: inline-block;
+	overflow: hidden;
 }
 .ripple::after, .button::after, .fab::after, [ripple]::after {
 	content:"";
@@ -187,8 +188,8 @@ code {
 	opacity: 0;
 }
 .ripple.circle::after, .fab::after, [ripple="circle"]::after {
-	width: 0;
-	height: 0;
+	width: 10%;
+	height: 10%;
 	top: 50%;
 	border-radius: 100% !important;
 }
@@ -1023,6 +1024,7 @@ code {
 .sidemenu .menu li {
 	line-height: 3em;
 	height: auto;
+	vertical-align: top;
 }
 .sidemenu .menu li > a {
 	padding: 0 1em;

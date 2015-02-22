@@ -65,7 +65,7 @@ var SideMenu = new function() {
 		var overlay = document.createElement("div");
 		overlay.className = "overlay sidemenu-overlay";
 		overlay.hidden = true;
-		overlay.setAttribute("id", "mf_overlay_" + Math.floor(Math.random() * 10000))
+		overlay.setAttribute("id", "mf_overlay_" + Math.floor(Math.random() * 100000))
 		document.body.appendChild(overlay);
 		this.overlay = overlay;
 	}
@@ -126,7 +126,7 @@ var Dialog = new function() {
 		var overlay = document.createElement("div");
 		overlay.className = "overlay dialog-overlay";
 		overlay.hidden = true;
-		overlay.setAttribute("id", "mf_overlay_" + Math.floor(Math.random() * 10000))
+		overlay.setAttribute("id", "mf_overlay_" + Math.floor(Math.random() * 100000))
 		document.body.appendChild(overlay);
 		this.overlay = overlay;
 	};
@@ -159,29 +159,30 @@ var Dialog = new function() {
 
 var Ripple = new function() {
 	this.onClick = function(event) {
-		if (event.target.classList.contains("no-ripple") ||
-		    event.target.getAttribute("ripple") == "none" ||
-		    !event.target.hasAttribute("ripple") ||
-		    !event.target.classList.contains("ripple") ||
-		    !event.target.classList.contains("fab") ||
-		    !event.target.classList.contains("button")) {
-		    return;
-		}
-		var x = event.pageX - event.target.offsetLeft;
-		var y = event.pageY - event.target.offsetTop;
+		/* This needs fixing */
+		var x = event.pageX - this.offsetLeft - (this.clientWidth / 2);
+		var y = event.pageY - this.offsetTop - (this.clientHeight / 2);
 		var style = document.createElement("style");
-		var id = "data-mf-ripple_" + Math.floor(Math.random() * 10000);
-		var value = Math.floor(Math.random() * 10000);
-		event.target.setAttribute(id, value);
-		style.innerHTML = "[" + id + "=" + value + "]::after {\n"+
+		var id = "data-mf-ripple_" + Math.floor(Math.random() * 1000000);
+		var value = Math.floor(Math.random() * 1000000);
+		this.setAttribute(id, value);
+		style.innerHTML = "[" + id + "='" + value + "']::after {\n"+
 		                  "left: " + x + "px;\n"+
 		                  "top: " + y + "px;}";
 		document.body.appendChild(style);
-		style.remove();
+		setTimeout(function() {
+			style.remove();
+			this.removeAttribute(id);
+		}.bind(this), 2000);
 	}
 	this.init = function() {
-		document.addEventListener("mousedown", this.onClick, false);
-		document.addEventListener("touchstart", this.onClick, false);
+		// var rippleitems = document.querySelectorAll(".button:not(.no-ripple):not([ripple='none']), .fab:not(.no-ripple):not([ripple='none']), [ripple]:not([ripple='none']), .ripple");
+		// for (var i = 0; i < rippleitems.length; i++) {
+		// 	rippleitems[i].addEventListener("mousedown", this.onClick, false);
+		// 	rippleitems[i].addEventListener("touchstart", this.onClick, false);
+		// }
+		// Hack to enable :active state on iOS
+		document.addEventListener("touchstart", function() {}, false);
 	}
 }
 
