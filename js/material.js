@@ -176,8 +176,7 @@ var Ripple = new function() {
 		style.innerHTML = "[" + id + "=" + value + "::after {\n"+
 		                  "left: " + x + "px;\n"+
 		                  "top: " + y + "px;}";
-		
-		
+		document.body.appendChild(style);
 	}
 	this.init = function() {
 		document.addEventListener("mousedown", this.onClick, false);
