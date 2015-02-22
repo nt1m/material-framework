@@ -65,7 +65,7 @@ var SideMenu = new function() {
 		var overlay = document.createElement("div");
 		overlay.className = "overlay sidemenu-overlay";
 		overlay.hidden = true;
-		overlay.setAttribute("id", "mf_overlay_" + (Math.random() * 10000))
+		overlay.setAttribute("id", "mf_overlay_" + Math.floor(Math.random() * 10000))
 		document.body.appendChild(overlay);
 		this.overlay = overlay;
 	}
@@ -126,7 +126,7 @@ var Dialog = new function() {
 		var overlay = document.createElement("div");
 		overlay.className = "overlay dialog-overlay";
 		overlay.hidden = true;
-		overlay.setAttribute("id", "mf_overlay_" + (Math.random() * 10000))
+		overlay.setAttribute("id", "mf_overlay_" + Math.floor(Math.random() * 10000))
 		document.body.appendChild(overlay);
 		this.overlay = overlay;
 	};
