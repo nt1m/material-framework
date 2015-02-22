@@ -7,6 +7,7 @@ Demo : http://nt1m.github.io/material-framework
 
 # Usage
 Just include material.css on any web page/ web app.
+You can also get a minified version by running `grunt dist`, the minified code will appear in the `dist` folder.
 
 # Resources used
 - [Material Colors](https://github.com/shuhei/material-colors/)
