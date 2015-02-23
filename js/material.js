@@ -3,7 +3,7 @@
 var console = (window.console = window.console || {});
 
 /* Responsive code */
-var Responsive = function(){
+function Responsive(){
 	this.initialised = false;
 };
 Responsive.prototype = {
@@ -16,7 +16,7 @@ Responsive.prototype = {
 	},
 	onResize: function() {
 		var width     = window.innerWidth,
-		    oldDevice = this.device;
+			oldDevice = this.device;
 		if (width > 1000) {
 			this.device = "desktop";
 		}
@@ -65,7 +65,7 @@ var Theme = {
 };
 
 /* SideMenu code */
-var SideMenu = function(){
+function SideMenu(){
 	this.initialised = false;
 };
 SideMenu.prototype = {
@@ -132,7 +132,7 @@ SideMenu.prototype = {
 };
 
 /* Dialog code */
-var Dialog = function(){
+function Dialog(){
 	this.initialised = false;
 };
 Dialog.prototype = {
@@ -179,7 +179,7 @@ Dialog.prototype = {
 };
 
 /* Ripple code */
-var Ripple = function(){
+function Ripple(){
 	this.initialised = false;
 };
 Ripple.prototype = {
@@ -198,10 +198,10 @@ Ripple.prototype = {
 	onClick: function(event) {
 		/* This needs fixing */
 		var x     = event.pageX - this.offsetLeft - (this.clientWidth / 2),
-		    y     = event.pageY - this.offsetTop - (this.clientHeight / 2),
-		    style = document.createElement("style"),
-		    id    = "data-mf-ripple_" + Math.floor(Math.random() * 1000000),
-		    value = Math.floor(Math.random() * 1000000);
+			y     = event.pageY - this.offsetTop - (this.clientHeight / 2),
+			style = document.createElement("style"),
+			id    = "data-mf-ripple_" + Math.floor(Math.random() * 1000000),
+			value = Math.floor(Math.random() * 1000000);
 		this.setAttribute(id, value);
 		style.innerHTML = "[" + id + "='" + value + "']::after {\n"+
 		                  "left: " + x + "px;\n"+
@@ -215,6 +215,11 @@ Ripple.prototype = {
 };
 
 /* Initiation */
+var Dialog    = new Dialog(),
+    Responsive = new Responsive(),
+    SideMenu   = new SideMenu(),
+    Ripple     = new Ripple();
+
 window.addEventListener("DOMContentLoaded", function MF_onLoad() {
 	Dialog.init();
 	Responsive.init();
