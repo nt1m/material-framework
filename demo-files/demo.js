@@ -1,8 +1,15 @@
+"use strict";
+var Dialog     = new Dialog(),
+    Responsive = new Responsive(),
+    SideMenu   = new SideMenu(),
+    Ripple     = new Ripple();
+
 function init() {
 	var sm = document.getElementById("navigation-sidemenu");
 	var smitems = sm.querySelectorAll(".menu > li:not(.divider) > a");
-	for (var i = 0; i < smitems.length; i++) {
-		smitems[i].addEventListener("click", function() {
+
+	function clickHandler() {
+		return function() {
 			if (Responsive.device != "desktop") {
 				SideMenu.hide(sm);
 			}
@@ -11,11 +18,16 @@ function init() {
 			}
 			this.parentNode.className = "selected color-blue-500";
 			document.querySelector(".main-content").scrollTop = 0;
-		});
+		};
+	}
+
+	for (var i = 0, len = smitems.length; i < len; i++) {
+		smitems[i].addEventListener("click", clickHandler());
 	}
 }
+
 window.addEventListener("DOMContentLoaded", function() {
-	if ((window.location.hash == "") || (document.querySelector(".navigation-section" + window.location.hash) == null)) {
+	if ((window.location.hash === "") || (document.querySelector(".navigation-section" + window.location.hash) === null)) {
 		window.location.hash = "#introduction";
 	}
 	document.querySelector("#navigation-sidemenu a[href='" + window.location.hash + "']").parentNode.className = "selected color-blue-500";
