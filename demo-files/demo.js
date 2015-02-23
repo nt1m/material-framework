@@ -1,9 +1,9 @@
 function init() {
-	var sm = document.querySelector("#navigation-sidemenu");
+	var sm = document.getElementById("navigation-sidemenu");
 	var smitems = sm.querySelectorAll(".menu > li:not(.divider) > a");
 	for (var i = 0; i < smitems.length; i++) {
 		smitems[i].addEventListener("click", function() {
-			if (document.body.clientWidth < 800) {
+			if (Responsive.device != "desktop") {
 				SideMenu.hide(sm);
 			}
 			for (var ind = 0; ind < smitems.length; ind++) {
