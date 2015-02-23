@@ -5,7 +5,7 @@ var console = (window.console = window.console || {});
 /* Responsive code */
 function Responsive(){
 	this.initialised = false;
-};
+}
 Responsive.prototype = {
 	constructor : Responsive,
 	init: function() {
@@ -67,7 +67,7 @@ var Theme = {
 /* SideMenu code */
 function SideMenu(){
 	this.initialised = false;
-};
+}
 SideMenu.prototype = {
 	constructor : SideMenu,
 	init: function(params) {
@@ -134,7 +134,7 @@ SideMenu.prototype = {
 /* Dialog code */
 function Dialog(){
 	this.initialised = false;
-};
+}
 Dialog.prototype = {
 	constructor : Dialog,
 	init: function() {
@@ -181,7 +181,7 @@ Dialog.prototype = {
 /* Ripple code */
 function Ripple(){
 	this.initialised = false;
-};
+}
 Ripple.prototype = {
 	constructor : Ripple,
 	init: function() {
