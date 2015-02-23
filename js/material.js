@@ -7,9 +7,9 @@ function Responsive(){
 	this.initialised = false;
 }
 Responsive.prototype = {
-	constructor : Responsive,
+	constructor: Responsive,
 	init: function() {
-		if(this.initialised) return;
+		if (this.initialised) return;
 		this.onResize();
 		window.addEventListener("resize", this.onResize.bind(this));
 		this.initialised = true;
@@ -69,9 +69,9 @@ function SideMenu(){
 	this.initialised = false;
 }
 SideMenu.prototype = {
-	constructor : SideMenu,
+	constructor: SideMenu,
 	init: function(params) {
-		if(this.initialised) return;
+		if (this.initialised) return;
 		this.createOverlay();
 		if (params && params.overlay) {
 			this.setOverlay(params.overlay);
@@ -136,9 +136,9 @@ function Dialog(){
 	this.initialised = false;
 }
 Dialog.prototype = {
-	constructor : Dialog,
+	constructor: Dialog,
 	init: function() {
-		if(this.initialised) return;
+		if (this.initialised) return;
 		this.createOverlay();
 		var buttons = document.querySelectorAll(".dialog-confirm, .dialog-close");
 		for (var i = 0, len = buttons.length; i < len; i++) {
@@ -214,7 +214,7 @@ Ripple.prototype = {
 	}
 };
 
-/* Initiation */
+/* Initialisation */
 var Dialog    = new Dialog(),
     Responsive = new Responsive(),
     SideMenu   = new SideMenu(),
