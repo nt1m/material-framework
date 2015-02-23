@@ -1,7 +1,7 @@
 "use strict";
 function init() {
-	var sm = document.getElementById("navigation-sidemenu");
-	var smitems = sm.querySelectorAll(".menu > li:not(.divider) > a");
+	var sm = document.getElementById("navigation-sidemenu"),
+	    smitems = sm.querySelectorAll(".menu > li:not(.divider) > a");
 
 	function clickHandler() {
 		return function() {
