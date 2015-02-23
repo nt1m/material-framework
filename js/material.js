@@ -133,7 +133,7 @@ SideMenu.prototype = {
 
 /* Dialog code */
 var Dialog = function(){
-	this.initiated = false;
+	this.initialised = false;
 };
 Dialog.prototype = {
 	constructor : Dialog,
