@@ -198,10 +198,10 @@ Ripple.prototype = {
 	onClick: function(event) {
 		/* This needs fixing */
 		var x     = event.pageX - this.offsetLeft - (this.clientWidth / 2),
-			y     = event.pageY - this.offsetTop - (this.clientHeight / 2),
-			style = document.createElement("style"),
-			id    = "data-mf-ripple_" + Math.floor(Math.random() * 1000000),
-			value = Math.floor(Math.random() * 1000000);
+		    y     = event.pageY - this.offsetTop - (this.clientHeight / 2),
+		    style = document.createElement("style"),
+		    id    = "data-mf-ripple_" + Math.floor(Math.random() * 1000000),
+		    value = Math.floor(Math.random() * 1000000);
 		this.setAttribute(id, value);
 		style.innerHTML = "[" + id + "='" + value + "']::after {\n"+
 		                  "left: " + x + "px;\n"+
