@@ -3,21 +3,20 @@
 var console = (window.console = window.console || {});
 
 /* Responsive code */
-function Responsive(){
+var Responsive = function(){
 	this.initialised = false;
-}
+};
 Responsive.prototype = {
 	constructor : Responsive,
 	init: function() {
-		if(!this.initialised){
-			this.onResize();
-			window.addEventListener("resize", this.onResize.bind(this));
-			this.initialised = true;
-		}
+		if(this.initialised) return;
+		this.onResize();
+		window.addEventListener("resize", this.onResize.bind(this));
+		this.initialised = true;
 	},
 	onResize: function() {
-		var width 		= window.innerWidth,
-			oldDevice 	= this.device;
+		var width     = window.innerWidth,
+			oldDevice = this.device;
 		if (width > 1000) {
 			this.device = "desktop";
 		}
@@ -66,31 +65,30 @@ var Theme = {
 };
 
 /* SideMenu code */
-function SideMenu(){
+var SideMenu = function(){
 	this.initialised = false;
-}
+};
 SideMenu.prototype = {
 	constructor : SideMenu,
 	init: function(params) {
-		if(!this.initialised){
-			this.createOverlay();
-			if (params && params.overlay) {
-				this.setOverlay(params.overlay);
-			}
-			this.overlay.addEventListener("click", function() {
-				var sidemenus = document.querySelectorAll(".sidemenu");
-				for (var i = 0, len = sidemenus.length; i < len; i++) {
-					if (!sidemenus[i].hidden && (!sidemenus[i].classList.contains("sidebar") || (typeof Responsive == "undefined" || Responsive.device !== "desktop"))) {
-						this.hide(sidemenus[i]);
-					}
-				}
-			}.bind(this));
-			if (typeof Responsive != "undefined") {
-				Responsive.addResizeHandler(this.onResize.bind(this));
-			}
-			this.onResize();
-			this.initialised = true;
+		if(this.initialised) return;
+		this.createOverlay();
+		if (params && params.overlay) {
+			this.setOverlay(params.overlay);
 		}
+		this.overlay.addEventListener("click", function() {
+			var sidemenus = document.querySelectorAll(".sidemenu");
+			for (var i = 0, len = sidemenus.length; i < len; i++) {
+				if (!sidemenus[i].hidden && (!sidemenus[i].classList.contains("sidebar") || (typeof Responsive == "undefined" || Responsive.device !== "desktop"))) {
+					this.hide(sidemenus[i]);
+				}
+			}
+		}.bind(this));
+		if (typeof Responsive != "undefined") {
+			Responsive.addResizeHandler(this.onResize.bind(this));
+		}
+		this.onResize();
+		this.initialised = true;
 	},
 	createOverlay: function() {
 		if (document.querySelector(".sidemenu-overlay")) {
@@ -134,20 +132,19 @@ SideMenu.prototype = {
 };
 
 /* Dialog code */
-function Dialog(){
+var Dialog = function(){
 	this.initiated = false;
-}
+};
 Dialog.prototype = {
 	constructor : Dialog,
 	init: function() {
-		if(!this.initialised){
-			this.createOverlay();
-			var buttons = document.querySelectorAll(".dialog-confirm, .dialog-close");
-			for (var i = 0, len = buttons.length; i < len; i++) {
-				buttons[i].addEventListener("click", this.hideCurrentDialog.bind(this));
-			}
-			this.initialised = true;
+		if(this.initialised) return;
+		this.createOverlay();
+		var buttons = document.querySelectorAll(".dialog-confirm, .dialog-close");
+		for (var i = 0, len = buttons.length; i < len; i++) {
+			buttons[i].addEventListener("click", this.hideCurrentDialog.bind(this));
 		}
+		this.initialised = true;
 	},
 	createOverlay: function() {
 		if (document.querySelector(".dialog-overlay")) {
@@ -182,9 +179,9 @@ Dialog.prototype = {
 };
 
 /* Ripple code */
-function Ripple(){
+var Ripple = function(){
 	this.initialised = false;
-}
+};
 Ripple.prototype = {
 	constructor : Ripple,
 	init: function() {
@@ -194,18 +191,17 @@ Ripple.prototype = {
 		// 	rippleitems[i].addEventListener("touchstart", this.onClick, false);
 		// }
 		// Hack to enable :active state on iOS
-		if(!this.initialised){
-			document.addEventListener("touchstart", function() {}, false);
-			this.initialised = true;
-		}
+		if(this.initialised) return;
+		document.addEventListener("touchstart", function() {}, false);
+		this.initialised = true;
 	},
 	onClick: function(event) {
 		/* This needs fixing */
-		var x 		= event.pageX - this.offsetLeft - (this.clientWidth / 2),
-			y 		= event.pageY - this.offsetTop - (this.clientHeight / 2),
-			style 	= document.createElement("style"),
-			id 		= "data-mf-ripple_" + Math.floor(Math.random() * 1000000),
-			value 	= Math.floor(Math.random() * 1000000);
+		var x     = event.pageX - this.offsetLeft - (this.clientWidth / 2),
+			y     = event.pageY - this.offsetTop - (this.clientHeight / 2),
+			style = document.createElement("style"),
+			id    = "data-mf-ripple_" + Math.floor(Math.random() * 1000000),
+			value = Math.floor(Math.random() * 1000000);
 		this.setAttribute(id, value);
 		style.innerHTML = "[" + id + "='" + value + "']::after {\n"+
 		                  "left: " + x + "px;\n"+
@@ -217,3 +213,12 @@ Ripple.prototype = {
 		}.bind(this), 2000);
 	}
 };
+
+/* Initiation */
+window.addEventListener("DOMContentLoaded", function MF_onLoad() {
+	Dialog.init();
+	Responsive.init();
+	SideMenu.init();
+	Ripple.init();
+	window.removeEventListener("DOMContentLoaded", MF_onLoad);
+});
