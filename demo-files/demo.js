@@ -1,9 +1,4 @@
 "use strict";
-var Dialog     = new Dialog(),
-    Responsive = new Responsive(),
-    SideMenu   = new SideMenu(),
-    Ripple     = new Ripple();
-
 function init() {
 	var sm = document.getElementById("navigation-sidemenu");
 	var smitems = sm.querySelectorAll(".menu > li:not(.divider) > a");
