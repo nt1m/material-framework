@@ -1,5 +1,5 @@
 #navigation-sidemenu {
-	max-width: 22em
+	max-width: 22em;
 }
 #navigation-sidemenu .sidemenu-hero h1 {
 	font-size: 25px;
@@ -27,7 +27,7 @@ p > code {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-	z-index: 999;
+	z-index: 998;
 }
 
 /* Header toolbar tweaks */
