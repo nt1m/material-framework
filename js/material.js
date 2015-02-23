@@ -16,7 +16,7 @@ Responsive.prototype = {
 	},
 	onResize: function() {
 		var width     = window.innerWidth,
-			oldDevice = this.device;
+		    oldDevice = this.device;
 		if (width > 1000) {
 			this.device = "desktop";
 		}
