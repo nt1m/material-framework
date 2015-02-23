@@ -22,6 +22,7 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", function() {
+	var md = new Material();
 	if ((window.location.hash === "") || (document.querySelector(".navigation-section" + window.location.hash) === null)) {
 		window.location.hash = "#introduction";
 	}

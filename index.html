@@ -54,8 +54,17 @@
 		<h2>What is this ?</h2>
 		<p>Material Framework is a simple responsive CSS framework made by <a href="http://github.com/nt1m">Tim Nguyen</a> that allows you to integrate <a href="http://google.com/design/spec">Material Design</a> in any web page or web app.</p>
 		<p>© Copyright 2014-2015 - Tim Nguyen</p>
-		<h2>How do I use it ?</h2>
-		<p>Just import material.css on any page you need. Start navigating the documentation by opening the menu !</p>
+		<h2>Setup</h2>
+		<p>Just import material.css if you only need the styles. If you need the JS, you'll also need to import material.js first, then you'll need to initialize the Material object. Luckily, that can be done using a simple line of code :</p>
+		<code class="prettyprint">
+// This will initialize all Material modules
+var md = new Material();
+		</code>
+		<p>Or if you only need specific modules :</p>
+		<code class="prettyprint">
+// This will initialize only the Responsive and SideMenu modules
+var md = new Material({modules: ["Responsive", "SideMenu"]});
+		</code>
 		<h2>Where do I get it ?</h2>
 		<p>You can find it on Github. Grab it now before your internet gets slow :)</p>
 		<a href="https://github.com/nt1m/material-framework/" class="button raised color-black" target="_blank"><i class="icon-visibility"></i>View on Github</a>
@@ -1785,7 +1794,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	</div>
 	<div class="section">
 		<h1>Dialogs</h1>
-		<p>Tip : include <code class="prettyprint">material.js</code> for quick helper functions</p>
+		<p>Tip : initialize the <code class="prettyprint">Dialog</code> module for quick helper functions</p>
 		<button class="button color-pink-500" onclick="Dialog.show(document.querySelector('#dialog-demo'))">Open dialog</button>
 		<div class="divider"></div>
 		<h2>Helpers</h2>
@@ -1895,7 +1904,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 		
 	<div class="section">
 		<h1>Sidemenus</h1>
-		<p>Tip : include <code class="prettyprint">material.js</code> to get quick helper functions.</p>
+		<p>Tip : initialize the <code class="prettyprint">SideMenu</code> module to get quick helper functions.</p>
 		<p>Add the additional <code class="prettyprint">sidebar</code> class if you want the sidemenu to persists on desktops (like the one on this page).</p>
 		<button id="sidemenu-button" class="button color-blue-500" onclick="SideMenu.toggle(document.querySelector('#sidemenu-demo'));">Click to see the sidemenu</button>
 		<div class="divider"></div>

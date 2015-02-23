@@ -2,11 +2,35 @@
 /* Util */
 var console = (window.console = window.console || {});
 
-/* Responsive code */
-function Responsive(){
+function Material(params) {
 	this.initialised = false;
+	var modules = params && params.hasOwnProperty("modules") ? params.modules : null;
+	this.init(modules);
 }
-Responsive.prototype = {
+Material.prototype.init = function(modules) {
+	if (this.initialised) return;
+	if (!modules) {
+		Dialog.init();
+		Responsive.init();
+		SideMenu.init();
+		Ripple.init();
+	}
+	else {
+		modules.forEach(function(module) {
+			if (!window.hasOwnProperty(module) || !window[module].hasOwnProperty("init") || !window[module].isMaterialModule) {
+				console.warn("[material.init] Module not found");
+				return;
+			}
+			window[module].init();
+		});
+	}
+	this.initialised = true;
+}
+
+/* Responsive code */
+var Responsive = {
+	initialised: false,
+	isMaterialModule: true,
 	constructor: Responsive,
 	init: function() {
 		if (this.initialised) return;
@@ -39,6 +63,7 @@ Responsive.prototype = {
 
 /* Theme code */
 var Theme = {
+	isMaterialModule: true,
 	toggle: function(element) {
 		var el = element || document.body;
 		if (el.classList.contains("dark-theme")) {
@@ -65,10 +90,9 @@ var Theme = {
 };
 
 /* SideMenu code */
-function SideMenu(){
-	this.initialised = false;
-}
-SideMenu.prototype = {
+var SideMenu = {
+	initialised: false,
+	isMaterialModule: true,
 	constructor: SideMenu,
 	init: function(params) {
 		if (this.initialised) return;
@@ -132,10 +156,9 @@ SideMenu.prototype = {
 };
 
 /* Dialog code */
-function Dialog(){
-	this.initialised = false;
-}
-Dialog.prototype = {
+var Dialog = {
+	initialised: false,
+	isMaterialModule: true,
 	constructor: Dialog,
 	init: function() {
 		if (this.initialised) return;
@@ -179,24 +202,23 @@ Dialog.prototype = {
 };
 
 /* Ripple code */
-function Ripple(){
-	this.initialised = false;
-}
-Ripple.prototype = {
+var Ripple = {
+	isMaterialModule: true,
+	initialised: false,
 	constructor : Ripple,
 	init: function() {
+		if(this.initialised) return;
 		// var rippleitems = document.querySelectorAll(".button:not(.no-ripple):not([ripple='none']), .fab:not(.no-ripple):not([ripple='none']), [ripple]:not([ripple='none']), .ripple");
 		// for (var i = 0; i < rippleitems.length; i++) {
 		// 	rippleitems[i].addEventListener("mousedown", this.onClick, false);
 		// 	rippleitems[i].addEventListener("touchstart", this.onClick, false);
 		// }
 		// Hack to enable :active state on iOS
-		if(this.initialised) return;
 		document.addEventListener("touchstart", function() {}, false);
 		this.initialised = true;
 	},
 	onClick: function(event) {
-		/* This needs fixing */
+		/* FIXME : This needs fixing */
 		var x     = event.pageX - this.offsetLeft - (this.clientWidth / 2),
 		    y     = event.pageY - this.offsetTop - (this.clientHeight / 2),
 		    style = document.createElement("style"),
@@ -213,17 +235,3 @@ Ripple.prototype = {
 		}.bind(this), 2000);
 	}
 };
-
-/* Initialisation */
-var Dialog    = new Dialog(),
-    Responsive = new Responsive(),
-    SideMenu   = new SideMenu(),
-    Ripple     = new Ripple();
-
-window.addEventListener("DOMContentLoaded", function MF_onLoad() {
-	Dialog.init();
-	Responsive.init();
-	SideMenu.init();
-	Ripple.init();
-	window.removeEventListener("DOMContentLoaded", MF_onLoad);
-});
