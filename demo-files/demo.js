@@ -1,8 +1,8 @@
 "use strict";
-var Dialog 		= new Dialog(),
-	Responsive 	= new Responsive(),
-	SideMenu 	= new SideMenu(),
-	Ripple 		= new Ripple();
+var Dialog     = new Dialog(),
+    Responsive = new Responsive(),
+    SideMenu   = new SideMenu(),
+    Ripple     = new Ripple();
 
 function init() {
 	var sm = document.getElementById("navigation-sidemenu");
@@ -27,10 +27,6 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", function() {
-	Dialog.init();
-	Responsive.init();
-	SideMenu.init();
-	Ripple.init();
 	if ((window.location.hash === "") || (document.querySelector(".navigation-section" + window.location.hash) === null)) {
 		window.location.hash = "#introduction";
 	}
