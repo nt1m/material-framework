@@ -2,7 +2,6 @@
 /* Util */
 var console = (window.console = window.console || {});
 
-/* Main Module */
 function Material(params) {
 	this.initialised = false;
 	var modules = params && params.hasOwnProperty("modules") ? params.modules : null;
@@ -17,13 +16,14 @@ Material.prototype.init = function(modules) {
 		Ripple.init();
 	}
 	else {
-		modules.forEach(function(module) {
+		for (var i = 0, len = modules.length; i < len; i++) {
+			var module = modules[i];
 			if (!window.hasOwnProperty(module) || !window[module].hasOwnProperty("init") || !window[module].isMaterialModule) {
 				console.warn("[material.init] Module not found");
 				return;
 			}
 			window[module].init();
-		});
+		}
 	}
 	this.initialised = true;
 };
@@ -104,8 +104,9 @@ var SideMenu = {
 		this.overlay.addEventListener("click", function() {
 			var sidemenus = document.querySelectorAll(".sidemenu");
 			for (var i = 0, len = sidemenus.length; i < len; i++) {
-				if (!sidemenus[i].hidden && (!sidemenus[i].classList.contains("sidebar") || (typeof Responsive == "undefined" || Responsive.device !== "desktop"))) {
-					this.hide(sidemenus[i]);
+				var sidemenu = sidemenus[i];
+				if (!sidemenu.hidden && (!sidemenu.classList.contains("sidebar") || (typeof Responsive == "undefined" || Responsive.device !== "desktop"))) {
+					this.hide(sidemenu);
 				}
 			}
 		}.bind(this));
