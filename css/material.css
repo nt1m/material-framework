@@ -880,20 +880,22 @@ code {
 	opacity: 0;
 	visibility: hidden;
 }
-.dialog[hidden] {
+.dialog:not(.inline)[hidden] {
 	display: block;
 	opacity: 0;
 	pointer-events: none;
 	z-index: -1;
 	-webkit-transform: translate(-50%, -100%);
 	transform: translate(-50%, -100%);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
+	transition: opacity 0.3s, transform 0.5s;
 }
 .dialog {
 	padding: 1.5em 1.5em 0.5em 1.5em;
 	z-index: 1001;
 	overflow: auto;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.6s;
-	transition: opacity 0.3s, transform 0.6s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.5s, z-index 0s 0.4s;
+	transition: opacity 0.3s, transform 0.5s, z-index 0s 0.4s;
 }
 .dialog:not(.inline) {
 	position: fixed;
