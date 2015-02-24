@@ -2,6 +2,7 @@
 /* Util */
 var console = (window.console = window.console || {});
 
+/* Main Module */
 function Material(params) {
 	this.initialised = false;
 	var modules = params && params.hasOwnProperty("modules") ? params.modules : null;
@@ -25,7 +26,7 @@ Material.prototype.init = function(modules) {
 		});
 	}
 	this.initialised = true;
-}
+};
 
 /* Responsive code */
 var Responsive = {
