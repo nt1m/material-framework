@@ -81,6 +81,8 @@ p > code {
 /* Code demos */
 code {
 	white-space: pre-wrap;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 code .tag {
 	color: #E91E63; /* Pink - 500 */
