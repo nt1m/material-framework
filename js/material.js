@@ -201,7 +201,7 @@ var Dialog = {
 	getCurrentDialog: function() {
 		return document.querySelector(".dialog:not([hidden])");
 	},
-	hideCurrentDialog: function() {
+	hideCurrentDialog: function(e) {
 		this.hide(this.getCurrentDialog());
 		if (this.callback) {
 			this.callback(e.target);
