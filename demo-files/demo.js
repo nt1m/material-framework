@@ -21,6 +21,11 @@ function init() {
 	}
 }
 
+function DialogDemoCallback(button) {
+	var ourButton = (button.className.indexOf("dialog-confirm") > -1) ? "Accept" : "Decline";
+	alert(ourButton + " was pressed!");
+}
+
 window.addEventListener("DOMContentLoaded", function() {
 	var md = new Material();
 	if ((window.location.hash === "") || (document.querySelector(".navigation-section" + window.location.hash) === null)) {

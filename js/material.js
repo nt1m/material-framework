@@ -162,6 +162,7 @@ var SideMenu = {
 var Dialog = {
 	initialised: false,
 	isMaterialModule: true,
+	callback: null,
 	constructor: Dialog,
 	init: function() {
 		if (this.initialised) return;
@@ -184,9 +185,10 @@ var Dialog = {
 		document.body.appendChild(overlay);
 		this.overlay = overlay;
 	},
-	show: function(dialog) {
+	show: function(dialog, callback) {
 		this.overlay.hidden = false;
 		dialog.hidden = false;
+		if (callback) this.callback = callback;
 	},
 	hide: function(dialog) {
 		this.overlay.hidden = true;
@@ -199,8 +201,12 @@ var Dialog = {
 	getCurrentDialog: function() {
 		return document.querySelector(".dialog:not([hidden])");
 	},
-	hideCurrentDialog: function() {
+	hideCurrentDialog: function(e) {
 		this.hide(this.getCurrentDialog());
+		if (this.callback) {
+			this.callback(e.target);
+			this.callback = null;
+		}
 	}
 };
 
