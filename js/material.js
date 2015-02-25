@@ -263,11 +263,11 @@ var FancyHeader = {
 		this.header = options.header;
 		this.scrollTarget = options.scrollTarget;
 		// Fix for Paddings
-		var headerHeight = Math.max(this.header.scrollHeight, this.header.offsetHeight, this.header.clientHeight);
-		var sections = document.querySelectorAll(".navigation-section");
-		for (var i = 0, len = sections.length; i < len; i++) {
-			sections[i].style.paddingTop = headerHeight + "px";
-		}
+		// var headerHeight = Math.max(this.header.scrollHeight, this.header.offsetHeight, this.header.clientHeight);
+		// var sections = document.querySelectorAll(".navigation-section");
+		// for (var i = 0, len = sections.length; i < len; i++) {
+		// 	sections[i].style.paddingTop = headerHeight + "px";
+		// }
 		this.lastY = this.scrollTarget.scrollY;
 		this.scrollTarget.addEventListener("scroll", this.update.bind(this), false);
 		this.initialised = true;
