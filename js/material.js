@@ -16,10 +16,10 @@ Material.prototype.init = function(modules, options) {
 	for (var i = 0, len = modules.length; i < len; i++) {
 		var module = modules[i];
 		if (!window.hasOwnProperty(module) || !window[module].hasOwnProperty("init") || !window[module].isMaterialModule) {
-			console.warn("[material.init] Module not found");
+			console.warn("[material.init] Module not found : " + module);
 			return;
 		}
-		if (options[module]) {
+		if (options && options[module]) {
 			window[module].init(options[module]);
 		}
 		else {
@@ -251,13 +251,13 @@ var FancyHeader = {
 	scrollTarget: null,
 	state: "show",
 	initialised: false,
-	isMaterialModule: false,
+	isMaterialModule: true,
 	constructor: FancyHeader,
 	init: function(options) {
 		if (this.initialised) return;
 		// Little Setup ?
-		if (options.header === null || options.scrollTarget === null) {
-			console.warn("[FancyHeader.init] You need to Setup a Header and Scroll-Target(window or obj) at least!");
+		if (!options || options.header === null || options.scrollTarget === null) {
+			console.warn("[FancyHeader.init] You need to Setup a Header and Scroll-Target (window or obj) at least!");
 			return;
 		}
 		this.header = options.header;
