@@ -255,17 +255,14 @@ var FancyHeader = {
 	constructor: FancyHeader,
 	init: function(options) {
 		if (this.initialised) return;
-		//Little Setup?
+		// Little Setup ?
 		if (options.header === null || options.scrollTarget === null) {
-			console.warn("You need to Setup a Header and Scroll-Target(window or obj) at least!");
+			console.warn("[FancyHeader.init] You need to Setup a Header and Scroll-Target(window or obj) at least!");
 			return;
 		}
 		this.header = options.header;
 		this.scrollTarget = options.scrollTarget;
-		//Needs another attempt
-		this.header.style.position = "fixed";
-		this.header.style.width = "100%";
-		//Fix for Paddings
+		// Fix for Paddings
 		var headerHeight = Math.max(this.header.scrollHeight, this.header.offsetHeight, this.header.clientHeight);
 		var sections = document.querySelectorAll(".navigation-section");
 		for (var i = 0, len = sections.length; i < len; i++) {
@@ -291,16 +288,15 @@ var FancyHeader = {
 		: (document.documentElement || document.body.parentNode || document.body).scrollTop);
 	},
 	update: function() {
-		var self = this;
 		this.getY(function(y) {
-			var direction = y > self.lastY ? "down" : "up";
+			var direction = y > this.lastY ? "down" : "up";
 			if (direction == "down") {
-				self.hide();
+				this.hide();
 			}
 			else if (direction == "up") {
-				self.show();
+				this.show();
 			}
-			self.lastY = y;
-		});
+			this.lastY = y;
+		}.bind(this));
 	}
 };
