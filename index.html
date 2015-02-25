@@ -69,6 +69,17 @@ var md = new Material();
 // This will initialize only the Responsive and SideMenu modules
 var md = new Material({modules: ["Responsive", "SideMenu"]});
 		</code>
+		<p>You can also specify options :</p>
+		<code class="prettyprint">
+var md = new Material({
+	options: {
+		FancyHeader: {
+			header: document.querySelector(".toolbar"),
+			scrollTarget: document.querySelector(".main-content")
+		}
+	}
+});
+		</code>
 	</div>
 	<div class="section">
 		<h1>Showcase</h1>
@@ -557,7 +568,7 @@ var md = new Material({modules: ["Responsive", "SideMenu"]});
 &lt;button class="button raised bg-blue-500 color-white" ripple="none">No ripple&lt;/button>
 &lt;div style="width: 100px;height: 100px;padding: 10px;" ripple="circle">Circular ripple&lt;/div>
 	</code>
-	<p class="bold">Or... using class names :</p>
+	<p>Or... using class names :</p>
 	<code class="prettyprint">
 &lt;button class="button raised bg-blue-500 color-white no-ripple">No ripple&lt;/button>
 &lt;div class="ripple circle" style="width: 100px;height: 100px;padding: 10px;">Circular ripple&lt;/div>

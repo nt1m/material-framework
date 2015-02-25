@@ -12,6 +12,9 @@
 	margin-top: -100px;
 }
 /* Sections */
+.navigation-section {
+	background-color: inherit;
+}
 .navigation-section:not(:target) {
 	display: none;
 }
