@@ -518,8 +518,8 @@ code {
 	text-transform: uppercase;
 	text-decoration: none !important;
 	padding: 0.5em 0.75em;
-	font-size: 1em;
-	font-weight: 400;
+	font-size: 0.875em;
+	font-weight: 500;
 	font-family: inherit;
 	border-radius: 2px;
 	overflow: hidden;
@@ -565,6 +565,7 @@ code {
 	border-radius: 100%;
 	font-size: 1.5em;
 	font-family: inherit;
+	font-weight: 400;
 	text-transform: none;
 	box-sizing: border-box;
 	color: #000;
