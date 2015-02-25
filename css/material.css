@@ -647,6 +647,10 @@ code {
 .toolbar-label {
 	margin: 0 5px;
 }
+.toolbar.hide{
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
 
 /* Navigation bar */
 .navbar {
