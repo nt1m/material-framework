@@ -433,7 +433,7 @@ code {
 	padding: 0.3125em;
 	border: none;
 	border-radius: 0;
-	border-bottom: 1px solid #4285f4;
+	border-bottom: 1px solid #2196f3;
 	background-color: inherit;
 	-webkit-transition: border-color 0.3s;
 	transition: border-color 0.3s;
@@ -460,8 +460,11 @@ code {
 }
 .text-input-icon {
 	display: inline-block;
-	font-size: 1em;
+	font-size: 1.5em;
 	margin-right: 1em;
+}
+.text-input-container:not([focused]) .text-input-icon {
+	opacity: 0.63;
 }
 
 /* Buttons */
