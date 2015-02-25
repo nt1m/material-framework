@@ -60,9 +60,6 @@ body {
 }
 
 /* Typography */
-h1, .heading {    
-	font-weight: 400;
-}
 h2, .subheading {
 	padding: 0;
 	margin: 0;
@@ -75,6 +72,11 @@ h2, .subheading {
 	font-weight: 400;
 	background-color: inherit;
 }
+h2,
+.subheading,
+.secondary-text {
+	color: rgba(0, 0, 0, 0.54);
+}
 h3 {
 	font-size: 0.93em;
 	line-height: 1.5em;
@@ -84,10 +86,48 @@ h3 {
 	margin-bottom: 1.5em;
 	padding-left: 2em;
 }
-h2,
-.subheading,
-.secondary-text {
-	color: rgba(0, 0, 0, 0.54);
+p {
+	font-size: 0.8125em;
+}
+.mobile p {
+	font-size: 0.875em;
+}
+.display-4,
+.display-3,
+.display-2,
+.display-1,
+h1, h2, h3, p,
+.headline,
+.title,
+.caption {
+	transition-property: color, font-size;
+	transition-duration: .25s;
+	transition-timing-function: cubic-bezier(.55, 0, .1, 1);
+	font-weight: 400;
+}
+.display-4 {
+	font-size: 7em;
+	font-weight: 300;
+}
+.display-3 {
+	font-size: 3.5em;
+}
+.display-2 {
+	font-size: 2.8125em;
+}
+h1,
+.display-1 {
+	font-size: 2.125em;
+}
+.headline {
+	font-size: 1.5em;
+}
+.title {
+	font-size: 1.25em;
+	font-weight: 500;
+}
+.caption {
+	font-size: 0.75em;
 }
 blockquote,
 blockquote::before,
