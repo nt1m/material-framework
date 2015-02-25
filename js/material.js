@@ -14,6 +14,7 @@ Material.prototype.init = function(modules) {
 		Responsive.init();
 		SideMenu.init();
 		Ripple.init();
+		FancyHeader.init();
 	}
 	else {
 		for (var i = 0, len = modules.length; i < len; i++) {
@@ -235,5 +236,58 @@ var Ripple = {
 			style.remove();
 			this.removeAttribute(id);
 		}.bind(this), 2000);
+	}
+};
+
+/* FanzyHeader Experimental*/
+var FancyHeader = {
+	element: document.querySelector(".toolbar"),
+	scroller: document.querySelector(".main-content"),
+	state: "show",
+	initialised: false,
+	isMaterialModule: true,
+	constructor: FancyHeader,
+	init: function(){
+		if(this.initialised) return;
+		this.lastY = this.scroller.scrollY;
+		this.scroller.addEventListener("scroll", this.update.bind(this), false);
+		this.element.style.position = "fixed";
+		this.element.style.width = "100%";
+		//Fix for Paddings
+		var sections = document.querySelectorAll(".navigation-section");
+		for (var i = 0, len = sections.length; i < len; i++) {
+			var height = Math.max(this.element.scrollHeight, this.element.offsetHeight, this.element.clientHeight);
+			sections[i].style.paddingTop = height + "px";
+		}
+		this.initialised = true;
+	},
+	hide: function(){
+		if(this.state == "show" || this.state === null){
+			this.element.classList.toggle("hide");
+			this.state = "hide";
+		}
+	},
+	show: function(){
+		if(this.state == "hide" || this.state === null){
+			this.element.classList.toggle("hide");
+			this.state = "show";
+		}
+	},
+	getY: function(cb){
+		cb((this.scroller.pageYOffset !== undefined) ? this.scroller.pageYOffset
+		: (this.scroller.scrollTop !== undefined) ? this.scroller.scrollTop
+		: (document.documentElement || document.body.parentNode || document.body).scrollTop);
+	},
+	update: function(){
+		var self = this;
+		this.getY(function(y){
+			var direction = y > self.lastY ? "down" : "up";
+			if(direction == "down"){
+				self.hide();
+			}else if(direction == "up"){
+				self.show();
+			}
+			self.lastY = y;
+		});
 	}
 };
