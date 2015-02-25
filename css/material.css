@@ -444,7 +444,11 @@ code {
 }
 .text-input:not(:focus),
 .dropdown-menu:not(:focus):not(.active) {
-	border-bottom-color: #888 !important;
+	border-bottom-color: rgba(0, 0, 0, 0.12) !important;
+}
+.dark-theme .text-input:not(:focus),
+.dark-theme .dropdown-menu:not(:focus):not(.active) {
+	border-bottom-color: rgba(255, 255, 255, 0.12) !important;
 }
 .text-input:focus,
 .dropdown-menu:focus,
