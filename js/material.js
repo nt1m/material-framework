@@ -237,3 +237,69 @@ var Ripple = {
 		}.bind(this), 2000);
 	}
 };
+
+/* FancyHeader Experimental
+  Example usage - demo.js: 
+  FancyHeader.init({
+	header:       document.querySelector(".toolbar"),
+	scrollTarget: document.querySelector(".main-content")
+  });
+*/
+var FancyHeader = {
+	header: null,
+	scrollTarget: null,
+	state: "show",
+	initialised: false,
+	isMaterialModule: false,
+	constructor: FancyHeader,
+	init: function(options) {
+		if (this.initialised) return;
+		//Little Setup?
+		if (options.header === null || options.scrollTarget === null) {
+			console.warn("You need to Setup a Header and Scroll-Target(window or obj) at least!");
+			return;
+		}
+		this.header = options.header;
+		this.scrollTarget = options.scrollTarget;
+		//Needs another attempt
+		this.header.style.position = "fixed";
+		this.header.style.width = "100%";
+		//Fix for Paddings
+		var headerHeight = Math.max(this.header.scrollHeight, this.header.offsetHeight, this.header.clientHeight);
+		var sections = document.querySelectorAll(".navigation-section");
+		for (var i = 0, len = sections.length; i < len; i++) {
+			sections[i].style.paddingTop = headerHeight + "px";
+		}
+		this.lastY = this.scrollTarget.scrollY;
+		this.scrollTarget.addEventListener("scroll", this.update.bind(this), false);
+		this.initialised = true;
+	},
+	hide: function() {
+		if (this.state == "hide") return;
+		this.header.classList.toggle("hide");
+		this.state = "hide";
+	},
+	show: function() {
+		if (this.state == "show") return;
+		this.header.classList.toggle("hide");
+		this.state = "show";
+	},
+	getY: function(cb) {
+		cb((this.scrollTarget.pageYOffset !== undefined) ? this.scrollTarget.pageYOffset
+		: (this.scrollTarget.scrollTop !== undefined) ? this.scrollTarget.scrollTop
+		: (document.documentElement || document.body.parentNode || document.body).scrollTop);
+	},
+	update: function() {
+		var self = this;
+		this.getY(function(y) {
+			var direction = y > self.lastY ? "down" : "up";
+			if (direction == "down") {
+				self.hide();
+			}
+			else if (direction == "up") {
+				self.show();
+			}
+			self.lastY = y;
+		});
+	}
+};
