@@ -5,23 +5,24 @@ var console = (window.console = window.console || {});
 function Material(params) {
 	this.initialised = false;
 	var modules = params && params.hasOwnProperty("modules") ? params.modules : null;
-	this.init(modules);
+	var options = params && params.hasOwnProperty("options") ? params.options : null;
+	this.init(modules, options);
 }
-Material.prototype.init = function(modules) {
+Material.prototype.init = function(modules, options) {
 	if (this.initialised) return;
 	if (!modules) {
-		Dialog.init();
-		Responsive.init();
-		SideMenu.init();
-		Ripple.init();
+		var modules = ["Dialog", "Responsive", "SideMenu", "Ripple", "FancyHeader"]
 	}
-	else {
-		for (var i = 0, len = modules.length; i < len; i++) {
-			var module = modules[i];
-			if (!window.hasOwnProperty(module) || !window[module].hasOwnProperty("init") || !window[module].isMaterialModule) {
-				console.warn("[material.init] Module not found");
-				return;
-			}
+	for (var i = 0, len = modules.length; i < len; i++) {
+		var module = modules[i];
+		if (!window.hasOwnProperty(module) || !window[module].hasOwnProperty("init") || !window[module].isMaterialModule) {
+			console.warn("[material.init] Module not found");
+			return;
+		}
+		if (options[module]) {
+			window[module].init(options[module]);
+		}
+		else {
 			window[module].init();
 		}
 	}
