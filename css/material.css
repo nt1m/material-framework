@@ -954,6 +954,8 @@ code {
 	overflow: auto;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
 	transition: opacity 0.3s, transform 0.5s;
+	display: flex;
+	flex-direction: column;
 }
 .dialog:not(.inline) {
 	position: fixed;
@@ -961,13 +963,29 @@ code {
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	max-height: 80%;
+}
+.phone .dialog:not(.inline),
+.tablet .dialog:not(.inline) {
+	min-width: 80%;
 }
 .dialog-title {
 	font-size: 1.4em;
 	font-weight: 500;
+	margin-top: 0;
 }
 .dialog-content {
+	display: block;
+	flex: 1;
 	padding-bottom: 1em;
+	overflow: auto;
+	color: rgba(0, 0, 0, 0.54);
+}
+.dark-theme .dialog-content {
+	color: rgba(255, 255, 255, 0.54);
+}
+.dialog-content p {
+	color: inherit;
 }
 .dialog-footer {
 	height: 3em;
