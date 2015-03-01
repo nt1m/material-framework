@@ -838,6 +838,14 @@ code {
 	width: 2.5em;
 	vertical-align: top;
 	margin-right: 1em;
+	position: relative;
+}
+.list > li .item-icon > i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
 }
 .list > li .item-text {
 	font-size: 1em;
