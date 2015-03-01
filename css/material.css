@@ -857,10 +857,16 @@ code {
 	-webkit-align-self: center;
 	-ms-flex-item-align: center;
 	align-self: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .list > li .secondary-text {
 	font-size: 0.875em;
 	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .list > li .item-action {
 	height: 2.5em;
