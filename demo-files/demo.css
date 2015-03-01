@@ -41,7 +41,16 @@ p > code {
 #external-fab-container {
 	position: absolute;
 	right: 20px;
+	top: 25px;
+}
+.phone .header #switch-container {
+	position: absolute;
+	right: -50px;
 	top: 10px;
+	background-color: #2196F3;
+	padding-left: 20px;
+	padding-right: 50px;
+	border-left: 1px solid rgba(255,255,255,0.2)
 }
 
 /* Color palette */
@@ -49,11 +58,17 @@ p > code {
 	color: rgba(255, 255, 255, 0.87);
 	font-size: 14px;
 	font-weight: 500;
+	text-align: center;
 }
 .color-group {
 	display: inline-block;
 	width: 24%;
+	min-width: 140px;
 	vertical-align: top;
+	text-align: left;
+}
+.phone .color-group {
+	width: 100%;
 }
 .color-group ul {
 	list-style: none;
