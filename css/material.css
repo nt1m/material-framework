@@ -89,7 +89,7 @@ h3 {
 p {
 	font-size: 0.8125em;
 }
-.mobile p {
+.phone p {
 	font-size: 0.875em;
 }
 .display-4,
@@ -685,16 +685,21 @@ code {
 }
 .toolbar {
 	display: block;
-	padding: 0.3125em 0.625em;
+	padding: 0.75rem 1rem;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 	background-color: #fff;
 	transition: all 0.2s;
+}
+.phone .toolbar:not(.tabs) {
+	padding: 0.5rem 1rem;
 }
 .toolbar > *:not(sub):not(sup) {
 	vertical-align: middle;
 }
 .toolbar-label {
-	margin: 0 5px;
+	margin: 0 1rem;
+	font-size: 1.25rem;
+	font-weight: 400;
 }
 .toolbar.hide,
 .toolbar-group.hide {
@@ -734,15 +739,14 @@ code {
 	display: -ms-flexbox;
 	display: flex;
 	padding: 0;
-	height: 2.5em;
+	height: 3rem;
 	margin: 0;
 }
 .tabs > li {
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	line-height: 2.857em;
-	height: 2.857em;
+	line-height: 3rem;
 	display: inline-block;
 	box-sizing: border-box;
 	margin: 0;
