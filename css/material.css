@@ -569,7 +569,7 @@ code {
 	text-transform: none;
 	box-sizing: border-box;
 	color: #000;
-	padding: 0.625em 0.417em;
+	padding: 0.5em 0.417em;
 }
 .fab.small {
 	width: 1.67em;
