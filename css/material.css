@@ -877,6 +877,9 @@ code {
 	text-align: center;
 	margin-left: 1em;
 }
+.list > li .item-action:first-child {
+	margin-left: 0;
+}
 .list > li i::before {
 	line-height: inherit !important;
 }
