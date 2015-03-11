@@ -660,8 +660,8 @@ code {
 
 /* Icon buttons */
 .icon-button {
-	width: 1.67em;
-	height: 1.67em;
+	width: 2em;
+	height: 2em;
 	border-radius: 100%;
 	border: none;
 	background-color: transparent;
@@ -673,7 +673,7 @@ code {
 	font-size: 1.5em;
 }
 .icon-button:active {
-	background-color: rgba(210, 210, 210, 0.27)
+	background-color: rgba(210, 210, 210, 0.3)
 }
 
 /* Toolbars */
@@ -685,13 +685,13 @@ code {
 }
 .toolbar {
 	display: block;
-	padding: 0.75rem 1rem;
+	padding: 0.5rem 0.75rem;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 	background-color: #fff;
 	transition: all 0.2s;
 }
 .phone .toolbar:not(.tabs) {
-	padding: 0.5rem 1rem;
+	padding: 0.25rem;
 }
 .toolbar > *:not(sub):not(sup) {
 	vertical-align: middle;
