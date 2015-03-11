@@ -35,8 +35,11 @@ p > code {
 
 /* Header toolbar tweaks */
 #switch-container {
-	margin-top: 8px;
+	margin-top: 14px;
 	margin-right: 100px;
+}
+.phone #switch-container {
+	margin-top: 8px;
 }
 #external-fab-container {
 	position: absolute;
