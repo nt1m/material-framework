@@ -131,10 +131,6 @@ code .com {
 	margin-bottom: 100px;
 	height: 100px;
 }
-#typography {
-	max-height: 330px;
-	overflow: auto;
-}
 
 /* Add spacing around items */
 .section > .checkbox, .section > .radio, .section > .button, .section > .switch, .section > .fab {
