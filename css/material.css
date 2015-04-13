@@ -769,6 +769,9 @@ code {
 	color: inherit;
 	text-decoration: none;
 }
+.tabs i {
+	font-size: 1.5rem;	
+}
 
 /* Toasts */
 .toast {
