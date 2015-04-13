@@ -35,6 +35,9 @@ body {
 .float-right {
 	float: right;
 }
+.flex {
+	flex: 1;
+}
 .checkbox, .radio, .text-input, .button, .switch, .fab {
 	display: inline-block;
 	vertical-align: top;
