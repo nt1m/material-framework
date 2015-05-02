@@ -825,7 +825,7 @@ code {
 	padding: 0;
 	list-style: none;
 }
-.list > li {
+.list > li, .grid-list > .tile > .tile-footer {
 	margin: 0;
 	padding: 0.2em 0.4em;
 	display: -webkit-flex;
@@ -853,7 +853,7 @@ code {
 	transform: translate(-50%, -50%);
 	font-size: 1.5em;
 }
-.list > li .item-text {
+.list > li .item-text, .grid-list > .tile > .tile-footer > .item-text {
 	font-size: 1em;
 	display: inline-block;
 	vertical-align: top;
@@ -867,7 +867,7 @@ code {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.list > li .secondary-text {
+.list > li .secondary-text, .grid-list >.tile > .tile-footer .secondary-text {
 	font-size: 0.875em;
 	display: block;
 	white-space: nowrap;
@@ -886,8 +886,35 @@ code {
 .list > li .item-action:first-child {
 	margin-left: 0;
 }
-.list > li i::before {
+.list > li i::before, .grid-list > .tile > .tile-footer i::before {
 	line-height: inherit !important;
+}
+
+/* specific to grid lists */
+
+.grid-list > .tile {
+	width: 11em;
+	margin: 0.25em;
+	display: inline-block;
+}
+
+.grid-list > .tile > .tile-image {
+	height: 11em;
+	width: 100%;
+	display: inline-block;
+}
+
+.grid-list > .tile > .tile-footer {
+	padding: 0.5em;
+}
+
+.grid-list > .tile > .tile-footer > .item-text {
+	padding: 0.5em;
+}
+
+.grid-list > .tile > .tile-footer .item-action {
+	font-size: 1.5em;
+	padding: 0.5em;
 }
 
 /* Dividers */
