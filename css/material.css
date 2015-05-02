@@ -898,7 +898,7 @@ code {
 	display: inline-block;
 }
 
-.grid-list > .tile > .tile-background {
+.grid-list > .tile > .tile-image {
 	height: 11em;
 	width: 100%;
 	display: inline-block;
@@ -913,8 +913,8 @@ code {
 }
 
 .grid-list > .tile > .tile-footer .item-action {
-  font-size: 1.5em;
-  padding: 0.5em;
+	font-size: 1.5em;
+	padding: 0.5em;
 }
 
 /* Dividers */
