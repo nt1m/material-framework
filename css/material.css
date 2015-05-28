@@ -36,6 +36,8 @@ body {
 	float: right;
 }
 .flex {
+	-webkit-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
 }
 .checkbox, .radio, .text-input, .button, .switch, .fab {
@@ -103,8 +105,11 @@ h1, h2, h3, p,
 .headline,
 .title,
 .caption {
+	-webkit-transition-property: color, font-size;
 	transition-property: color, font-size;
+	-webkit-transition-duration: .25s;
 	transition-duration: .25s;
+	-webkit-transition-timing-function: cubic-bezier(.55, 0, .1, 1);
 	transition-timing-function: cubic-bezier(.55, 0, .1, 1);
 	font-weight: 400;
 }
@@ -691,6 +696,7 @@ code {
 	padding: 0.5rem 0.75rem;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 	background-color: #fff;
+	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 .phone .toolbar:not(.tabs) {
@@ -813,8 +819,8 @@ code {
 }
 .toast .button {
 	margin: 0;
-	-webkit-align-self: stretch;
 	-ms-flex-item-align: stretch;
+	-webkit-align-self: stretch;
 	align-self: stretch;
 	font-size: inherit;
 }
@@ -850,6 +856,7 @@ code {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	font-size: 1.5em;
 }
@@ -860,8 +867,8 @@ code {
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	-webkit-align-self: center;
 	-ms-flex-item-align: center;
+	-webkit-align-self: center;
 	align-self: center;
 	white-space: nowrap;
 	overflow: hidden;
@@ -1006,7 +1013,11 @@ code {
 	overflow: auto;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
 	transition: opacity 0.3s, transform 0.5s;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 .dialog:not(.inline) {
@@ -1028,6 +1039,8 @@ code {
 }
 .dialog-content {
 	display: block;
+	-webkit-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
 	padding-bottom: 1em;
 	overflow: auto;
