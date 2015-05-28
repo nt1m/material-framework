@@ -933,6 +933,7 @@ code {
 /* Menu */
 .menu {
 	display: inline-block;
+	padding: 0.5em 0;
 	list-style: none;
 	background-color: #fff;
 	color: rgba(0, 0, 0, 0.87);
