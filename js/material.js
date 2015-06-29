@@ -11,7 +11,7 @@ function Material(params) {
 Material.prototype.init = function(modules, options) {
 	if (this.initialised) return;
 	if (!modules) {
-		var modules = ["Dialog", "Responsive", "SideMenu", "Ripple", "FancyHeader"]
+		var modules = ["Dialog", "Responsive", "SideMenu", "Ripple", "DropdownMenu", "FancyHeader"]
 	}
 	for (var i = 0, len = modules.length; i < len; i++) {
 		var module = modules[i];
@@ -245,6 +245,38 @@ var Ripple = {
 	}
 };
 
+var DropdownMenu = {
+	initialised: false,
+	isMaterialModule: true,
+	init: function() {
+		if (this.initialised) return;
+		var dropdowns = [].slice.call(document.querySelectorAll(".dropdown .dropdown-menu"));
+		dropdowns.forEach(function (dropdown) {
+			dropdown.addEventListener("click", function(ev) {
+				this.classList.add("active");
+				ev.stopPropagation();
+			});
+		});
+		var dropdownmenus = [].slice.call(document.querySelectorAll(".dropdown .menu li"));
+		dropdownmenus.forEach(function (menu) {
+			menu.addEventListener("click", function(ev) {
+				this.parentNode.parentNode.querySelector(".dropdown-menu").innerHTML = this.childNodes[0].innerHTML;
+				if (this.value) {
+					this.parentNode.parentNode.querySelector(".dropdown-menu").value = this.value;
+				}
+				var customevent = new CustomEvent("change", {});
+				this.parentNode.parentNode.querySelector(".dropdown-menu").dispatchEvent(customevent);
+			});
+		});
+		document.body.addEventListener("click", function() {
+			var dropdowns = [].slice.call(document.querySelectorAll(".dropdown .dropdown-menu"));
+			dropdowns.forEach(function (dropdown) {
+				dropdown.classList.remove("active");
+			});
+		});
+	}
+}
+			
 /* FancyHeader Experimental
   Example usage - demo.js: 
   FancyHeader.init({

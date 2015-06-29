@@ -71,11 +71,8 @@ h2, .subheading {
 	padding-left: 1em;
 	font-size: 1em;
 	line-height: 3em;
-	position: -webkit-sticky;
-	position: sticky;
 	top: 0;
 	font-weight: 400;
-	background-color: inherit;
 }
 h2,
 .subheading,
@@ -210,7 +207,7 @@ code {
 	font-family: Consolas, Menlo, monospace;
 	display: inline-block;
 	padding: 1em;
-	font-size: 0.9em;
+	font-size: 0.875em;
 	line-height: 1.5em;
 	font-weight: 400;
 }
@@ -478,7 +475,9 @@ code {
 /* Text inputs */
 .text-input,
 .dropdown-menu {
-	padding: 0.3125em;
+	padding: 1em 0 0.5em 0;
+	height: 1em;
+	box-sizing: content-box;
 	border: none;
 	border-radius: 0;
 	border-bottom: 1px solid #2196f3;
@@ -490,6 +489,43 @@ code {
 	font-size: 1em;
 	font-weight: 400;
 }
+.dropdown-menu {
+	padding: 0.5em 0;
+	height: 1.45em;
+	padding-right: 2em;
+	background-image: url('data:image/svg+xml,<svg width="8" height="4" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 4,4 8,0" fill-opacity="0.54"></polygon></svg>');
+	background-repeat: no-repeat;
+	background-size: 0.5em 0.25em;
+	background-position: right 0.25em center;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+.dropdown-menu:focus,
+.dropdown-menu.active {
+	border-bottom-width: 2px;
+	padding-bottom: calc(0.5em - 1px);
+}
+.dropdown {
+	position: relative;
+}
+.dropdown .dropdown-menu:not(.active):not(:focus) + .menu {
+	padding: 0 !important;
+	visibility: hidden;
+	transform: translate(-50%, -50%) scale(0)
+}
+.dropdown .dropdown-menu:not(.active):not(:focus) + .menu li {
+	max-height: 0;
+	opacity: 0;
+}
+.dropdown .dropdown-menu:not(.active):not(:focus) + .menu li a {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.dropdown .menu {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 .text-input:not(:focus),
 .dropdown-menu:not(:focus):not(.active) {
 	border-bottom-color: rgba(0, 0, 0, 0.12) !important;
@@ -498,22 +534,35 @@ code {
 .dark-theme .dropdown-menu:not(:focus):not(.active) {
 	border-bottom-color: rgba(255, 255, 255, 0.12) !important;
 }
-.text-input:focus,
-.dropdown-menu:focus,
-.dropdown-menu.active {
+.text-input:focus {
 	border-bottom-width: 2px;
-	padding-bottom: 0.25em;
+	padding-bottom: calc(0.5em - 1px);
+}
+.text-input-container.card {
+	border-radius: 2px;
+	overflow: hidden;
+}
+.text-input-container.card .text-input-icon {
+	padding-top: 0.5em;
+}
+.text-input-container.card .text-input {
+	border: none;
+	padding-top: 0.875rem !important;
+	padding-bottom: 0.875rem !important;
+	font-size: 1.25rem;
 }
 .text-input-container {
 	display: inline-block;
 }
 .text-input-container * {
 	vertical-align: middle;
+	float: left;
 }
 .text-input-icon {
 	display: inline-block;
 	font-size: 1.5em;
-	margin-right: 1em;
+	padding: 0.5em;
+	margin-right: 0.667em;
 }
 .text-input-container:not([focused]) .text-input-icon {
 	opacity: 0.63;
@@ -954,6 +1003,7 @@ code {
 	-ms-user-select: none;
 	user-select: none;
 	min-width: 100px;
+	transition: all 0.2s
 }
 .dark-theme .menu {
 	background-color: #444;
@@ -965,12 +1015,16 @@ code {
 	width: 100%;
 	box-sizing: border-box;
 	vertical-align: top;
+	transition: all 0.2s;
+	max-height: 3em;
+	display: list-item;
 }
 .menu li > a {
 	display: block;
 	padding: 0 1.5em;
 	text-decoration: none;
 	color: inherit;
+	transform: all 0.2s
 }
 
 /* Dialogs */

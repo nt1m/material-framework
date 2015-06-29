@@ -108,7 +108,7 @@ var md = new Material({
 		<p>This framework provides access to all material design colors. Here's how you can use them :</p>
 		<p>Class names are composed like this :
 		<code class="pretty-print">type</code>-<code class="pretty-print">color</code>-<code class="pretty-print">shade</code><br/>
-		<code class="pretty-print">type</code> corresponds to one of the 4 different types (<code class="prettyprint">bg</code>, <code class="prettyprint">color</code></li>, <code class="prettyprint">fill</code> or <code class="prettyprint">stroke</code>) depending on your needs, <code class="pretty-print">color</code> corresponds to the color name (red for example), and <code class="pretty-print">shade</code> corresponds to number specified in the palette below (500 for example).</p>
+		<code class="pretty-print">type</code> corresponds to one of the 4 different types (<code class="prettyprint">bg</code>, <code class="prettyprint">color</code>, <code class="prettyprint">fill</code> or <code class="prettyprint">stroke</code>) depending on your needs, <code class="pretty-print">color</code> corresponds to the color name (red for example), and <code class="pretty-print">shade</code> corresponds to number specified in the palette below (500 for example).</p>
 		<p>Note that you can also use multiple classes together.</p>
 
 		<div class="divider"></div>
@@ -699,6 +699,36 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 &lt;button class=&quot;fab bg-green-500 color-white small&quot;&gt;&lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 		</code>
 	</div>
+	<div class="section">
+		<h1>Dropdown menus</h1>
+		<p>Native menu (&lt;select>) : Use the dropdown-menu class on any select.</p>
+		<select class="dropdown-menu">
+			<option>Apple</option>
+			<option>Orange</option>
+			<option>Pear</option>
+		</select>
+		<p>Custom menu (JS)</p>
+		<div class="dropdown">
+			<button class="dropdown-menu">Apple</button>
+			<ul class="menu">
+				<li ripple><a>Apple</a></li>
+				<li ripple><a>Orange</a></li>
+				<li ripple><a>Pear</a></li>
+			</ul>
+		</div>
+		<div class="divider"></div>
+		<h2>Example</h2>
+		<code class="prettyprint">
+&lt;div class="dropdown">
+	&lt;button class="dropdown-menu">Apple&lt;/button>
+	&lt;ul class="menu">
+		&lt;li ripple>&lt;a>Apple&lt;/a>&lt;/li>
+		&lt;li ripple>&lt;a>Orange&lt;/a>&lt;/li>
+		&lt;li ripple>&lt;a>Pear&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+		</code>
+	</div>
 </div>
 <div class="navigation-section" id="inputs">
 	<div class="section">
@@ -728,6 +758,19 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	&lt;i class=&quot;icon-location text-input-icon&quot;&gt;&lt;/i&gt;
 	&lt;input type=&quot;text&quot; class=&quot;text-input border-green-500&quot; placeholder=&quot;Input with an icon&quot;/&gt;
 &lt;/div&gt;
+		</code>
+		<div class="divider"></div>
+		<p>You can create floating inputs by adding the <code class="prettyprint">card</code> class to text-input-container.</p>
+		<div class="text-input-container card">
+			<i class="icon-search text-input-icon"></i>
+			<input type="text" class="text-input" placeholder="Search"/>
+		</div>
+		<h2>Example</h2>
+		<code class="prettyprint">
+&lt;div class="text-input-container card">
+	&lt;i class="icon-search text-input-icon">&lt;/i>
+	&lt;input type="text" class="text-input" placeholder="Search"/>
+&lt;/div>
 		</code>
 	</div>
 	<div class="section">
