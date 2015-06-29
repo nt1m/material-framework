@@ -1293,6 +1293,9 @@ code {
 .card-content {
 	padding: 0.5em;
 }
+.card-footer .icon-button {
+	margin-top: -0.5em;
+}
 
 /* Icons */
 @font-face {
