@@ -488,6 +488,7 @@ code {
 	font-family: inherit;
 	font-size: 1em;
 	font-weight: 400;
+	margin-bottom: 0.5em;
 }
 .dropdown-menu {
 	padding: 0.5em 0;
@@ -553,6 +554,7 @@ code {
 	padding-top: 0.875rem !important;
 	padding-bottom: 0.875rem !important;
 	font-size: 1.25rem;
+	margin-bottom: 0;
 }
 .text-input-container {
 	display: inline-block;
