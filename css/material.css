@@ -795,6 +795,10 @@ code {
 	text-decoration: none;
 	line-height: 3.125em;
 	padding: 0 1em;
+	transition: opacity 0.2s;
+}
+.navbar a:not(.bold):not(:hover):not(:focus) {
+	opacity: 0.8;
 }
 .navbar .fab {
 	margin: 0.66em;
