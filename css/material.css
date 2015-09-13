@@ -1132,7 +1132,10 @@ code {
 
 [data-tooltip]::before {
 	content: attr(data-tooltip);
+	display: inline-block;
 	position: absolute;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	left: 50%;
 	top: calc(100% + 0.875em);
 	transform: translateX(-50%);
@@ -1145,13 +1148,13 @@ code {
 	white-space: nowrap;
 	font-weight: 400;
 	opacity: 1;
-	max-width: 100%;
-	transition: border-radius 0.2s, opacity 0.1s, max-width 0.2s;
+	transition: border-radius 0.3s, opacity 0.1s, transform 0.2s;
 }
 [data-tooltip]:not(:hover)::before {
 	opacity: 0;
-	border-radius: 0.75em / 2em;
-	max-width: 10px;
+	border-radius: 0.75em / 1.5em;
+	transform: translateX(-50%) scaleX(0.85);
+	transition: none;
 }
 .phone [data-tooltip]::before {
 	font-size: 0.875em;
