@@ -601,15 +601,15 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 <div class="navigation-section" id="toggles">
 	<div class="section">
 		<h1>Checkboxes</h1>
-		<div class="checkbox"> 
+		<div class="checkbox">
 			<input type="checkbox" id="checkbox-demo"/>
 			<label for="checkbox-demo"></label>
 		</div>
-		<div class="checkbox">    
+		<div class="checkbox">
 			<input type="checkbox" id="checkbox2" checked/>
 			<label for="checkbox2"></label>
 		</div>
-		
+
 		<div class="divider"></div>
 		<h2>Example</h2>
 		<code class="prettyprint">
@@ -776,7 +776,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	<div class="section">
 		<h1>Sliders</h1>
 		<input type="range" class="slider"/>
-		
+
 		<div class="divider"></div>
 		<h2>Example</h2>
 		<code class="prettyprint">
@@ -1742,7 +1742,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 		&lt;button class=&quot;icon-button&quot;&gt;&lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 		&lt;button class=&quot;icon-button&quot;&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 	&lt;/span&gt;
-&lt;/div&gt;	
+&lt;/div&gt;
 		</code>
 	</div>
 	<div class="section">
@@ -1752,7 +1752,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 			<li ripple><a href="#toolbars">Item 2</a></li>
 			<li ripple><a href="#toolbars">Item 3</a></li>
 		</ul>
-		
+
 		<div class="divider"></div>
 		<h2>Example</h2>
 		<code class="prettyprint">
@@ -1762,7 +1762,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 		</code>
-		
+
 		<div class="divider"></div>
 		You can also add tabs to underneath a toolbar by using a <code class="prettyprint">toolbar-group</code> class that contains both the tabs and the toolbar.
 		<div class="toolbar-group">
@@ -1792,7 +1792,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 				<button class="fab bg-pink-500 color-white"><i class="icon-file-upload"></i></button>
 			</div>
 		</div>
-		
+
 		<div class="divider"></div>
 		<h2>Example</h2>
 		<code class="prettyprint">
@@ -1826,7 +1826,13 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	</div>
 </div>
 <div class="navigation-section" id="popups">
-	<div class="section" id="toasts">
+	<div class="section">
+		<h1>Tooltips</h1>
+		<p>Use the <code class="prettyprint">data-tooltip</code> attribute to add a custom tooltip to any element.
+			 Note that elements using the <code class="prettyprint">::before</code> pseudo class will interfere with the tooltip.</p>
+		<button class="button color-red-500" data-tooltip="Tooltip text">Button with tooltip</button>
+	</div>
+	<div class="section">
 		<h1>Toasts</h1>
 		<div class="toast">
 			<label class="toast-label">We could not load your mail</label>
@@ -1934,10 +1940,10 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 	&lt;/li&gt;
 &lt;/ul&gt;
 	</code>
-	
+
 	<div class="divider"></div>
 	<h1>Grid Lists</h1>
-	
+
 	<div class="grid-list">
 		<div class="tile">
 			<img class="tile-image" src="demo-files/avatar.jpg"/>
@@ -2011,7 +2017,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 		If the tile image does not fit the size of the tile background, you will want to use background images instead to avoid stretching the image.
 	</p>
 	<code class="prettyprint">
-&lt;div class=&quot;tile-image&quot; style=&quot;background-image:url(demo-files/avatar.jpg)&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;tile-image&quot; style=&quot;background-image:url(demo-files/avatar.jpg)&quot;&gt;&lt;/div&gt;
 	</code>
 </div>
 
@@ -2036,7 +2042,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 &lt;/ul&gt;
 		</code>
 	</div>
-		
+
 	<div class="section">
 		<h1>Sidemenus</h1>
 		<p>Tip : initialize the <code class="prettyprint">SideMenu</code> module to get quick helper functions.</p>
@@ -2060,13 +2066,13 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 		&lt;span class=&quot;title&quot;&gt;Larry Page&lt;/span&gt;
 		&lt;span class=&quot;text&quot;&gt;example@gmail.com&lt;/span&gt;
 	&lt;/div&gt;
-	&lt;ul class=&quot;menu&quot;&gt; 
-		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-person-add&quot;&gt;&lt;/i&gt;Current&lt;/a&gt;&lt;/li&gt; 
+	&lt;ul class=&quot;menu&quot;&gt;
+		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-person-add&quot;&gt;&lt;/i&gt;Current&lt;/a&gt;&lt;/li&gt;
 		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-person&quot;&gt;&lt;/i&gt;Recent&lt;/a&gt;&lt;/li&gt;
 		&lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
 		&lt;h2&gt;Subheading&lt;/h2&gt;
-		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-archive&quot;&gt;&lt;/i&gt;Archive&lt;/a&gt;&lt;/li&gt; 
-		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-delete&quot;&gt;&lt;/i&gt;Trash&lt;/a&gt;&lt;/li&gt; 
+		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-archive&quot;&gt;&lt;/i&gt;Archive&lt;/a&gt;&lt;/li&gt;
+		&lt;li ripple&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-delete&quot;&gt;&lt;/i&gt;Trash&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;
 		</code>
@@ -2078,13 +2084,13 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 			<span class="title">Larry Page</span>
 			<span class="text">example@gmail.com</span>
 		</div>
-		<ul class="menu"> 
-			<li ripple><a href="#menus"><i class="icon-person-add"></i>Current</a></li> 
+		<ul class="menu">
+			<li ripple><a href="#menus"><i class="icon-person-add"></i>Current</a></li>
 			<li ripple><a href="#menus"><i class="icon-person"></i>Recent</a></li>
 			<li class="divider"></li>
 			<h2>Subheading</h2>
-			<li ripple><a href="#menus"><i class="icon-archive"></i>Archive</a></li> 
-			<li ripple><a href="#menus"><i class="icon-delete"></i>Trash</a></li> 
+			<li ripple><a href="#menus"><i class="icon-archive"></i>Archive</a></li>
+			<li ripple><a href="#menus"><i class="icon-delete"></i>Trash</a></li>
 		</ul>
 	</div>
 </div>
