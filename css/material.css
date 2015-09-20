@@ -65,7 +65,9 @@ body {
 }
 
 /* Typography */
-h2, .subheading {
+h5,
+.sidemenu h2,
+.subheading {
 	padding: 0;
 	margin: 0;
 	font-size: 1em;
@@ -73,22 +75,14 @@ h2, .subheading {
 	top: 0;
 	font-weight: 400;
 }
-h2,
 .subheading,
 .secondary-text {
 	color: rgba(0, 0, 0, 0.54);
 }
-h3 {
-	font-size: 0.93em;
-	line-height: 1.5em;
-	color: rgba(0, 0, 0, 0.7);
-	font-weight: 400;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	padding-left: 2em;
-}
 p {
 	font-size: 0.8125em;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .phone p {
 	font-size: 0.875em;
@@ -123,12 +117,18 @@ h1,
 .display-1 {
 	font-size: 2.125em;
 }
+h2,
 .headline {
 	font-size: 1.5em;
 }
+h3,
 .title {
 	font-size: 1.25em;
 	font-weight: 500;
+}
+h4,
+.subhead {
+	font-size: 1em;
 }
 .caption {
 	font-size: 0.75em;
@@ -239,12 +239,17 @@ code {
 	border-radius: 100% !important;
 }
 .sidemenu .menu li.selected::after,
-.ripple:active::after, .button:active::after, .fab:active::after, [ripple]:active::after {
+.ripple:active::after, .button:active::after,
+[ripple]:active::after, .fab:active::after {
 	width: 100% !important;
 	left: 0;
 	top: 0 !important;
 	height: 100% !important;
 	opacity: 0.12;
+}
+.sidemenu .menu li.selected::after,
+.ripple:active::after, .button:active::after,
+[ripple]:active::after {
 	border-radius: 0 !important;
 }
 .sidemenu .menu li.selected::after {
@@ -1279,7 +1284,7 @@ code {
 
 /* Cards */
 .card-container {
-	background-color: #e5e5e5;
+	background-color: #fafafa;
 }
 .dark-theme .card-container {
 	background-color: #222;
