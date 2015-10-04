@@ -130,8 +130,12 @@ code .com {
 	color: #607d8b /* Blue Gray - 500 */
 }
 /* Specific demo rules */
-#card-demo .card {
-	margin-bottom: 100px;
+
+.card-demo {
+	padding: 1rem;
+}
+.card-demo .card {
+	margin-bottom: 50px;
 	height: 100px;
 }
 
