@@ -1284,7 +1284,7 @@ code {
 
 /* Cards */
 .card-container {
-	background-color: #fafafa;
+	background-color: #eee;
 }
 .dark-theme .card-container {
 	background-color: #222;
