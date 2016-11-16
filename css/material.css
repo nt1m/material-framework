@@ -918,6 +918,9 @@ code {
 	vertical-align: top;
 	margin-right: 1em;
 	position: relative;
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
 }
 .list > li .item-icon > i {
 	position: absolute;
