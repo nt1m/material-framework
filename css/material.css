@@ -478,6 +478,9 @@ code {
 	-webkit-filter: brightness(110%);
 	filter: brightness(110%);
 }
+.switch label:not(.form-control-label) {
+	cursor: pointer;
+}
 
 /* Text inputs */
 .text-input,
